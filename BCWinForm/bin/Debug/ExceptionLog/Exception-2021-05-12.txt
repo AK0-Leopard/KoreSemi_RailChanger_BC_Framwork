@@ -1,0 +1,14 @@
+2021-05-12 09:00:11.022>
+[Mirle.AK0.Hlt.Communications.Sockets.TCPClients.TCPClientAPI\ConnectCallback]:
+System.Net.Sockets.SocketException (0x80004005): 無法連線，因為目標電腦拒絕連線。 127.0.0.1:6000
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at Mirle.AK0.Hlt.Communications.Sockets.TCPClients.TCPClientAPI.ConnectCallback(IAsyncResult asyncResult) in D:\Projects\Mirle\AK0\Hlt\Communications\SocketsTCPClient\Mirle.AK0.Hlt.Communications.Sockets.TCPClients\TCPClientAPI.cs:line 704
+2021-05-12 17:28:43.341>
+[Mirle.AK0.Hlt.Communications.Sockets.TCPClients.TCPClientAPI\ConnectCallback]:
+System.Net.Sockets.SocketException (0x80004005): 無法連線，因為目標電腦拒絕連線。 127.0.0.1:6000
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at Mirle.AK0.Hlt.Communications.Sockets.TCPClients.TCPClientAPI.ConnectCallback(IAsyncResult asyncResult) in D:\Projects\Mirle\AK0\Hlt\Communications\SocketsTCPClient\Mirle.AK0.Hlt.Communications.Sockets.TCPClients\TCPClientAPI.cs:line 704

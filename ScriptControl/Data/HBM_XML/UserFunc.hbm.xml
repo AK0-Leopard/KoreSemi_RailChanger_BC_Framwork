@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="UserFunc" table="BUASUFNC" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="UserFuncPK" class="com.mirle.ibg3k0.sc.Data.VO.UserFuncPKInfo, ScriptControl">
+      <key-property name="User_GRP" type="string">
+        <column name="USER_GRP" sql-type="char(20)"/>
+      </key-property>
+      <key-property name="Func_Code" type="string">
+        <column name="FUNC_CODE" sql-type="char(60)"/>
+      </key-property>
+    </composite-id>
+  </class>
+  <database-object>
+    <create>
+
+
+      <!--Basic Function-->
+      <!--System-->
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_LOGOUT', 'User Logout' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_PASSWORD_CHANGE', 'Password Change' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_USER_MANAGEMENT', 'User Account Management' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CLOSE_BC', 'BC System Shutdown' );
+
+      <!--Operation-->
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CONNECTION_CONTROL', 'Connection Control' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_STOCKER_TRANSFER_COMMAND', 'Stocker Transfer Command' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CYCLE_RUN', 'Cycle Run' );
+
+      <!--Parameter-->
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_PARAMETER_SETTING', 'Parameter Setting' );
+
+      <!--Query-->
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_SHELF_STATUS', 'Shelf Status' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_SHELF_INFO', 'Shelf Information' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_MAGAZINE_INFO', 'Magazine Information' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_STOCK_TRS_CMD_INFO', 'Stocker Transfer Command Information' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_STOCK_TRS_CMD_HIS_INFO', 'Stocker Transfer Command Information History' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CIM_TRS_CMD_INFO', 'CIM Transfer Command Information' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CIM_TRS_CMD_HIS_INFO', 'CIM Transfer Command Information History' );
+
+      <!--Maintenance-->
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_PROHIBITED_SHELF', 'Prohibited Shelf' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_MODIFY_SHELF_DATA', 'Modify Shelf Data' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_SETTING_ZONE', 'Setting Zone' );
+      insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_MODIFY_MAGAZINE_DATA', 'Modify Magazine Data' );
+
+
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_BUFFER_OPERATION', 'Buffer Operation' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_WORK_ORDER_OPERATION', 'Work Order Operation' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_CST_DATA_DOWNLOAD', 'CST Data Download' );-->
+      <!--insert into UASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_EQ_MESSAGE_QUERY', 'EQ Message' );-->
+      <!--insert into UASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_HOST_MESSAGE_QUERY', 'Host Message' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_WIP_DATA_MAINTENANCE', 'WIP Data Maintenance' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_ALARM_MAINTENANCE', 'Alarm Maintenance' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_PPID_MAINTENANCE', 'PPID Maintenance' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_BC_PARAMETER', 'BC Parameter' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_LINE_STATUS_SETTING', 'Line Status Setting' );-->
+      <!--insert into BUASFNC (FUNC_CODE, FUNC_NAME) VALUES ( 'FUNC_DEBUG_FORM', 'Debug' );-->
+
+      <!--Administrator Authority-->
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_LOGOUT' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_PASSWORD_CHANGE' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_USER_MANAGEMENT' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_CLOSE_BC' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_CONNECTION_CONTROL' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_STOCKER_TRANSFER_COMMAND' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_CYCLE_RUN' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_PARAMETER_SETTING' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_SHELF_STATUS' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_SHELF_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_MAGAZINE_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_STOCK_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_STOCK_TRS_CMD_HIS_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_CIM_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_CIM_TRS_CMD_HIS_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_PROHIBITED_SHELF' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_MODIFY_SHELF_DATA' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_SETTING_ZONE' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ADMIN', 'FUNC_MODIFY_MAGAZINE_DATA' );
+
+
+      <!--Engineer Authority-->
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_LOGOUT' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_PASSWORD_CHANGE' );
+      <!--insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_USER_MANAGEMENT' );-->
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_CLOSE_BC' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_CONNECTION_CONTROL' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_STOCKER_TRANSFER_COMMAND' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_CYCLE_RUN' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_PARAMETER_SETTING' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_SHELF_STATUS' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_SHELF_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_MAGAZINE_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_STOCK_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_STOCK_TRS_CMD_HIS_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_CIM_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_CIM_TRS_CMD_HIS_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_PROHIBITED_SHELF' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_MODIFY_SHELF_DATA' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_SETTING_ZONE' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'ENG', 'FUNC_MODIFY_MAGAZINE_DATA' );
+
+      <!--Operator Authority-->
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_LOGOUT' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_PASSWORD_CHANGE' );
+      <!--insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_USER_MANAGEMENT' );-->
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_CLOSE_BC' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_CONNECTION_CONTROL' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_STOCKER_TRANSFER_COMMAND   ' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_CYCLE_RUN' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_PARAMETER_SETTING' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_SHELF_STATUS' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_SHELF_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_MAGAZINE_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_STOCK_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_STOCK_TRS_CMD_HIS_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_CIM_TRS_CMD_INFO' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_CIM_TRS_CMD_HIS_INFO' );
+      <!--insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_PROHIBITED_SHELF' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_MODIFY_SHELF_DATA' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_SETTING_ZONE' );
+      insert into BUASUFNC (USER_GRP, FUNC_CODE) VALUES ( 'OPER', 'FUNC_MODIFY_MAGAZINE_DATA' );-->
+
+
+    </create>
+    <drop></drop>
+  </database-object>
+</hibernate-mapping>

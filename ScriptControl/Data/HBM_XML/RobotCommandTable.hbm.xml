@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="RobotCommandTable" table="ROBOTCMD_TABLE" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Seq_No" type="int">
+      <column name="SEQ_NO" sql-type="int"/>
+    </id>
+    <property name="Stk_ID" type="string">
+      <column name="STK_ID" not-null="false" sql-type="char(15)"/>
+    </property>
+    <property name="Crr_ID" type="string">
+      <column name="CRR_ID" not-null="false" sql-type="char(10)"/>
+    </property>
+    <property name="Gen_Source" type="int">
+      <column name="GEN_SOURCE" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="Seq_No_Year" type="int">
+      <column name="SEQ_NO_YEAR" not-null="false" sql-type="char(4)"/>
+    </property>
+    <property name="Seq_No_Month" type="int">
+      <column name="SEQ_NO_MONTH" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="Seq_No_Day" type="int">
+      <column name="SEQ_NO_DAY" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="Seq_No_Hour" type="int">
+      <column name="SEQ_NO_HOUR" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="From_Loc" type="string">
+      <column name="FROM_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="To_Loc" type="string">
+      <column name="TO_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="Status_Time" type="DateTimeOffset">
+      <column name="STATUS_TIME"/>
+    </property>
+    <property name="Command_Gen_Time" type="DateTimeOffset">
+      <column name="COMMAND_GEN_TIME"/>
+    </property>
+    <property name="Step_Gen_Time" type="DateTimeOffset">
+      <column name="STEP_GEN_TIME" not-null="false" />
+    </property>
+    <property name="Command_Send_Time" type="DateTimeOffset">
+      <column name="COMMAND_SEND_TIME" />
+    </property>
+    <property name="Command_Start_Time" type="DateTimeOffset">
+      <column name="COMMAND_START_TIME" />
+    </property>
+    <property name="Command_End_Time" type="DateTimeOffset">
+      <column name="COMMAND_END_TIME" />
+    </property>
+    <property name="Command_Status" type="int">
+      <column name="COMMAND_STAT" sql-type="char(1)"/>
+    </property>
+    <property name="Command_Excute_Retune_Code" type="int">
+      <column name="COMMAND_EXCUTE_RETURN_CODE" sql-type="char(4)"/>
+    </property>
+    <property name="Step_Return_Code" type="int">
+      <column name="STEP_RETURN_CODE" sql-type="char(2)"/>
+    </property>
+    <property name="Command_Prioty" type="int">
+      <column name="COMMAND_PRIOTY" sql-type="char(3)"/>
+    </property>
+    <property name="UsingArm" type="string">
+      <column name="USINGARM" sql-type="char(1)"/>
+    </property>
+    <property name="Cmd_Sno" type="string">
+      <column name="CMD_SNO" sql-type="char(5)"/>
+    </property>
+    <property name="User_ID" type="string">
+      <column name="USER_ID" sql-type="char(30)"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,169 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "com.mirle.ibgAK0.EAP.HostMessage.E2H";
+// The greeting service definition.
+service EAP_K11_E2H {
+	//From EQ (EAP send to MCS)
+	rpc SendHost_EP11_Command (SendHost_EP11) returns (Reply_FromHost_HP11) {}
+	rpc SendHost_EW34_Command (SendHost_EW34) returns (Reply_FromHost_HW34) {}
+	rpc SendHost_EW35_Command (SendHost_EW35) returns (Reply_FromHost_HW35) {}
+	rpc SendHost_EW36_Command (SendHost_EW36) returns (Reply_FromHost_HW36) {}
+	rpc SendHost_ES45_Command (SendHost_ES45) returns (Reply_FromHost_HS45) {}
+	rpc SendHost_ES46_Command (SendHost_ES46) returns (Reply_FromHost_HS46) {}
+	rpc SendHost_ES49_Command (SendHost_ES49) returns (Reply_FromHost_HS49) {}
+	rpc SendHost_ES54_Command (SendHost_ES54) returns (Reply_FromHost_HS54) {}
+}
+//From EQ (EAP send to MCS)
+message Reply_FromHost_HP11{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_EP11{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BUFFER_ID = 6;
+	string BUNDLE_ID = 7;
+	string STATUS = 8;
+	string TRAY_TYPE = 9;
+}
+
+message Reply_FromHost_HW34{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_EW34{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BUNDLE_ID = 6;
+	string DELETE_LOCATION = 7;
+}
+
+message Reply_FromHost_HW35{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_EW35{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string TRANSFER_TYPE = 6;
+	string BUNDLE_ID = 7;
+	string LOCATION = 8;
+}
+
+message Reply_FromHost_HW36{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_EW36{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string LOCATION = 6;
+	string BUNDLE_ID = 7;
+	string EVENT_TYPE = 8;
+	string TRAY_TYPE = 9;
+	string CODE = 10;
+}
+
+message Reply_FromHost_HS45{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+message SendHost_ES45{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+
+message Reply_FromHost_HS46{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+message SendHost_ES46{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string EQUIPMENT_STATUS = 6;
+	string CIM_MODE = 7;
+	string RUN_MODE = 8;
+	string OPERATION_MODE = 9;
+	string ALARMWARNINGHAPPEN = 10;
+
+}
+
+message Reply_FromHost_HS49{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_ES49{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string ALARM_STATUS = 6;
+	string ALARM_LEVEL = 7;
+	string ALARM_CODE = 8;
+}
+
+message Reply_FromHost_HS54{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+message SendHost_ES54{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BCR_Bundle_ID = 6;
+	string Virtual_Bundle_ID = 7;
+	string MATERIAL_PRESENT = 8;
+	string EXECUTION_CMD_SEQUENCE_NO = 9;
+}
+

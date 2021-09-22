@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Cycle" table="CYCLE" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="CyclePK" class="com.mirle.ibg3k0.sc.Data.VO.CyclePKInfo, ScriptControl">
+      <key-property name="Cyc_No" type="string">
+        <column name="CYC_NO" sql-type="char(15)"/>
+      </key-property>
+      <key-property name="Wh_ID" type="string">
+        <column name="WH_ID" sql-type="char(5)"/>
+      </key-property>
+      <key-property name="Loc" type="string">
+        <column name="LOC" sql-type="char(8)"/>
+      </key-property>
+      <key-property name="Loc_TxNo" type="string">
+        <column name="LOC_TXNO" sql-type="char(15)"/>
+      </key-property>
+    </composite-id>
+    <property name="In_Date" type="string">
+      <column name="IN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_Date" type="string">
+      <column name="TRN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Cycle_Date" type="string">
+      <column name="CYCLE_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Expire_Date" type="string">
+      <column name="EXPIRE_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Item_No" type="string">
+      <column name="ITEM_NO" sql-type="char(50)"/>
+    </property>
+    <property name="In_Tkt_No" type="string">
+      <column name="IN_TKT_NO" sql-type="char(50)"/>
+    </property>
+    <property name="Lot_No" type="string">
+      <column name="LOT_NO" not-null="true" sql-type="char(30)"/>
+    </property>
+    <property name="Store_Code" type="string">
+      <column name="STORE_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Bank_Code" type="string">
+      <column name="BANK_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Qc_Code" type="string">
+      <column name="QC_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Item_Type" type="string">
+      <column name="ITEM_TYPE" not-null="true" sql-type="char(10)"/>
+    </property>
+    <property name="Plt_Qty" type="int">
+      <column name="PLT_QTY" sql-type="int"/>
+    </property>
+    <property name="Cyc_Qty" type="int">
+      <column name="CYC_QTY" sql-type="int"/>
+    </property>
+    <property name="Status" type="string">
+      <column name="STATUS" sql-type="char(1)"/>
+    </property>
+    <property name="LocDtl01" type="string">
+      <column name="LOCDTL01" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl02" type="string">
+      <column name="LOCDTL02" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl03" type="string">
+      <column name="LOCDTL03" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl04" type="string">
+      <column name="LOCDTL04" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl05" type="string">
+      <column name="LOCDTL05" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl06" type="string">
+      <column name="LOCDTL06" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl07" type="string">
+      <column name="LOCDTL07" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl08" type="string">
+      <column name="LOCDTL08" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl09" type="string">
+      <column name="LOCDTL09" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl10" type="string">
+      <column name="LOCDTL10" sql-type="char(20)"/>
+    </property>
+    <property name="Crr_ID" type="string">
+      <column name="CRR_ID" sql-type="char(24)"/>
+    </property>
+  </class>
+</hibernate-mapping>

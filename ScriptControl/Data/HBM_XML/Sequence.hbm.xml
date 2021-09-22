@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Sequence" table="ASEQUENCE" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Seq_Name" type="string">
+      <column name="SEQ_NAME" sql-type="char(12)"/>
+    </id>
+    <property name="Nxt_Val" type="long">
+      <column name="NXT_VAL" sql-type="bigint"/>
+    </property>
+    <property name="Record_Time" type="DateTime">
+      <column name="RECORD_TIME" sql-type="datetime"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Trn_Log" table="TRN_LOG" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Log_Date" type="string">
+      <column name="LOG_DATE" sql-type="char(20)"/>
+    </id>
+    <property name="Cmd_Sno" type="string">
+      <column name="CMD_SNO" sql-type="char(5)"/>
+    </property>
+    <property name="Cmd_TxNo" type="string">
+      <column name="CMD_TXNO" sql-type="char(15)"/>
+    </property>
+    <property name="Cmd_Sts" type="string">
+      <column name="CMD_STS" sql-type="char(2)"/>
+    </property>
+    <property name="Cmd_Abnormal" type="string">
+      <column name="CMD_ABNORMAL" sql-type="char(2)"/>
+    </property>
+    <property name="Prty" type="int">
+      <column name="PRTY" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Stn_No" type="string">
+      <column name="STN_NO" sql-type="char(4)"/>
+    </property>
+    <property name="Cmd_Mode" type="string">
+      <column name="CMD_MODE" sql-type="char(1)"/>
+    </property>
+    <property name="Io_Type" type="string">
+      <column name="IO_TYPE" sql-type="char(2)"/>
+    </property>
+    <property name="Wh_ID" type="string">
+      <column name="WH_ID" sql-type="char(5)"/>
+    </property>
+    <property name="Loc" type="string">
+      <column name="LOC" sql-type="char(4)"/>
+    </property>
+    <property name="New_Loc" type="string">
+      <column name="NEW_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="Mix_Qty" type="int">
+      <column name="MIX_QTY" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Avail" type="int">
+      <column name="AVAIL" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Zone_ID" type="string">
+      <column name="ZONE_ID" sql-type="char(10)"/>
+    </property>
+    <property name="Crt_Date" type="string">
+      <column name="CRT_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Exp_Date" type="string">
+      <column name="EXP_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="End_Date" type="string">
+      <column name="END_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_User" type="string">
+      <column name="TRN_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Host_Name" type="string">
+      <column name="HOST_NAME" sql-type="char(30)"/>
+    </property>
+    <property name="Trace" type="string">
+      <column name="TRACE" sql-type="char(3)"/>
+    </property>
+    <property name="Plt_Count" type="string">
+      <column name="PLT_COUNT" sql-type="char(2)"/>
+    </property>
+    <property name="Equ_No" type="string">
+      <column name="EQU_NO" sql-type="char(2)"/>
+    </property>
+    <property name="Loc_TxNo" type="string">
+      <column name="LOC_TXNO" sql-type="char(15)"/>
+    </property>
+    <property name="Item_No" type="string">
+      <column name="ITEM_NO" sql-type="char(50)"/>
+    </property>
+    <property name="Lot_No" type="string">
+      <column name="LOT_NO" sql-type="char(30)"/>
+    </property>
+    <property name="Qc_Code" type="string">
+      <column name="QC_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Item_Type" type="string">
+      <column name="ITEM_TYPE" sql-type="char(10)"/>
+    </property>
+    <property name="Plt_Qty" type="int">
+      <column name="PLT_QTY" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Trn_Qty" type="int">
+      <column name="TRN_QTY" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="In_Date" type="string">
+      <column name="IN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Expire_Date" type="string">
+      <column name="EXPIRE_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="In_Tkt_No" type="string">
+      <column name="IN_TKT_NO" sql-type="char(20)"/>
+    </property>
+    <property name="In_Tkt_Seq" type="string">
+      <column name="IN_TKT_SEQ" sql-type="char(5)"/>
+    </property>
+    <property name="Store_Code" type="string">
+      <column name="STORE_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Bank_Code" type="string">
+      <column name="BANK_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Trn_Tkt_No" type="string">
+      <column name="TRN_TKT_NO" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_Tkt_Seq" type="string">
+      <column name="TRN_TKT_SEQ" sql-type="char(5)"/>
+    </property>
+    <property name="Cyc_No" type="string">
+      <column name="CYC_NO" sql-type="char(15)"/>
+    </property>
+    <property name="Cyc_Date" type="string">
+      <column name="CYCLE_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl01" type="string">
+      <column name="LOCDTL01" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl02" type="string">
+      <column name="LOCDTL02" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl03" type="string">
+      <column name="LOCDTL03" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl04" type="string">
+      <column name="LOCDTL04" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl05" type="string">
+      <column name="LOCDTL05" sql-type="char(20)"/>
+    </property>
+    <property name="LocDtl06" type="string">
+      <column name="LOCDTL06" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_Date" type="string">
+      <column name="TRN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Created_by" type="string">
+      <column name="Created_by" sql-type="char(20)"/>
+    </property>
+    <property name="Created_Date" type="string">
+      <column name="Created_Date" sql-type="char(20)"/>
+    </property>
+    <property name="Updated_Date" type="string">
+      <column name="Updated_Date" sql-type="char(20)"/>
+    </property>
+    <property name="Updated_by" type="string">
+      <column name="Updated_by" sql-type="char(20)"/>
+    </property>
+    <property name="Prog_ID" type="string">
+      <column name="PROG_ID" sql-type="char(20)"/>
+    </property>
+    <property name="Xfr_Speed" type="int">
+      <column name="XFR_SPEED" sql-type="int"/>
+    </property>
+    <property name="Alo_Qty" type="int">
+      <column name="ALO_QTY" sql-type="int" default="0"/>
+    </property>
+    <property name="OutPort_Flg" type="string">
+      <column name="OUTPORT_FLG" sql-type="char(1)"/>
+    </property>
+    <property name="Cmd_No" type="string">
+      <column name="CMD_NO" sql-type="char(4)"/>
+    </property>
+    <property name="Cmd_Name" type="string">
+      <column name="CMD_NAME" sql-type="char(35)"/>
+    </property>
+  </class>
+</hibernate-mapping>

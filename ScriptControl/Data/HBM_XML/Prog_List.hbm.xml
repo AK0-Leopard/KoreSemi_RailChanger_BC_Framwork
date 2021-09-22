@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Prog_List" table="PROG_LIST" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="ProgID" type="string">
+      <column name="PROGID" sql-type="char(20)"/>
+    </id>
+    <property name="ProgName" type="string">
+      <column name="PROGNAME" not-null="true" sql-type="char(50)"/>
+    </property>
+    <property name="ProgFile" type="string">
+      <column name="PROGFILE" not-null="true" sql-type="char(50)"/>
+    </property>
+  </class>
+</hibernate-mapping>

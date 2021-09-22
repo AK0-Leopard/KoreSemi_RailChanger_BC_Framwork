@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Sno_Max" table="SNO_MAX" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Sno_Type" type="string">
+      <column name="SNO_TYPE" sql-type="char(10)"/>
+    </id>
+    <property name="Month_Flag" type="string">
+      <column name="MONTH_FLAG" sql-type="char(1)"/>
+    </property>
+    <property name="Init_Sno" type="int">
+      <column name="INIT_SNO" sql-type="int"/>
+    </property>
+    <property name="Max_Sno" type="int">
+      <column name="MAX_SNO" sql-type="int"/>
+    </property>
+    <property name="Sno_Len" type="int">
+      <column name="SNO_LEN" sql-type="int"/>
+    </property>
+  </class>
+</hibernate-mapping>

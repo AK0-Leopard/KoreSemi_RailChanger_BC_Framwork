@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Alarm" table="BALARM" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="AlarmPK" class="com.mirle.ibg3k0.sc.Data.VO.AlarmPKInfo, ScriptControl">
+      <key-property name="EQPT_ID" type="string">
+        <column name="EQPT_ID" sql-type="char(15)"/>
+      </key-property>
+      <key-property name="Unit_Num" type="int">
+        <column name="UNIT_NUM" sql-type="int"/>
+      </key-property>
+      <key-property name="Rpt_Date_Time" type="string">
+        <column name="RPT_DATE_TIME" sql-type="char(19)"/>
+      </key-property>
+    </composite-id>
+    <property name="Alarm_Code" type="string">
+      <column name="ALAM_CODE" not-null="true" sql-type="char(10)"/>
+    </property>
+    <property name="Alarm_Affect_Count" type="int">
+      <column name="ALAM_AFFECT_COUNT" not-null="true" sql-type="char(3)"/>
+    </property>
+    <property name="Alarm_Lvl" type="int">
+      <column name="ALAM_LVL" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Alarm_Stat" type="int">
+      <column name="ALAM_STAT" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Alarm_Desc" type="string">
+      <column name="ALAM_DESC" sql-type="char(80)"/>
+    </property>
+  </class>
+</hibernate-mapping>

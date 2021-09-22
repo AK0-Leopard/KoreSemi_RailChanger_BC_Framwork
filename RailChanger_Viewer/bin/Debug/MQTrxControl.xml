@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MQTrxControl</name>
+    </assembly>
+    <members>
+        <member name="P:com.mirle.ibg3k0.mqc.app.MQCApplication.TxLogPath">
+            <summary>
+            取得Transaction XML Log路徑
+            </summary>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.app.MQCApplication.UserPath">
+            <summary>
+            取得使用者預設路徑
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.getInstance">
+            <summary>
+            取得MQCApplication實例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXML">
+            <summary>
+            取得TrxXML，用於傳送Transaction input並取得回傳的Transaction output Message
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXML(System.String)">
+            <summary>
+            取得TrxXML，用於傳送Transaction input並取得回傳的Transaction output Message
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXMLReply(System.String,com.mirle.ibg3k0.mqc.common.MainProcess)">
+            <summary>
+            用於監聽特定Queue,
+            並進行特定處理及回應
+            </summary>
+            <param name="listenQueueName">監聽的Queue名稱</param>
+            <param name="mainProcess">處理函式</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXMLReply(System.String,System.String,com.mirle.ibg3k0.mqc.common.MainProcess)">
+            <summary>
+            用於監聽特定Queue,
+            並進行特定處理及回應
+            </summary>
+            <param name="mq_id">MQ ID</param>
+            <param name="listenQueueName">監聽的Queue名稱</param>
+            <param name="mainProcess">處理函式</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXMLReply(System.String,com.mirle.ibg3k0.mqc.common.MainProcessText)">
+            <summary>
+            用於監聽特定Queue,
+            並進行特定處理及回應。但並不會對Queue Message進行轉換為Tx Object
+            </summary>
+            <param name="listenQueueName">監聽的Queue名稱</param>
+            <param name="mainProcess">處理函式</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.app.MQCApplication.TrxXMLReply(System.String,System.String,com.mirle.ibg3k0.mqc.common.MainProcessText)">
+            <summary>
+            用於監聽特定Queue,
+            並進行特定處理及回應。但並不會對Queue Message進行轉換為Tx Object
+            </summary>
+            <param name="mq_id">MQ ID</param>
+            <param name="listenQueueName">監聽的Queue名稱</param>
+            <param name="mainProcess">處理函式</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.MQEnvConfigSectionHandler">
+            <summary>
+            MQ環境設定的解析處理類別
+            </summary>
+        </member>
+        <member name="F:com.mirle.ibg3k0.mqc.common.MQsEnvConfigSections.mqConfigList">
+            <summary>
+            The mq configuration list
+            </summary>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.common.MQsEnvConfigSections.MqConfigList">
+            <summary>
+            Gets the mq configuration list.
+            </summary>
+            <value>The mq configuration list.</value>
+        </member>
+        <member name="F:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.mq_id">
+            <summary>
+            MQ ID
+            </summary>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.MQ_ID">
+            <summary>
+            Gets the mq_ identifier.
+            </summary>
+            <value>The mq_ identifier.</value>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.SelectedMQType">
+            <summary>
+            MQ Server類型
+            </summary>
+        </member>
+        <member name="F:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.MQTYPE_MSMQ">
+            <summary>
+            MSMQ
+            </summary>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.DefaultPrimarySelect">
+            <summary>
+            預設使用的MQ Server設定
+            </summary>
+        </member>
+        <member name="P:com.mirle.ibg3k0.mqc.common.MQEnvConfigSections.WaitIntervalSec">
+            <summary>
+            等待回應的Timeout時間限制
+            </summary>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.TXHandler">
+            <summary>
+            TX Handler. 由Transaction input/output轉換為Transaction Object
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TXHandler.#ctor(com.mirle.ibg3k0.mqc.app.MQCApplication,System.Boolean)">
+            <summary>
+            根據參數建立轉換input/output的Handler
+            </summary>
+            <param name="mqcApp">MQCApplication的實體</param>
+            <param name="isOutput">若為true，則表示轉為Output，反之轉為Input</param>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.StringMessageFormatter">
+            <summary>
+            String Message Formatter
+            會在UTF-8和iso-8859-1之間轉換
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.Int32@,System.String@)">
+            <summary>
+            傳送inTrx，並等待回覆
+            </summary>
+            <param name="inTrx">Input Transaction</param>
+            <param name="rtnCode">Client Return Code</param>
+            <param name="mqRtnMsg">Client Return Message</param>
+            <returns>Server Reply Output Transaction</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.String,System.Int32@,System.String@)">
+            <summary>
+            送出Transaction，並自行指定回覆的Queue Name
+            </summary>
+            <param name="inTrx"></param>
+            <param name="directReplyQueueName">用於特別指定Reply的Queue Name</param>
+            <param name="mqRtnCode">Client Return Code</param>
+            <param name="mqRtnMsg">Client Return Message</param>
+            <returns>Server Reply Output Transaction</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.String,System.String,System.Int32@,System.String@)">
+            <summary>
+            送出Transaction，並自行指定寫入及回覆的Queue Name
+            </summary>
+            <param name="inTrx"></param>
+            <param name="directInputQueueName">用於特別指定Input的Queue Name</param>
+            <param name="directReplyQueueName">用於特別指定Reply的Queue Name</param>
+            <param name="mqRtnCode">Client Return Code</param>
+            <param name="mqRtnMsg">Client Return Message</param>
+            <returns>Server Reply Output Transaction</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX)">
+            <summary>
+            傳送inTrx，並等待回覆
+            </summary>
+            <param name="inTrx">Input Transaction</param>
+            <returns>Server Reply Output Transaction</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.getQueueMsg(System.String)">
+            <summary>
+            取得指定Queue的所有Message
+            </summary>
+            <param name="queueName">Queue Name</param>
+            <returns>Server Reply All Message ID, Tx From Queue</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.sendReplyMsg(System.String,System.String,com.mirle.ibg3k0.mqc.tx.BaseTX)">
+            <summary>
+            將Transaction寫入Share Reply Queue
+            </summary>
+            <param name="msgID">Message ID</param>
+            <param name="inTrx">Reply Tx</param>
+            <returns>Server Reply Result</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXML.parseMsg(System.Messaging.Message)">
+            <summary>
+            將Message轉換為Transaction
+            </summary>
+            <param name="msg">Message</param>
+            <returns>Server Reply Transaction</returns>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ">
+            <summary>
+            繼承自TrxXML共用介面，此為MSMQ專用
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.String,System.Int32@,System.String@)">
+            <summary>
+            送出Transaction，並自行指定回覆的Queue Name
+            </summary>
+            <param name="inTrx"></param>
+            <param name="directReplyQueueName">用於特別指定Reply的Queue Name</param>
+            <param name="mqRtnCode">MSMQ的Return Code</param>
+            <param name="mqRtnMsg">MQ Controller的Return Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.String,System.String,System.Int32@,System.String@)">
+            <summary>
+            送出Transaction，並自行指定寫入及回覆的Queue Name
+            </summary>
+            <param name="inTrx"></param>
+            <param name="directInputQueueName">用於特別指定Input的Queue Name</param>
+            <param name="directReplyQueueName">用於特別指定Reply的Queue Name</param>
+            <param name="mqRtnCode">Client Return Code</param>
+            <param name="mqRtnMsg">Client Return Message</param>
+            <returns>Server Reply Output Transaction</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.sendRecv(com.mirle.ibg3k0.mqc.tx.BaseTX,System.Int32@,System.String@)">
+            <summary>
+            送出Transaction，並接收回覆
+            </summary>
+            <param name="inTrx"></param>
+            <param name="mqRtnCode"></param>
+            <param name="mqRtnMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.getQueueMsg(System.String)">
+            <summary>
+            取得指定Queue的所有Message
+            </summary>
+            <param name="queueName">Queue Name</param>
+            <returns>Server Reply All Message ID, Tx From Queue</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.sendReplyMsg(System.String,System.String,com.mirle.ibg3k0.mqc.tx.BaseTX)">
+            <summary>
+            將Transaction寫入Share Reply Queue
+            </summary>
+            <param name="msgID">Message ID</param>
+            <param name="inTrx">Reply Tx</param>
+            <returns>Server Reply Result</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLMSMQ.parseMsg(System.Messaging.Message)">
+            <summary>
+            將Message轉換為Transaction
+            </summary>
+            <param name="msg">Message</param>
+            <returns>Server Reply Transaction</returns>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.TrxXMLReply">
+            <summary>
+            處理請求Message，並回覆Message
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReply.startListen">
+            <summary>
+            開始聆聽請求
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReply.stopListen">
+            <summary>
+            結束聆聽請求
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReply.setAlarmHandler(com.mirle.ibg3k0.mqc.data.handler.AlarmHandlerIF)">
+            <summary>
+            指定Alarm發生時，執行的Handler
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.MainProcess">
+            <summary>
+            主要處理程序。
+            </summary>
+            <param name="input">請求的Transaction Input Message</param>
+            <returns>回應的Transaction Output Message</returns>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.common.MainProcessText">
+            <summary>
+            主要處理程序。但不會對從Queue讀到的資料作任何轉換。
+            </summary>
+            <param name="input">請求的Input Message</param>
+            <returns>回應的Output Message</returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReplyMSMQMgm.startListen">
+            <summary>
+            開始聆聽
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReplyMSMQMgm.releaseResourceOfQueue">
+            <summary>
+            釋放Queue所佔用的資源
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.common.TrxXMLReplyMSMQMgm.stopListen">
+            <summary>
+            停止聆聽
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.data.handler.AlarmHandlerIF.mainProcess(System.Int32,System.String)">
+            <summary>
+            The Main Function of Alarm Handler Class
+            </summary>
+            <param name="alarmType"></param>
+            <param name="alarmMessage"></param>
+        </member>
+        <member name="T:com.mirle.ibg3k0.mqc.tx.BaseTX">
+            <summary>
+            Transaction的基本型別
+            </summary>
+        </member>
+        <member name="F:com.mirle.ibg3k0.mqc.tx.BaseTX.TX_TYPE_INPUT">
+            <summary>
+            Transaction Input
+            </summary>
+        </member>
+        <member name="F:com.mirle.ibg3k0.mqc.tx.BaseTX.TX_TYPE_OUTPUT">
+            <summary>
+            Transaction Outpu
+            </summary>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.tx.BaseTX.getReturnCode">
+            <summary>
+            取得回覆的Code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.tx.BaseTX.getReturnMessage">
+            <summary>
+            取得回覆的Message
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.mirle.ibg3k0.mqc.tx.BaseTX.toXMLString">
+            <summary>
+            將Transaction轉換為XML String
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

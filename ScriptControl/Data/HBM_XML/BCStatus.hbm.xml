@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="BCStatus" table="BCSTAT" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="BC_ID" type="string">
+      <column name="BC_ID" sql-type="char(6)"/>
+    </id>
+    <property name="Close_Mode" type="string">
+      <column name="CLOSE_MODE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Run_Timestamp" type="string">
+      <column name="RUN_TIMESTAMP" sql-type="char(16)"/>
+    </property>
+  </class>
+</hibernate-mapping>

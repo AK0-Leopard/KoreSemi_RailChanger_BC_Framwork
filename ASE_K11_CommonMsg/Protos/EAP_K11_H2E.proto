@@ -1,0 +1,173 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "com.mirle.ibgAK0.EAP.HostMessage.H2E";
+// The greeting service definition.
+service EAP_K11_H2E {
+	//From Host (MCS send to EAP)
+	rpc FromHost_HP02_Command (FromHost_HP02) returns (ReplyHost_EP02) {}
+	rpc FromHost_HW33_Command (FromHost_HW33) returns (ReplyHost_EW33) {}
+	rpc FromHost_HW37_Command (FromHost_HW37) returns (ReplyHost_EW37) {}
+	rpc FromHost_HS42_Command (FromHost_HS42) returns (ReplyHost_ES42) {}
+	rpc FromHost_HS44_Command (FromHost_HS44) returns (ReplyHost_ES44) {}
+	rpc FromHost_HS48_Command (FromHost_HS48) returns (ReplyHost_ES48) {}
+	rpc FromHost_HS64_Command (FromHost_HS64) returns (ReplyHost_ES64) {}
+	rpc FromHost_HC05_Command (FromHost_HC05) returns (ReplyHost_EC05) {}
+	rpc FromHost_HC06_Command (FromHost_HC06) returns (ReplyHost_EC06) {}
+}
+
+//From Host (MCS send to EAP)
+message FromHost_HP02{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BUFFER_ID = 6;
+	string BUNDLE_ID = 7;
+	string TO_PORT_ID = 8;
+}
+message ReplyHost_EP02{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+
+message FromHost_HW33{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BUNDLE_ID = 6;
+	string TO_BUFFER_PORT_ID = 7;
+	string TRAY_TYPE = 8;
+}
+message ReplyHost_EW33{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+
+message FromHost_HW37{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string BUNDLE_ID = 6;
+	string LOCATION = 7;
+	string POSITION_NO = 8;
+}
+message ReplyHost_EW37{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+
+message FromHost_HS42{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string MESSAGE = 6;
+}
+message ReplyHost_ES42{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+
+message FromHost_HS44{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+message ReplyHost_ES44{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+
+message FromHost_HS48{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CIM_ON_OFF = 6;
+}
+message ReplyHost_ES48{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+
+message FromHost_HS64{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string RUN_MODE = 6;
+}
+message ReplyHost_ES64{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+
+message FromHost_HC05{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string PORT_ID = 6;
+	string CAPACITY = 7;
+	string OTHER_CAPACITY = 8;
+}
+message ReplyHost_EC05{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}
+
+message FromHost_HC06{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+}
+message ReplyHost_EC06{
+	string FUNCTIONID = 1;
+	string FUNCTIONSEQUENCENO = 2;
+	string FUNCTIONNAME = 3;
+	string EQID = 4;
+	string REPORT_TIME = 5;
+	string CODE = 6;
+}

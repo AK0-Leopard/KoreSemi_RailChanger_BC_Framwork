@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="OperationHis" table="BHOPERATION" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Seq_No" type="string">
+      <column name="SEQ_NO"/>
+      <generator class="uuid.hex"/>
+    </id>
+    <property name="T_Stamp" type="string">
+      <column name="T_STAMP" sql-type="char(19)"/>
+    </property>
+    <property name="User_ID" type="string">
+      <column name="USER_ID" sql-type="char(20)"/>
+    </property>
+    <property name="Form_Name" type="string">
+      <column name="FORM_NAME" sql-type="char(30)"/>
+    </property>
+    <property name="Action" type="string">
+      <column name="ACTION" sql-type="text"/>
+    </property>
+  </class>
+</hibernate-mapping>

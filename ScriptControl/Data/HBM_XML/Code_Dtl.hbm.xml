@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Code_Dtl" table="CODE_DTL" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="CodeDtlPK" class="com.mirle.ibg3k0.sc.Data.VO.CodeDtlPKInfo, ScriptControl">
+      <key-property name="Code_Type" type="string">
+        <column name="CODE_TYPE" sql-type="char(10)"/>
+      </key-property>
+      <key-property name="Code_No" type="string">
+        <column name="CODE_NO" sql-type="char(30)"/>
+      </key-property>
+    </composite-id>
+    <property name="Code_Name" type="string">
+      <column name="CODE_NAME" sql-type="char(50)"/>
+    </property>
+    <property name="Limit_Len" type="int">
+      <column name="LIMIT_LEN" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Code_Color" type="string">
+      <column name="CODE_COLOR" sql-type="char(10)"/>
+    </property>
+    <property name="Code_Ul" type="string">
+      <column name="CODE_UL" sql-type="char(10)"/>
+    </property>
+    <property name="Code_Ll" type="string">
+      <column name="CODE_LL" sql-type="char(10)"/>
+    </property>
+    <property name="Is_Sys" type="string">
+      <column name="IS_SYS" sql-type="char(1)"/>
+    </property>
+  </class>
+</hibernate-mapping>

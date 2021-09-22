@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Loc_Mst" table="LOC_MST" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="LocMstPK" class="com.mirle.ibg3k0.sc.Data.VO.LocMstPKInfo, ScriptControl">
+      <key-property name="Wh_ID" type="string">
+        <column name="WH_ID" sql-type="char(5)"/>
+      </key-property>
+      <key-property name="Loc" type="string">
+        <column name="LOC" sql-type="char(4)"/>
+      </key-property>
+    </composite-id>
+    <property name="Loc_Sts" type="string">
+      <column name="LOC_STS" sql-type="char(1)" />
+    </property>
+    <property name="Old_Sts" type="string">
+      <column name="OLD_STS" sql-type="char(1)"/>
+    </property>
+    <property name="Mix_Qty" type="int">
+      <column name="MIX_QTY" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Avail" type="int">
+      <column name="AVAIL" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Row_X" type="int">
+      <column name="ROW_X" sql-type="int"/>
+    </property>
+    <property name="Bay_Y" type="int">
+      <column name="BAY_Y" sql-type="int"/>
+    </property>
+    <property name="Lvl_Z" type="int">
+      <column name="LVL_Z" sql-type="int"/>
+    </property>
+    <property name="Loc_ID" type="string">
+      <column name="LOC_ID" sql-type="char(20)"/>
+    </property>
+    <property name="Loc_Size" type="string">
+      <column name="LOC_SIZE" sql-type="char(1)"/>
+    </property>
+    <property name="Zone_ID" type="string">
+      <column name="ZONE_ID" sql-type="char(10)"/>
+    </property>
+    <property name="Cycle_Date" type="string">
+      <column name="CYCLE_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_Date" type="string">
+      <column name="TRN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Loc_DD" type="string">
+      <column name="LOC_DD" sql-type="char(8)"/>
+    </property>
+    <property name="Storage_Type" type="string">
+      <column name="STORAGE_TYPE" not-null="true" sql-type="char(2)" />
+    </property>
+    <property name="Remark" type="string">
+      <column name="REMARK" sql-type="char(250)"/>
+    </property>
+    <property name="Creater_By" type="string">
+      <column name="CREATED_BY" sql-type="char(30)"/>
+    </property>
+    <property name="Inhibit_By" type="string">
+      <column name="INHIBIT_BY" sql-type="char(30)"/>
+    </property>
+    <property name="Trn_User" type="string">
+      <column name="TRN_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Equ_No" type="string">
+      <column name="EQU_NO" sql-type="char(2)"/>
+    </property>
+    <property name="Equ_RowNo" type="string">
+      <column name="EQU_ROWNO" sql-type="char(1)"/>
+    </property>
+    <property name="Plt_Count" type="string">
+      <column name="PLT_COUNT" sql-type="char(2)"/>
+    </property>
+    <!--新欄位-->
+    <property name="Enable_Flag" type="int">
+      <column name="ENABLE_FLAG" sql-type="int"/>
+    </property>
+  </class>
+</hibernate-mapping>

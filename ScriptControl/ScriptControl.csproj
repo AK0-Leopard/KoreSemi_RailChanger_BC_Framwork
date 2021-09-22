@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34F0D133-FC32-4219-BCA9-9D0BC9A74AD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.mirle.ibg3k0.sc</RootNamespace>
+    <AssemblyName>ScriptControl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>C:\Users\bob\Desktop\findZeroRefCode.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Appccelerate.Fundamentals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Appccelerate.Fundamentals.dll</HintPath>
+    </Reference>
+    <Reference Include="Appccelerate.StateMachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Appccelerate.StateMachine.dll</HintPath>
+    </Reference>
+    <Reference Include="BlockControlFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\BlockControlFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.7.3.0\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericParsing, Version=1.1.3.20921, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\GenericParsing.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.17.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.17.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.37.1\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.37.1\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="hasp_net_windows, Version=7.1.1.42581, Culture=neutral, PublicKeyToken=56120be447701319, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\hasp_net_windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.1.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.1\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.1.0.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.1.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Mirle.AK0.Hlt.Communications.Sockets.TCPClients, Version=1.0.7635.28910, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Mirle.AK0.Hlt.Communications.Sockets.TCPClients.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirle.AK0.Hlt.Utils, Version=1.0.7635.28910, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Mirle.AK0.Hlt.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MirleGoWpfTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MirleGoWpfTools.dll</HintPath>
+    </Reference>
+    <Reference Include="MPLCConnectionControl, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MPLCConnectionControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MQTrxControl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\MQTrxControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.5\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="NATS.Client, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NATS.Client.0.9.0\lib\net45\NATS.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.7.3.0\lib\net461\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="SECSTrxControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\SECSTrxControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Designer, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\SQLite.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="STAN.Client, Version=0.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\STAN.Client.0.1.6\lib\net45\STAN.Client.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Abstractions, Version=1.4.0.32, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UtilityCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\UtilityCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility_LogQuery, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Utility_LogQuery.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\PLC_Functions\Rail_Changer_R.cs" />
+    <Compile Include="Data\ValueDefMapAction\EAPDefaultValueDefMapAction.cs" />
+    <Compile Include="Data\ValueDefMapAction\RailChangerDefaultValueDefMapAction.cs" />
+    <Compile Include="WebAPI\ToHostCommand.cs" />
+    <Compile Include="WebAPI\ReceiveHostCommand.cs" />
+    <Compile Include="App\SCAppConstants.cs" />
+    <Compile Include="App\SCApplication.cs" />
+    <Compile Include="BLL\AlarmBLL.cs" />
+    <Compile Include="BLL\BCSystemBLL.cs" />
+    <Compile Include="BLL\CarrierBLL.cs" />
+    <Compile Include="BLL\CmdBLL.cs" />
+    <Compile Include="BLL\DcsBLL.cs" />
+    <Compile Include="BLL\LineBLL.cs" />
+    <Compile Include="BLL\SequenceBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="Common\EQObjCacheManager.cs" />
+    <Compile Include="Common\ObjectPool.cs" />
+    <Compile Include="Common\RCSFaced.cs" />
+    <Compile Include="Common\RobotCMDUtility.cs" />
+    <Compile Include="Common\SCUtility.cs" />
+    <Compile Include="Common\CmdConst.cs" />
+    <Compile Include="ConfigHandler\ProcessDataConfigHandler.cs" />
+    <Compile Include="ConfigHandler\SVDataConfigHandler.cs" />
+    <Compile Include="ConfigHandler\RecipeParameterConfigHandler.cs" />
+    <Compile Include="ConfigHandler\ECIDConfigHandler.cs" />
+    <Compile Include="Data\BackgroundWork\BackgroundWorkSample.cs" />
+    <Compile Include="Data\DAO\AlarmDao.cs" />
+    <Compile Include="Data\DAO\MergeCmdHisDao.cs" />
+    <Compile Include="Data\DAO\MergeCmdDao.cs" />
+    <Compile Include="Data\DAO\PortPosMapDao.cs" />
+    <Compile Include="Data\DAO\CarrierHisDao.cs" />
+    <Compile Include="Data\DAO\RobotCommandListHisDao.cs" />
+    <Compile Include="Data\DAO\RobotCommandListDao.cs" />
+    <Compile Include="Data\DAO\RobotCommandTableHisDao.cs" />
+    <Compile Include="Data\DAO\RobotCommandTableDao.cs" />
+    <Compile Include="Data\DAO\SequenceDao.cs" />
+    <Compile Include="Data\DAO\SnoCtlDao.cs" />
+    <Compile Include="Data\DAO\CmdHisDao.cs" />
+    <Compile Include="Data\DAO\ParameterDao.cs" />
+    <Compile Include="Data\DAO\AlarmMapDao.cs" />
+    <Compile Include="Data\DAO\BCStatusDao.cs" />
+    <Compile Include="Data\DAO\LocDtlDao.cs" />
+    <Compile Include="Data\DAO\CarrierDao.cs" />
+    <Compile Include="Data\DAO\CmdDtlDao.cs" />
+    <Compile Include="Data\DAO\CmdMstDao.cs" />
+    <Compile Include="Data\DAO\ECDataMapDao.cs" />
+    <Compile Include="Data\DAO\EqptDao.cs" />
+    <Compile Include="Data\DAO\FunctionCodeDao.cs" />
+    <Compile Include="Data\DAO\LineDao.cs" />
+    <Compile Include="Data\DAO\LocMstDao.cs" />
+    <Compile Include="Data\DAO\MainAlarmDao.cs" />
+    <Compile Include="Data\DAO\NodeDao.cs" />
+    <Compile Include="Data\DAO\OperationHisDao.cs" />
+    <Compile Include="Data\DAO\PortDao.cs" />
+    <Compile Include="Data\DAO\SVDataMapDao.cs" />
+    <Compile Include="Data\DAO\UserGroupDao.cs" />
+    <Compile Include="Data\JSON\BaseReplyJson.cs" />
+    <Compile Include="Data\JSON\ConnectJson.cs" />
+    <Compile Include="Data\JSON\LinkJson.cs" />
+    <Compile Include="Data\JSON\BaseSendJson.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEUNCRTi_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\CrrTrxReport.cs" />
+    <Compile Include="Data\MQ_TX\MES\CrrHoldReport.cs" />
+    <Compile Include="Data\MQ_TX\MES\CrrMoveReport.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPi_a2 .cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLREPo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHLRERi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIREPi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCHIRERo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREPINVo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREPINVi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREPINVi_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZMNCREQo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZUPLPTNo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZUPLPTNi_a3.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZUPLPTNi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZUPLPTNi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZUPLPTNi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREQINVo_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREQINVo_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREQINVo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREQINVi_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZREQINVi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMPOSo_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMPOSi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMPOSi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMPOSo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMSTAo_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMSTAi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMSTAi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMSTAi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMSTAo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMPOSi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCXFCANo_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCXFCANo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCXFCANi_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCXFCANi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRi_a4.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRi_a3.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMXFRo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRi_a1.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRi_a2.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRi_a3.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRi_a4.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMMFRo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMCANi.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMCANi_a.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMCANo.cs" />
+    <Compile Include="Data\MQ_TX\MES\BZCLMCANo_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCUACCHi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCUACCHo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEPTSTo_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEPTSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEPTSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEUNCRTo_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEUNCRTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEBCRRFi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEBCRRFi_a1.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEBCRRFi_a2.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEBCRRFo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEUNCRTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEPTSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEPTSTi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEPTSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQAVAo_a2.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQAVAo_a1.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQAVAi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECNCHGi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQAVAo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRERi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWIi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRERi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWIi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECNCHGo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRERo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWIo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWOi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWOi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECARWOo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQPSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQPSTo_a2.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQPSTo_a1.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDILCSSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDILCSSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIEQPSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIXFRIFo_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIXFRIFo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDIXFRIFi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPSTi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRSTi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRCMo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRCMi_a2.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRCMi_a1.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEXFRCMi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDESTOREo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDESTOREi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDESTOREi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRRRMo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRRRMi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRRRMi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRINSo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRINSi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDECRINSi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPALo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPALi_a2.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPALi_a1.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDEEQPALi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDELCSSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDELCSSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCPRICHi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCPRICHo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCXFRCHo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCXFRCHi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCXFRCDo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCXFRCDi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCXFRCDi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCDTSYNi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCDTSYNo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCRMREQo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCRMREQi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCCNREQo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCCNREQi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCALTZNo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCALTZNi_a.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DDCALTZNi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DPCAGVSTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DPCAGVSTo.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DPSWPPOTi.cs" />
+    <Compile Include="Data\MQ_TX\LCS\DPSWPPOTo.cs" />
+    <Compile Include="Data\MQ_TX\XlgLen.cs" />
+    <Compile Include="Data\DAO\UnitDao.cs" />
+    <Compile Include="Data\DAO\UserDao.cs" />
+    <Compile Include="Data\DAO\UserFuncDao.cs" />
+    <Compile Include="Data\DAO\ZoneDao.cs" />
+    <Compile Include="Data\DAO\EqptMapDao.cs" />
+    <Compile Include="Data\DAO\UnitMapDao.cs" />
+    <Compile Include="Data\InitAction\ShareMemoryInitProcess_Base.cs" />
+    <Compile Include="Data\PLC_Functions\Rail_Changer_W.cs" />
+    <Compile Include="Data\PLC_Functions\PLCElement .cs" />
+    <Compile Include="Data\PLC_Functions\PLC_FunBase.cs" />
+    <Compile Include="Data\TimerAction\BCSystemStatusTimer.cs" />
+    <Compile Include="Data\TimerAction\HostConnectCheck.cs" />
+    <Compile Include="Data\TimerAction\LinkStatusCheck.cs" />
+    <Compile Include="Data\TimerAction\MasterPCConnection.cs" />
+    <Compile Include="Data\ValueDefMapAction\BCDefaultValueDefMapAction.cs" />
+    <Compile Include="Data\ValueDefMapAction\HostDefaultValueDefMapAction.cs" />
+    <Compile Include="Data\ValueDefMapAction\ValueDefMapActionBase.cs" />
+    <Compile Include="Data\VO\RobotCommandListHis.cs" />
+    <Compile Include="Data\VO\RobotCommandTableHis.cs" />
+    <Compile Include="Data\VO\UnSendMsg.cs" />
+    <Compile Include="Data\VO\MergeCmdHis.cs" />
+    <Compile Include="Data\VO\MergeCmd.cs" />
+    <Compile Include="Data\VO\CmdErrorProcClass.cs" />
+    <Compile Include="Data\VO\WipRejectStat.cs" />
+    <Compile Include="Data\VO\PosReport.cs" />
+    <Compile Include="Data\VO\JobRoute.cs" />
+    <Compile Include="Data\VO\PortPosMap.cs" />
+    <Compile Include="Data\VO\PortCmdChk.cs" />
+    <Compile Include="Data\VO\CmdChkLcs.cs" />
+    <Compile Include="Data\VO\CmdChk.cs" />
+    <Compile Include="Data\VO\CarrierHis.cs" />
+    <Compile Include="Data\VO\ReportData.cs" />
+    <Compile Include="Data\VO\RgvPortMap.cs" />
+    <Compile Include="Data\VO\Cmd_Com.cs" />
+    <Compile Include="Data\VO\Parameter.cs" />
+    <Compile Include="Data\VO\RobotCommandList.cs" />
+    <Compile Include="Data\VO\RobotCommandTable.cs" />
+    <Compile Include="Data\VO\Sequence.cs" />
+    <Compile Include="Data\VO\SMPPort.cs" />
+    <Compile Include="Data\VO\Code_Dtl.cs" />
+    <Compile Include="Data\VO\Itm_Mst.cs" />
+    <Compile Include="Data\VO\PortCmd.cs" />
+    <Compile Include="Data\VO\Prog_List.cs" />
+    <Compile Include="Data\VO\Shelf.cs" />
+    <Compile Include="Data\VO\Carrier.cs" />
+    <Compile Include="Data\VO\Sno_Ctl.cs" />
+    <Compile Include="Data\VO\Sno_Max.cs" />
+    <Compile Include="Data\VO\TranCMDReq.cs" />
+    <Compile Include="Data\VO\Trn_Log.cs" />
+    <Compile Include="Data\VO\Tkt_Mst.cs" />
+    <Compile Include="Data\VO\Loc_Mst.cs" />
+    <Compile Include="Data\VO\Loc_Dtl_Log.cs" />
+    <Compile Include="Data\VO\Loc_Dtl.cs" />
+    <Compile Include="Data\VO\Cycle.cs" />
+    <Compile Include="Data\VO\Cmd_Mst_His.cs" />
+    <Compile Include="Data\VO\Cmd_Mst.cs" />
+    <Compile Include="Data\VO\Cmd_Dtl_His.cs" />
+    <Compile Include="Data\VO\Cmd_Dtl.cs" />
+    <Compile Include="Data\VO\EqMsgType.cs" />
+    <Compile Include="Data\VO\Alarm.cs" />
+    <Compile Include="Data\VO\AlarmHisList.cs" />
+    <Compile Include="Data\VO\AlarmMap.cs" />
+    <Compile Include="Data\VO\BaseUnitObject.cs" />
+    <Compile Include="Data\VO\BCStatus.cs" />
+    <Compile Include="Data\VO\CassetteLoader.cs" />
+    <Compile Include="Data\VO\ComboDataObj.cs" />
+    <Compile Include="Data\VO\CommonInfo.cs" />
+    <Compile Include="Data\VO\CSTDataInfo.cs" />
+    <Compile Include="Data\VO\ECDataMap.cs" />
+    <Compile Include="Data\VO\EqptMap.cs" />
+    <Compile Include="Data\VO\Equipment.cs" />
+    <Compile Include="Data\VO\FunctionCode.cs" />
+    <Compile Include="Data\VO\Line.cs" />
+    <Compile Include="Data\VO\MainAlarm.cs" />
+    <Compile Include="Data\VO\Node.cs" />
+    <Compile Include="Data\VO\OperationHis.cs" />
+    <Compile Include="Data\VO\Port.cs" />
+    <Compile Include="Data\VO\RawData.cs" />
+    <Compile Include="Data\VO\UnitMap.cs" />
+    <Compile Include="Data\VO\SVDataMap.cs" />
+    <Compile Include="Data\VO\Unit.cs" />
+    <Compile Include="Data\VO\User.cs" />
+    <Compile Include="Data\VO\UserFunc.cs" />
+    <Compile Include="Data\VO\UserGroup.cs" />
+    <Compile Include="Data\VO\CassetteDispatchInfo.cs" />
+    <Compile Include="Data\VO\Work_Host.cs" />
+    <Compile Include="Data\VO\Work_Stn.cs" />
+    <Compile Include="Data\VO\Zone.cs" />
+    <Compile Include="Data\VO\ECIDMap.cs" />
+    <Compile Include="Data\VO\ConsoleMsg.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolFormat\Mcsmessage.cs" />
+    <Compile Include="ValueHandler\ProcessDataValueHandler.cs" />
+    <Compile Include="ValueHandler\SVDataValueHandler.cs" />
+    <Compile Include="ValueHandler\ValueHandlerBase.cs" />
+    <Compile Include="ValueHandler\ECIDValueHandler.cs" />
+    <Compile Include="ValueHandler\Vo\SendCmdReturnCodeVo.cs" />
+    <Compile Include="WebAPI\QxCheckWaterFlow.cs" />
+    <Compile Include="WebAPI\QxMGVPortCarrier.cs" />
+    <Compile Include="WebAPI\UxReturn.cs" />
+    <Compile Include="WebAPI\QxLocStsCount.cs" />
+    <Compile Include="WIF\BCSystemWIF.cs" />
+    <Compile Include="WIF\LineWIF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DLL\BlockControlFramework.dll.config" />
+    <None Include="DLL\nhibernate-configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DLL\nhibernate-mapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProtocolFormat\mcsmessage.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\HBM_XML\UserGroup.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Loc_Mst.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Loc_Dtl.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Loc_Dtl_Log.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Cmd_Mst.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Cmd_Dtl.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Trn_Log.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Cycle.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Tkt_Mst.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Cmd_Mst_His.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Cmd_Dtl_His.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Parameter.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Carrier.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Code_Dtl.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Itm_Mst.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Prog_List.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Sno_Ctl.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Sno_Max.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Work_Host.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Work_Stn.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\CarrierHis.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\RobotCommandList.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\RobotCommandTable.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Sequence.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\MergeCmd.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\MergeCmdHis.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\RobotCommandTableHis.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\RobotCommandListHis.hbm.xml" />
+    <Content Include="DLL\AlphaBlendTextBox.dll" />
+    <Content Include="DLL\BlockControlFramework.dll" />
+    <Content Include="DLL\BlockControlFramework.pdb" />
+    <Content Include="DLL\CSkin.dll" />
+    <Content Include="DLL\EPPlus.dll" />
+    <Content Include="DLL\EPPlus.XML" />
+    <Content Include="DLL\MetroFramework.Design.dll" />
+    <Content Include="DLL\MetroFramework.dll" />
+    <Content Include="DLL\MetroFramework.Fonts.dll" />
+    <Content Include="DLL\Mirle.AK0.Hlt.Communications.Sockets.TCPClients.dll" />
+    <Content Include="DLL\Mirle.AK0.Hlt.Communications.Sockets.TCPClients.pdb" />
+    <Content Include="DLL\Mirle.AK0.Hlt.Utils.dll" />
+    <Content Include="DLL\Mirle.AK0.Hlt.Utils.pdb" />
+    <Content Include="DLL\MirleGoWpfTools.dll" />
+    <Content Include="DLL\MirleGO_UIFrameWork.dll" />
+    <Content Include="DLL\MQTrxControl.dll" />
+    <Content Include="DLL\MQTrxControl.XML" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\SECSTrxControl.dll" />
+    <Content Include="DLL\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="DLL\ToggleSwitch.dll" />
+    <Content Include="DLL\UtilityCommon.dll" />
+    <Content Include="DLL\Utility_LogQuery.dll" />
+    <Content Include="hasp_windows_101490.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hasp_windows_24266.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hasp_windows_x64_101490.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Data\HBM_XML\OperationHis.hbm.xml" />
+    <Content Include="apidsp_windows.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="apidsp_windows_x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DLL\hasp_net_windows.dll" />
+    <EmbeddedResource Include="Data\HBM_XML\ECDataMap.hbm.xml" />
+    <Content Include="DLL\Appccelerate.Fundamentals.dll" />
+    <Content Include="DLL\Appccelerate.Fundamentals.xml" />
+    <Content Include="DLL\Appccelerate.StateMachine.dll" />
+    <Content Include="DLL\Appccelerate.StateMachine.xml" />
+    <Content Include="DLL\BlockControlFramework.XML" />
+    <Content Include="DLL\GenericParsing.dll" />
+    <Content Include="DLL\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="DLL\Iesi.Collections.dll" />
+    <Content Include="DLL\Iesi.Collections.xml" />
+    <Content Include="DLL\Ionic.Zip.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\MPLCConnectionControl.dll" />
+    <Content Include="DLL\MPLCConnectionControl.XML" />
+    <Content Include="DLL\NHibernate.dll" />
+    <Content Include="DLL\NHibernate.xml" />
+    <Content Include="DLL\NLog.dll" />
+    <Content Include="DLL\NLog.Extended.dll" />
+    <Content Include="DLL\NLog.Extended.xml" />
+    <Content Include="DLL\NLog.xml" />
+    <Content Include="DLL\QS2305A2_Retail.exe" />
+    <Content Include="DLL\SECSTrxControl.xml" />
+    <Content Include="DLL\SQLite.Designer.dll" />
+    <Content Include="DLL\System.Data.SQLite.dll" />
+    <Content Include="DLL\System.Data.SQLite.Linq.dll" />
+    <Content Include="DLL\System.IO.Abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\HBM_XML\Alarm.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\BCStatus.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Eqpt.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\FunctionCode.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Line.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Node.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Port.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\Unit.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\User.hbm.xml" />
+    <EmbeddedResource Include="Data\HBM_XML\UserFunc.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\HBM_XML\Zone.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\ObjectRelay\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASE_K11_CommonMsg\ASE_K11_CommonMsg.csproj">
+      <Project>{7b81176e-d598-47c6-bee4-e9e7414bae0b}</Project>
+      <Name>ASE_K11_CommonMsg</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Grpc.Core.2.37.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.37.1\build\net45\Grpc.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.37.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.37.1\build\net45\Grpc.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

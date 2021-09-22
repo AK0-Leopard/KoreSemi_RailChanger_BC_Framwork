@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+   <class name="User" table="BUASUSR" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="User_ID" type="string">
+      <column name="USER_ID" sql-type="char(20)"/>
+    </id>
+    <property name="Passwd" type="string">
+      <column name="PASSWD" not-null="false" sql-type="text"/>
+    </property>
+     <property name="Badge_Number" type="string">
+       <column name="BADGE_NUMBER" sql-type="char(80)"/>
+     </property>
+    <property name="User_Name" type="string">
+      <column name="USER_NAME" sql-type="char(30)"/>
+    </property>
+    <property name="Disable_Flg" type="string">
+      <column name="DISABLE_FLG" sql-type="char(1)"/>
+    </property>
+     <property name="Power_User_Flg" type="string">
+       <column name="POWER_USER_FLG" sql-type="char(1)"/>
+     </property>
+     <property name="Admin_Flg" type="string">
+       <column name="ADMIN_FLG" sql-type="char(1)"/>
+     </property>
+     <property name="User_Grp" type="string">
+       <column name="USER_GRP" sql-type="char(20)"/>
+     </property>
+     <property name="Department" type="string">
+       <column name="DEPARTMENT" sql-type="char(20)"/>
+     </property>
+  </class>
+  <database-object>
+    <create>
+      insert into BUASUSR (USER_ID, PASSWD, BADGE_NUMBER, USER_NAME, DISABLE_FLG, POWER_USER_FLG, ADMIN_FLG, USER_GRP,DEPARTMENT)
+      VALUES ('ADMIN', 'hello@123', null, 'Admin', 'N', 'N', 'N', 'ADMIN','FA');
+      <!--insert into UASUSR (USER_ID, PASSWD, BADGE_NUMBER, USER_NAME, DISABLE_FLG, POWER_USER_FLG, ADMIN_FLG, USER_GRP,DEPARTMENT)
+      VALUES ('fa01', 'fa01@123', null, 'fa01', 'N', 'N', 'N', 'ENG','FA');
+      insert into UASUSR (USER_ID, PASSWD, BADGE_NUMBER, USER_NAME, DISABLE_FLG, POWER_USER_FLG, ADMIN_FLG, USER_GRP,DEPARTMENT)
+      VALUES ('op01', 'op01', null, 'op01', 'N', 'N', 'N', 'OPER','FA');-->
+    </create>
+    <drop></drop>
+  </database-object>
+</hibernate-mapping>

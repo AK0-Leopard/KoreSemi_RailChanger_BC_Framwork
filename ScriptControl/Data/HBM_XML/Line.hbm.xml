@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+   <class name="Line" table="BALINE" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Line_ID" type="string">
+      <column name="LINE_ID" sql-type="char(15)"/>
+    </id>
+    <property name="Host_Mode" type="int">
+      <column name="HOST_MODE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Line_Stat" type="int">
+      <column name="LINE_STAT" not-null="true" sql-type="char(1)"/>
+    </property>
+     <property name="Operation_Mode" type="string">
+       <column name="OPERATION_MODE" not-null="true" sql-type="char(2)"/>
+     </property>
+  </class>
+</hibernate-mapping>

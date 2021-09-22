@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Itm_Mst" table="ITM_MST" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Item_No" type="string">
+      <column name="ITEM_NO" sql-type="char(50)"/>
+    </id>
+    <property name="Item_Name" type="string">
+      <column name="ITEM_NAME" sql-type="char(250)"/>
+    </property>
+    <property name="Item_Spec" type="string">
+      <column name="ITEM_SPEC" sql-type="char(250)"/>
+    </property>
+    <property name="Item_Unit" type="string">
+      <column name="ITEM_UNIT" sql-type="char(10)"/>
+    </property>
+    <property name="Item_Unite" type="string">
+      <column name="ITEM_UNITE" sql-type="char(10)"/>
+    </property>
+    <property name="Item_Type" type="string">
+      <column name="ITEM_TYPE" sql-type="char(10)"/>
+    </property>
+    <property name="Item_Grp" type="string">
+      <column name="ITEM_GRP" sql-type="char(10)"/>
+    </property>
+    <property name="Qty_Box" type="int">
+      <column name="QTY_BOX" sql-type="int"/>
+    </property>
+    <property name="Box_Plt" type="int">
+      <column name="BOX_PLT" sql-type="int"/>
+    </property>
+    <property name="Qty_Plt" type="int">
+      <column name="QTY_PLT" sql-type="int"/>
+    </property>
+    <property name="Safe_Height" type="int">
+      <column name="SAFE_HEIGHT" sql-type="int"/>
+    </property>
+    <property name="Safe_low" type="int">
+      <column name="SAFE_LOW" sql-type="int"/>
+    </property>
+    <property name="Unit_Wg" type="int">
+      <column name="UNIT_WG" sql-type="int"/>
+    </property>
+    <property name="Valid_Days" type="int">
+      <column name="VALID_DAYS" sql-type="int"/>
+    </property>
+    <property name="Remark" type="string">
+      <column name="REMARK" sql-type="char(250)"/>
+    </property>
+    <property name="Create_User" type="string">
+      <column name="CREATED_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Create_Date" type="string">
+      <column name="CREATED_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_Date" type="string">
+      <column name="TRN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_User" type="string">
+      <column name="TRN_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Note1" type="string">
+      <column name="NOTE1" sql-type="char(50)"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+obj\Release\netstandard2.0\Protos/EAPK11H2E.cs \
+obj\Release\netstandard2.0\Protos/EAPK11H2EGrpc.cs: Protos/EAP_K11_H2E.proto

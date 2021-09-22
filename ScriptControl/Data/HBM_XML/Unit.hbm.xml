@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Unit" table="BAUNIT" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Unit_ID" type="string">
+      <column name="UNIT_ID" sql-type="char(30)"/>
+    </id>
+    <property name="Unit_Num" type="int">
+      <column name="UNIT_NUM" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Eqpt_ID" type="string">
+      <column name="EQPT_ID" not-null="true" sql-type="char(15)"/>
+    </property>
+    <property name="Unit_Cate" type="string">
+      <column name="UNIT_CATE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Eqpt_Type" type="string">
+      <column name="EQPT_TYPE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Capacity" type="int">
+      <column name="CAPACITY" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Unit_Stat" type="string">
+      <column name="UNIT_STAT" not-null="true" sql-type="char(1)"/>
+    </property>
+  </class>
+</hibernate-mapping>

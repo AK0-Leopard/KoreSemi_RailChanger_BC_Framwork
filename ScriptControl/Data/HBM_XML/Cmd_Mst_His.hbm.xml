@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Cmd_Mst_His" table="CMD_MST_HIS" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Log_Sno" type="string">
+      <column name="LOG_SNO" sql-type="char(20)"/>
+    </id>
+    <property name="Cmd_Sno" type="string">
+      <column name="CMD_SNO" not-null="true" sql-type="char(5)"/>
+    </property>
+    <property name="Cmd_Sts" type="string">
+      <column name="CMD_STS" not-null="true" sql-type="char(2)" default="0"/>
+    </property>
+    <property name="Cmd_Abnormal" type="string">
+      <column name="CMD_ABNORMAL" not-null="true" sql-type="char(2)"/>
+    </property>
+    <property name="Prty" type="int">
+      <column name="PRTY" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Stn_No" type="string">
+      <column name="STN_NO" not-null="true" sql-type="char(4)"/>
+    </property>
+    <property name="Cmd_Mode" type="string">
+      <column name="CMD_MODE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="IO_Type" type="string">
+      <column name="IO_TYPE" not-null="true" sql-type="char(2)"/>
+    </property>
+    <property name="Wh_ID" type="string">
+      <column name="WH_ID" sql-type="char(5)"/>
+    </property>
+    <property name="Loc" type="string">
+      <column name="LOC" sql-type="char(4)"/>
+    </property>
+    <property name="New_Loc" type="string">
+      <column name="NEW_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="Mix_Qty" type="int">
+      <column name="MIX_QTY" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Avail" type="int">
+      <column name="AVAIL" not-null="true" sql-type="int" default="0"/>
+    </property>
+    <property name="Zone_ID" type="string">
+      <column name="ZONE_ID" sql-type="char(10)"/>
+    </property>
+    <property name="Crt_Date" type="string">
+      <column name="CRT_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Exp_Date" type="string">
+      <column name="EXP_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="End_Date" type="string">
+      <column name="END_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Trn_User" type="string">
+      <column name="TRN_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Host_Name" type="string">
+      <column name="HOST_NAME" sql-type="char(30)"/>
+    </property>
+    <property name="Trace" type="string">
+      <column name="TRACE" sql-type="char(3)"/>
+    </property>
+    <property name="Plt_Count" type="string">
+      <column name="PLT_COUNT" sql-type="char(2)"/>
+    </property>
+    <property name="Equ_No" type="string">
+      <column name="EQU_NO" not-null="true" sql-type="char(2)"/>
+    </property>
+    <property name="Xfr_Speed" type="string">
+      <column name="XFR_SPEED" sql-type="char(3)"/>
+    </property>
+    <property name="Cmd_Stat" type="string">
+      <column name="CMD_STAT" sql-type="char(1)"/>
+    </property>
+    <property name="Ticket_No" type="string">
+      <column name="TICKET_NO" sql-type="char(20)"/>
+    </property>
+    <property name="OutPort_Flg" type="string">
+      <column name="OUTPORT_FLG" sql-type="char(1)"/>
+    </property>
+    <property name="Cmd_No" type="string">
+      <column name="CMD_NO" sql-type="char(4)"/>
+    </property>
+    <property name="Cmd_Name" type="string">
+      <column name="CMD_NAME" sql-type="char(35)"/>
+    </property>
+  </class>
+</hibernate-mapping>

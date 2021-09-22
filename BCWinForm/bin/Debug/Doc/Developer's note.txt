@@ -1,0 +1,32 @@
+**********************************************
+*  BlockControlSystem LaiBao
+*  Latest Developer's note
+*  Date  : 2020/09/03
+*  Author: 
+*  Mail  : 
+**********************************************
+***v1.0.2
+問題修正:
+   2021/03/19  Steven Hong
+--修正EW36刪帳錯誤
+--修正S003未報問題
+--修正補送訊息失敗時，List內容不斷增加錯誤
+--Host命令有問題時，顯示Tip Message
+功能修改:
+   2021/03/24  Steven Hong
+--系統起始時，Line、EQ發佈一次初始狀態
+--修改搬到3800時，改為以MG位置決定搬送目標
+
+***v1.0.1
+問題修正:
+   2021/03/03  Steven Hong
+--修正雙臂命令結束後，命令殘留問題
+--修正Force Delete Stocker命令未刪除問題
+--修正Force Delete Carrier未刪除Carrier問題
+新增功能:
+   2021/03/16  Steven Hong
+--新增Stocker壓力測試功能
+
+***v1.0.0
+   2020/11/30  Steven Hong
+--Initial Release

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="RobotCommandListHis" table="ROBOTCMD_LST_HIS" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="RobotCommandListHisPK" class="com.mirle.ibg3k0.sc.Data.VO.RobotCommandListHisPKInfo, ScriptControl">
+      <key-property name="Log_Sno" type="string">
+        <column name="LOG_SNO" sql-type="char(20)"/>
+      </key-property>
+      <key-property name="Seq_No" type="int">
+        <column name="SEQ_NO" sql-type="int"/>
+      </key-property>
+      <key-property name="CMD_Step" type="int">
+        <column name="CMD_STEP" sql-type="int"/>
+      </key-property>
+    </composite-id>
+    <property name="Seq_No_Year" type="int">
+      <column name="SEQ_NO_YEAR" not-null="false" sql-type="char(4)"/>
+    </property>
+    <property name="Seq_No_Month" type="int">
+      <column name="SEQ_NO_MONTH" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="Seq_No_Day" type="int">
+      <column name="SEQ_NO_DAY" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="Seq_No_Houre" type="int">
+      <column name="SEQ_NO_HOURE" not-null="false" sql-type="char(2)"/>
+    </property>
+    <property name="CMD_Type" type="int">
+      <column name="CMD_TYPE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Arm" type="string">
+      <column name="ARM" not-null="true" sql-type="char(2)"/>
+    </property>
+    <property name="From_Loc" type="string">
+      <column name="FROM_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="To_Loc" type="string">
+      <column name="TO_LOC" sql-type="char(4)"/>
+    </property>
+    <property name="Return_Code" type="int">
+      <column name="RETURN_CODE" not-null="false" sql-type="char(5)"/>
+    </property>
+    <property name="Step_Start_Time" type="DateTime">
+      <column name="STEP_START_TIME" not-null="false" />
+    </property>
+    <property name="Step_End_Time" type="DateTime">
+      <column name="STEP_END_TIME" not-null="false" />
+    </property>
+    <property name="Crr_ID" type="String">
+      <column name="CRR_ID" not-null="false" sql-type="char(10)"/>
+    </property>
+    <property name="Org_Seq_No" type="int">
+      <column name="ORG_SEQ_NO" not-null="false" sql-type="int"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,188 @@
+﻿<Window x:Class="RailChanger_Viewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:RailChanger_Viewer.UI"
+        mc:Ignorable="d"
+        Background="#1976D2"
+        Icon="Resources/icon_Home.png"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize"
+        Title="RailChanger" Height="420" Width="800" Closed="Window_Closed">
+    <Viewbox Stretch=" fill">
+        <Canvas Width=" 800" Height=" 420">
+            <Grid Background="#1976D2" Height="420" Width="800">
+                <Grid  Background="#ECECEC" Margin="8,8,8,8" >
+                    <Grid HorizontalAlignment="Left" Margin="96,128,0,0" VerticalAlignment="Top"/>
+                    <GroupBox x:Name="groupBox_Copy2" Header="控制主選單" FontSize="20" HorizontalAlignment="Left" Height="370" Margin="277,19,0,0" VerticalAlignment="Top" Width="492">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="51*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="換軌器編號" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Padding="0,6,0,0" FontSize="18" Style="{DynamicResource TitleContentText}" Grid.ColumnSpan="2" Margin="26,-3,0,0"/>
+                            <ComboBox x:Name="cbx_RC_Number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,-5,0,0" Width="67" Height="30" Grid.Column="1">
+                                <ComboBoxItem Content="1"/>
+                                <ComboBoxItem Content="2"/>
+                                <ComboBoxItem Content="3"/>
+                                <ComboBoxItem Content="4"/>
+                                <ComboBoxItem Content="5"/>
+                                <ComboBoxItem Content="6"/>
+                                <ComboBoxItem Content="7"/>
+                                <ComboBoxItem Content="8"/>
+                                <ComboBoxItem Content="9"/>
+                                <ComboBoxItem Content="10"/>
+                                <ComboBoxItem Content="11"/>
+                                <ComboBoxItem Content="12"/>
+                                <ComboBoxItem Content="13"/>
+                                <ComboBoxItem Content="14"/>
+                                <ComboBoxItem Content="15"/>
+                                <ComboBoxItem Content="16"/>
+                                <ComboBoxItem Content="17"/>
+                                <ComboBoxItem Content="18"/>
+                                <ComboBoxItem Content="19"/>
+                                <ComboBoxItem Content="20"/>
+                                <ComboBoxItem Content="21"/>
+                                <ComboBoxItem Content="22"/>
+                                <ComboBoxItem Content="23"/>
+                                <ComboBoxItem Content="24"/>
+                                <ComboBoxItem Content="25"/>
+                                <ComboBoxItem Content="26"/>
+                                <ComboBoxItem Content="27"/>
+                                <ComboBoxItem Content="28"/>
+                                <ComboBoxItem Content="29"/>
+                                <ComboBoxItem Content="30"/>
+                                <ComboBoxItem Content="31"/>
+                                <ComboBoxItem Content="32"/>
+                                <ComboBoxItem Content="33"/>
+                                <ComboBoxItem Content="34"/>
+                                <ComboBoxItem Content="35"/>
+                                <ComboBoxItem Content="36"/>
+                                <ComboBoxItem Content="37"/>
+                                <ComboBoxItem Content="38"/>
+                                <ComboBoxItem Content="39"/>
+                                <ComboBoxItem Content="40"/>
+                                <ComboBoxItem Content="41"/>
+                                <ComboBoxItem Content="42"/>
+                            </ComboBox>
+                            <GroupBox x:Name="groupBox" FontSize="14" Header="重置功能" HorizontalAlignment="Left" Height="80" Margin="0,34,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" >
+                                <Grid>
+                                    <Button x:Name="btn_alarm_rst" Height="30" Margin="0,-4,89.4,-3.6" Content="Alarm重置" Click="Alarm_Reset_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button Height="30" Margin="90,-4,-0.6,-3.6" Content="Block重置" Click="Block_Reset_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox x:Name="groupBox_Copy" FontSize="14" Header="軌道切換" HorizontalAlignment="Left" Height="80" Margin="0,127,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2">
+                                <Grid>
+                                    <Button x:Name="btn_read_Copy6" Height="30" Margin="0,-4,89.4,-3.6" Content="直軌" Click="SideChange_Rightt_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button x:Name="btn_read_Copy7" Height="30" Margin="90,-4,-0.6,-3.6" Content="彎軌" Click="SideChange_Left_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox x:Name="groupBox_Copy1" FontSize="14" Header="模式切換" HorizontalAlignment="Left" Height="80" Margin="0,223,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2">
+                                <Grid>
+                                    <Button x:Name="btn_read_Copy8" Height="30" Margin="0,-4,89.4,-3.6" Content="自動" Click="Mode_Auto_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button x:Name="btn_read_Copy9" Height="30" Margin="90,-4,-0.6,-3.6" Content="手動" Click="Mode_Manual_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="85">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox x:Name="groupBox_Copy3" FontSize="14" Header="自動切換軌道設定" HorizontalAlignment="Left" Height="173" Margin="187,34,0,0" VerticalAlignment="Top" Width="239" Grid.ColumnSpan="2" Grid.Column="1" >
+                                <Grid>
+                                    <Button x:Name="btn_read_Copy2" Height="30" Margin="5,52,116.6,38" Content="自動(直軌)" Click="AutoChange_Right_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="100">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button x:Name="btn_read_Copy3" Height="30" Margin="116,52,5.6,38" Content="自動(彎軌)" Click="AutoChange_Left_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="100">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button x:Name="btn_read_Copy4" Height="30" Margin="1,147,7.6,-57" Content="強制停止" Click="FoceStop_Click" Background="#FFF32121" Foreground="White" BorderBrush="#FF2196F3">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Padding="0,6,0,0" FontSize="16" Style="{DynamicResource TitleContentText}" Margin="4,0,0,0" Width="146"><Run Text="延遲時間"/><Run Text="(x1000ms):"/></TextBlock>
+                                    <Button x:Name="btn_read_Copy5" Height="30" Margin="4,92,4.6,-2" Content="停用自動切換" Click="AutoChange_Stop_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <TextBox x:Name="tbx_delay_time" Margin="148,3,7.6,92" TextWrapping="Wrap" Text="1" Foreground="Black" Background="White" FontSize="18" MaxLength="10" Style="{DynamicResource MirleGoTextBox1}" Width="66"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                <local:EQStatus x:Name="EQ_Status" HorizontalAlignment="Left" VerticalAlignment="Top" Height="228" Width="250" Margin="20,28,0,0"/>
+
+            </Grid>
+        </Canvas>
+    </Viewbox>
+</Window>

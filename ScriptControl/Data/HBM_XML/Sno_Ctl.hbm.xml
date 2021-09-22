@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true" >
+  <class name="Sno_Ctl" table="SNO_CTL" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Sno_Type" type="string">
+      <column name="SNO_TYPE" sql-type="char(10)"/>
+    </id>
+    <property name="Trn_Month" type="string">
+      <column name="TRN_MONTH" sql-type="char(4)"/>
+    </property>
+    <property name="Sno" type="int">
+      <column name="SNO" sql-type="int"/>
+    </property>
+  </class>
+</hibernate-mapping>

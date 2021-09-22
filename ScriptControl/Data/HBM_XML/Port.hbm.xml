@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Port" table="BAPORT" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="Port_ID" type="string">
+      <column name="PORT_ID" sql-type="char(15)"/>
+    </id>
+    <property name="Unit_Num" type="int">
+      <column name="UNIT_NUM" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Port_Num" type="int">
+      <column name="PORT_NUM" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Eqpt_ID" type="string">
+      <column name="EQPT_ID" not-null="true" sql-type="char(15)"/>
+    </property>
+    <property name="Port_Type" type="string">
+      <column name="PORT_TYPE" not-null="true" sql-type="char(3)"/>
+    </property>
+    <property name="Port_Type_Alias" type="string">
+      <column name="PORT_TYPE_ALIAS" sql-type="char(30)"/>
+    </property>
+    <property name="Port_Use_Typ" type="string">
+      <column name="PORT_USE_TYPE" sql-type="char(2)"/>
+    </property>
+    <property name="Port_Real_Typ" type="string">
+      <column name="PORT_REAL_TYPE" sql-type="char(3)"/>
+    </property>
+    <property name="Capacity" type="int">
+      <column name="CAPACITY" not-null="true" sql-type="int"/>
+    </property>
+    <property name="Port_Stat" type="int">
+      <column name="PORT_STAT" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Port_Enable" type="int">
+      <column name="PORT_ENABLE" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Trs_Mode" type="int">
+      <column name="TRS_MODE" sql-type="char(1)"/>
+    </property>
+    <property name="Lyt_Dir" type="string">
+      <column name="LYT_DIR" sql-type="char(1)"/>
+    </property>
+  </class>
+</hibernate-mapping>

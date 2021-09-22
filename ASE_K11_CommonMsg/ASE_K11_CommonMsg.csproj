@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+
+    <None Remove="ASE_K11_CommonMsg.csproj.vspscc" />
+
+    <None Remove="Protos\EAP_K11_E2H.proto" />
+
+    <None Remove="Protos\EAP_K11_H2E.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.17.0" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.17.0" />
+    <PackageReference Include="Grpc.Core" Version="2.37.1" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.37.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.37.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="ASE_K11_CommonMsg.csproj.vspscc" Access="Public" />
+    <Protobuf Include="Protos\EAP_K11_E2H.proto" />
+    <Protobuf Include="Protos\EAP_K11_H2E.proto" />
+  </ItemGroup>
+</Project>

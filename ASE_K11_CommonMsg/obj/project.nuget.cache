@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "UT3wcPrJAXVwFC5Be5yvIhr8nVbS6W2c5xp88Q1JErYeMgAsVh4ft72rf02ISDImqkUBF+PyO8vemgTYzv1JaA==",
+  "success": true,
+  "projectFilePath": "D:\\Workspace\\青島\\RailChanger\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lashellow\\.nuget\\packages\\google.protobuf\\3.17.0\\google.protobuf.3.17.0.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\google.protobuf.tools\\3.17.0\\google.protobuf.tools.3.17.0.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.core\\2.37.1\\grpc.core.2.37.1.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.core.api\\2.37.1\\grpc.core.api.2.37.1.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.tools\\2.37.1\\grpc.tools.2.37.1.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\lashellow\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

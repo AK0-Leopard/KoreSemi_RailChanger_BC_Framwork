@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="ECDataMap" table="BAECDATAMAP" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <id name="ECID" type="string">
+      <column name="ECID" sql-type="char(4)"/>
+    </id>
+    <property name="EQPT_REAL_ID" type="string">
+      <column name="EQPT_REAL_ID" not-null="false" sql-type="char(15)"/>
+    </property>
+    <property name="ECNAME" type="string">
+      <column name="ECNAME" not-null="false" sql-type="char(40)"/>
+    </property>
+    <property name="ECMIN" type="string">
+      <column name="ECMIN" not-null="false" sql-type="char(10)"/>
+    </property>
+    <property name="ECMAX" type="string">
+      <column name="ECMAX" not-null="false" sql-type="char(10)"/>
+    </property>
+    <property name="ECV" type="string">
+      <column name="ECV" not-null="false" sql-type="char(10)"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="CarrierHis" table="BACARRIER_HIS" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="CarrierHisPK" class="com.mirle.ibg3k0.sc.Data.VO.CarrierHisPKInfo, ScriptControl">
+      <key-property name="Log_Sno" type="string">
+        <column name="LOG_SNO" sql-type="char(20)"/>
+      </key-property>
+      <key-property name="Crr_ID" type="string">
+        <column name="CRR_ID" sql-type="char(10)"/>
+      </key-property>
+    </composite-id>
+    <property name="Crr_Stat" type="int">
+      <column name="CRR_STAT" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Crr_TrxStat" type="int">
+      <column name="CRR_TRXSTAT" not-null="true" sql-type="char(1)"/>
+    </property>
+    <property name="Loc" type="string">
+      <column name="LOC" not-null="true" sql-type="char(4)"/>
+    </property>
+    <property name="To_PortNo" type="string">
+      <column name="TO_PORTNO" sql-type="char(4)"/>
+    </property>
+    <property name="Priority" type="int">
+      <column name="PRIORITY" sql-type="int"/>
+    </property>
+    <property name="Cst_Type" type="string">
+      <column name="CST_TYPE" sql-type="char(4)"/>
+    </property>
+    <property name="CrrStockIn_Time" type="DateTime">
+      <column name="CRRSTOCKIN_TIME" not-null="false"/>
+    </property>
+    <property name="CrrLogOn_Time" type="DateTime">
+      <column name="CRRLOGON_TIME" not-null="false" />
+    </property>
+    <property name="CrrLogOff_Time" type="DateTime">
+      <column name="CRRLOGOff_TIME" not-null="false" />
+    </property>
+    <property name="CrrLogOff_Port" type="string">
+      <column name="CRRLOGOFF_PORT" sql-type="char(40)"/>
+    </property>
+    <property name="HoldFlag" type="string">
+      <column name="HOLDFLAG" sql-type="char(1)"/>
+    </property>
+    <property name="Ticket_No" type="string">
+      <column name="TICKET_NO" sql-type="char(20)"/>
+    </property>
+    <property name="Alternate" type="string">
+      <column name="ALTERNATE" sql-type="char(1)"/>
+    </property>
+    <property name="Reserve_Flag" type="string">
+      <column name="RESERVE_FLAG" sql-type="char(1)"/>
+    </property>
+    <property name="Zone_Code" type="string">
+      <column name="ZONE_CODE" sql-type="char(10)"/>
+    </property>
+    <property name="Inventory_Flag" type="string">
+      <column name="INVENTORY_FLAG" sql-type="char(1)"/>
+    </property>
+    <property name="Create_Time" type="DateTime">
+      <column name="CREATE_TIME" not-null="false" />
+    </property>
+    <property name="Trn_User" type="string">
+      <column name="TRN_USER" sql-type="char(30)"/>
+    </property>
+    <property name="Trn_Date" type="string">
+      <column name="TRN_DATE" sql-type="char(20)"/>
+    </property>
+    <property name="Schedule" type="string">
+      <column name="SCHEDULE" sql-type="char(12)"/>
+    </property>
+    <property name="RotFlag" type="string">
+      <column name="ROTFLAG" sql-type="char(1)"/>
+    </property>
+    <property name="FliFlag" type="string">
+      <column name="FLIPFLG" sql-type="char(1)"/>
+    </property>
+    <property name="BCRRead_Flag" type="string">
+      <column name="BCRREAD_FLAG" sql-type="char(32)"/>
+    </property>
+    <property name="Reject_Flag" type="string">
+      <column name="REJECT_FLAG" sql-type="char(1)"/>
+    </property>
+    <property name="Crr_Size" type="string">
+      <column name="CRR_SIZE" sql-type="char(1)"/>
+    </property>
+  </class>
+</hibernate-mapping>

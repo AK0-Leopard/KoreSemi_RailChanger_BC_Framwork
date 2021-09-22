@@ -1,0 +1,127 @@
+﻿// See README.txt for information and build instructions.
+//
+// Note: START and END tags are used in comments to define sections used in
+// tutorials.  They are not part of the syntax for Protocol Buffers.
+//
+// To get an in-depth walkthrough of this file and the related examples, see:
+// https://developers.google.com/protocol-buffers/docs/tutorials
+
+// [START declaration]
+syntax = "proto3";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/golang/protobuf/ptypes/timestamp";
+option java_multiple_files = true;
+option objc_class_prefix = "GPB";
+package tutorial;
+// [END declaration]
+
+// [START java_declaration]
+option java_package = "com.example.tutorial";
+option java_outer_classname = "AddressBookProtos";
+// [END java_declaration]
+
+// [START csharp_declaration]
+option csharp_namespace = "com.mirle.ibg3k0.sc.ProtocolFormat";
+// [END csharp_declaration]
+
+// [START messages]
+message SYSTEMEVENT_INFO {
+   message EVENT {
+      string TIME = 1;
+      string MSG = 2;
+      MessageType MSG_LEVEL = 3;
+   }
+
+   repeated EVENT EVENTS = 1;
+}
+
+message ALARM_INFO {
+   message ALARM {
+      string EQPT_ID = 1;
+      int32 UNIT_NO = 2;
+      string RPT_DATE_TIME = 3;
+	  string ALARM_CODE = 4;
+	  int32 ALARM_LVL = 5;
+	  int32 ALARM_STAT = 6;
+	  int32 ALARM_AFFECT_CNT = 7;
+	  string ALARM_DESC = 8;
+   }
+
+   repeated ALARM ALARMS = 1;
+}
+
+message CMD_INFO {
+   message CMD {
+      string CMD_SNO = 1;
+	  string TICKET_NO = 2;
+	  string CMD_STAT = 3;
+	  string CMD_ABNORMAL = 4;
+	  int32 PRTY = 5;
+	  string FROM = 6;
+	  string TO = 7;
+	  string CRR_ID = 8;
+	  string CRT_DATE = 9;
+	  string EXP_DATE = 10;
+	  string END_DATE = 11;
+   }
+
+   repeated CMD CMDS = 1;
+}
+
+message STK_CMD_INFO {
+   message CMD {
+      string CMD_SNO = 1;
+	  string SEQ_NO = 2;
+	  string CMD_STAT = 3;
+	  string FROM = 4;
+	  string TO = 5;
+	  string CRR_ID = 6;
+	  string CRT_DATE = 7;
+	  string EXP_DATE = 8;
+	  string END_DATE = 9;
+   }
+
+   repeated CMD CMDS = 1;
+}
+
+message LINE_INFO {
+   string LINE_ID = 1;
+   string BC_ID = 2;
+   int32 PLC_LINK_STAT = 3;
+   int32 CIM_LINK_STAT = 4;
+   int32 CR_ALARM_CNT = 5;
+   string OPER_MODE = 6;
+}
+
+message BC_INFO {
+   string BUILD_DATE = 1;
+   string VERSION = 2;
+   string RUN_TIME = 3;
+}
+
+message EQUIPMENT_INFO {
+   string EQPT_ID = 1;
+   int32 EQPT_ALIVET = 2;
+   int32 EQPT_STAT = 3;
+   int32 CIM_MODE = 4;
+   int32 OPER_MODE = 5;
+   int32 ALARM_HAPPEN = 6;
+   int32 WARN_HAPPEN = 7;
+}
+
+message TIP_INFO {
+   message TIP {
+      string TIME = 1;
+	  string MSG_LEVEL = 2;
+      string MSG = 3;
+   }
+
+   repeated TIP TIPS = 1;
+}
+
+enum MessageType {
+    WARNING = 0;
+    ALARM = 1;
+}
+// [END messages]

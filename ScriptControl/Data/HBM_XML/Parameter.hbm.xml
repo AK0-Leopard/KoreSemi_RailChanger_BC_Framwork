@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ScriptControl" namespace="com.mirle.ibg3k0.sc.Data.VO" auto-import="true">
+  <class name="Parameter" table="BAPARAMETER" optimistic-lock="none" lazy="false" dynamic-update="true">
+    <composite-id name="ParaPK" class="com.mirle.ibg3k0.sc.Data.VO.ParaPKInfo, ScriptControl">
+      <key-property name="Para_Cate" type="string">
+        <column name="PARA_CATE" sql-type="char(10)"/>
+      </key-property>
+      <key-property name="Para_ID" type="string">
+        <column name="PARA_ID" sql-type="char(20)"/>
+      </key-property>
+    </composite-id>
+    <property name="Val_1" type="string">
+      <column name="VAL_1" sql-type="char(32)"/>
+    </property>
+    <property name="Val_2" type="string">
+      <column name="VAL_2" sql-type="char(32)"/>
+    </property>
+    <property name="Val_3" type="string">
+      <column name="VAL_3" sql-type="char(32)"/>
+    </property>
+    <property name="Val_4" type="string">
+      <column name="VAL_4" sql-type="char(32)"/>
+    </property>
+    <property name="Val_5" type="string">
+      <column name="VAL_5" sql-type="char(32)"/>
+    </property>
+    <property name="Para_Desc" type="string">
+      <column name="PARA_DESC" sql-type="char(40)"/>
+    </property>
+  </class>
+  <database-object>
+    <create>
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'SYSTEM', 'ARM_MODE', 'S', '', '', '', '', 'Arm Mode' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'SYSTEM', 'CRANE_PRIORITY', 'O', '', '', '', '', 'In/Out Priority' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'SERIALNO', 'UNKNOWCRR', '1', '999', '20001', '', '', 'Serial No-Unknow Crr' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'SERIALNO', 'MERGECMD', '1', '9999', '', '', '', 'Serial No-Merge Cmd' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'CHK_LEVEL', 'CV_WATER_LEVEL', 'Y', '', '', '', '', 'Check Water Level Flag' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MAX4', 'S', 'R', '', '', '', 'MG, Small, MAX4' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MAHD', 'S', 'R', '', '', '', 'MG, Small, MAHD' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MAXL', 'S', 'R', '', '', '', 'MG, Small, MAXL' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MAEL', 'S', 'R', '', '', '', 'MG, Small, MAEL' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MDX4', 'S', 'R', '', '', '', 'MG, Small, MDX4' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'MG_TYPE', 'MAIN', 'B', 'L', '', '', '', 'MG, Big, MAIN' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'WAIT_CMD', 'TIME', '4', '', '', '', '', 'Wait Command Time Out, Second' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ01', '', '', '', '', '', 'EQ MG Type' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ02', '', '', '', '', '', 'EQ MG Type' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ03', '', '', '', '', '', 'EQ MG Type' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ04', '', '', '', '', '', 'EQ MG Type' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ05', '', '', '', '', '', 'EQ MG Type' );
+      insert into BAPARAMETER (PARA_CATE, PARA_ID, VAL_1, VAL_2, VAL_3, VAL_4, VAL_5, PARA_DESC) VALUES ( 'EQMG_TYPE', 'EQ06', '', '', '', '', '', 'EQ MG Type' );
+    </create>
+    <drop></drop>
+  </database-object>
+</hibernate-mapping>

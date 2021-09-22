@@ -1,0 +1,9 @@
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\bin\Debug\netstandard2.0\Common.deps.json
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\bin\Debug\netstandard2.0\Common.dll
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\bin\Debug\netstandard2.0\Common.pdb
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.dll
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.pdb
+C:\專案\gRPC\Demo_gRPC\Demo_gRPC\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
