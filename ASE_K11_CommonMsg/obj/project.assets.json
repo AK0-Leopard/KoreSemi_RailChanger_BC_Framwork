@@ -569,11 +569,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\青島\\RailChanger\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
+      "projectUniqueName": "C:\\Users\\lashellow\\Documents\\GitHub\\KoreSemi_RailChanger_BC_Framwork\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
       "projectName": "ASE_K11_CommonMsg",
-      "projectPath": "D:\\Workspace\\青島\\RailChanger\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
+      "projectPath": "C:\\Users\\lashellow\\Documents\\GitHub\\KoreSemi_RailChanger_BC_Framwork\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
       "packagesPath": "C:\\Users\\lashellow\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\青島\\RailChanger\\ASE_K11_CommonMsg\\obj\\",
+      "outputPath": "C:\\Users\\lashellow\\Documents\\GitHub\\KoreSemi_RailChanger_BC_Framwork\\ASE_K11_CommonMsg\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

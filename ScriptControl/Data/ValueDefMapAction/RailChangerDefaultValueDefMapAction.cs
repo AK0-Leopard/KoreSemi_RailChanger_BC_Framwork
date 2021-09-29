@@ -311,7 +311,7 @@ namespace com.mirle.ibg3k0.sc.Data.ValueDefMapAction
                 {
                     if (PLCIsConnect)
                     {
-                        smControl = scApp.getBCFApplication().getMPLCSMControl("EQ") as MPLCSMControl;
+                        smControl = scApp.getBCFApplication().getMPLCSMControl(RPVW_Trigger.MPLCName) as MPLCSMControl;
 
                         int x = (UInt16)RPVW_Trigger.getText() + 1;
                         if (x > 65536) { x = 1; }
