@@ -9,8 +9,8 @@
     ".NETStandard,Version=v2.0/": {
       "ASE_K11_CommonMsg/1.0.0": {
         "dependencies": {
-          "Google.Protobuf": "3.17.0",
-          "Google.Protobuf.Tools": "3.17.0",
+          "Google.Protobuf": "3.19.1",
+          "Google.Protobuf.Tools": "3.19.1",
           "Grpc.Core": "2.37.1",
           "Grpc.Core.Api": "2.37.1",
           "Grpc.Tools": "2.37.1",
@@ -20,19 +20,19 @@
           "ASE_K11_CommonMsg.dll": {}
         }
       },
-      "Google.Protobuf/3.17.0": {
+      "Google.Protobuf/3.19.1": {
         "dependencies": {
           "System.Memory": "4.5.3",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.17.0.0",
-            "fileVersion": "3.17.0.0"
+            "assemblyVersion": "3.19.1.0",
+            "fileVersion": "3.19.1.0"
           }
         }
       },
-      "Google.Protobuf.Tools/3.17.0": {},
+      "Google.Protobuf.Tools/3.19.1": {},
       "Grpc.Core/2.37.1": {
         "dependencies": {
           "Grpc.Core.Api": "2.37.1",
@@ -108,19 +108,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Google.Protobuf/3.17.0": {
+    "Google.Protobuf/3.19.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iyZfmz69cqbRRjtxfrMRFUPdXZHPKD6Nn33ABcfsE36YfEsG91s3UXBAYTuF7Mw8Y1VAd78gOyGRUQIjcQyaIw==",
-      "path": "google.protobuf/3.17.0",
-      "hashPath": "google.protobuf.3.17.0.nupkg.sha512"
+      "sha512": "sha512-M6yun2BPdHkBjD3V14muZSt72azWHRJEx88ME2TyyH2+/ww6R3hIptjBFQQtO6pmkfLXW/NGQ4hADWSa9AmK2A==",
+      "path": "google.protobuf/3.19.1",
+      "hashPath": "google.protobuf.3.19.1.nupkg.sha512"
     },
-    "Google.Protobuf.Tools/3.17.0": {
+    "Google.Protobuf.Tools/3.19.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lfFz8w6e4dSozVifAVXM9Tkt/qipHDIZBklvI275O6mcdYaq2AGl4OIgQ4uWTea0zs2i94hBujrcnzfXE7HG+g==",
-      "path": "google.protobuf.tools/3.17.0",
-      "hashPath": "google.protobuf.tools.3.17.0.nupkg.sha512"
+      "sha512": "sha512-n8Zu+f2lDjc1ULPIXzTuseO9BigYKUq3MDNjtzEfNbPPPdqwgSMqet9/jQergttabdk9PIIi1wI8gptrDPW2XA==",
+      "path": "google.protobuf.tools/3.19.1",
+      "hashPath": "google.protobuf.tools.3.19.1.nupkg.sha512"
     },
     "Grpc.Core/2.37.1": {
       "type": "package",

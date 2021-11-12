@@ -58,9 +58,10 @@ using Grpc.Core;
 using ConsoleAppServer;
 using com.mirle.ibgAK0.EAP.HostMessage.H2E;
 using com.mirle.ibg3k0.sc.WebAPI;
-using com.mirle.ibgAK0.EAP.HostMessage.E2H;
 using System.Windows.Forms;
 using System.Diagnostics;
+using GrpcService;
+using RailChangerProtocol;
 //using Excel = Microsoft.Office.Interop.Excel;
 namespace com.mirle.ibg3k0.sc.App
 {
@@ -240,7 +241,6 @@ namespace com.mirle.ibg3k0.sc.App
 
         //gRPC Service
         public ToHostCommand ToHostCommand = null;
-        public EAP_K11_E2H.EAP_K11_E2HClient EAP_Client = null;
 
         //RailChanger Value
         public UInt16 RC_Alive = 0;
@@ -1193,7 +1193,6 @@ namespace com.mirle.ibg3k0.sc.App
                 int mcs_port = int.Parse(ConfigurationManager.AppSettings["Host_Sever_Port"]);
 
                 Channel eapChannel = new Channel(mcs_ip, mcs_port, ChannelCredentials.Insecure);
-                EAP_Client = new EAP_K11_E2H.EAP_K11_E2HClient(eapChannel);
 
                 Task.Run(async () => await gRPC_Server_StartAsync());
                 ToHostCommand = new ToHostCommand(this);
@@ -1715,12 +1714,16 @@ namespace com.mirle.ibg3k0.sc.App
         /// </summary>
         public async Task gRPC_Server_StartAsync()
         {
+            #region 建立gRPC Server
+            Console.WriteLine("建立gRPC連線服務中");
             var server = new Server()
             {
-                Services = { EAP_K11_H2E.BindService(new ReceiveHostCommad(this)) },
-                Ports = { new ServerPort(IPAddress.Any.ToString(), int.Parse(ConfigurationManager.AppSettings["gRPC_Sever_Port"]), ServerCredentials.Insecure) }
+                Services = { Greeter.BindService(new TrackService(this)) },
+                Ports = { new ServerPort(IPAddress.Any.ToString(), 6060, ServerCredentials.Insecure) },
             };
             server.Start();
+            Console.WriteLine("建立gRPC連線服務完成");
+            #endregion
             //await server.ShutdownAsync();
         }
     }

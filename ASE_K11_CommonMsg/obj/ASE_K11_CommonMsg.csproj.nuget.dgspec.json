@@ -46,11 +46,11 @@
           "dependencies": {
             "Google.Protobuf": {
               "target": "Package",
-              "version": "[3.17.0, )"
+              "version": "[3.19.1, )"
             },
             "Google.Protobuf.Tools": {
               "target": "Package",
-              "version": "[3.17.0, )"
+              "version": "[3.19.1, )"
             },
             "Grpc.Core": {
               "target": "Package",

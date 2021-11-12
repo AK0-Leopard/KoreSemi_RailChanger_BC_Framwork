@@ -6,6 +6,6 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
     <Import Project="$(NuGetPackageRoot)grpc.tools\2.37.1\build\Grpc.Tools.targets" Condition="Exists('$(NuGetPackageRoot)grpc.tools\2.37.1\build\Grpc.Tools.targets')" />
-    <Import Project="$(NuGetPackageRoot)google.protobuf.tools\3.17.0\build\Google.Protobuf.Tools.targets" Condition="Exists('$(NuGetPackageRoot)google.protobuf.tools\3.17.0\build\Google.Protobuf.Tools.targets')" />
+    <Import Project="$(NuGetPackageRoot)google.protobuf.tools\3.19.1\build\Google.Protobuf.Tools.targets" Condition="Exists('$(NuGetPackageRoot)google.protobuf.tools\3.19.1\build\Google.Protobuf.Tools.targets')" />
   </ImportGroup>
 </Project>

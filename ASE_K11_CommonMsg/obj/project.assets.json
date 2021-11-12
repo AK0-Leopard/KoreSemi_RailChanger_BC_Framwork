@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Google.Protobuf/3.17.0": {
+      "Google.Protobuf/3.19.1": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3",
@@ -15,7 +15,7 @@
           "lib/netstandard2.0/Google.Protobuf.dll": {}
         }
       },
-      "Google.Protobuf.Tools/3.17.0": {
+      "Google.Protobuf.Tools/3.19.1": {
         "type": "package",
         "build": {
           "build/Google.Protobuf.Tools.targets": {}
@@ -146,14 +146,14 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.17.0": {
-      "sha512": "iyZfmz69cqbRRjtxfrMRFUPdXZHPKD6Nn33ABcfsE36YfEsG91s3UXBAYTuF7Mw8Y1VAd78gOyGRUQIjcQyaIw==",
+    "Google.Protobuf/3.19.1": {
+      "sha512": "M6yun2BPdHkBjD3V14muZSt72azWHRJEx88ME2TyyH2+/ww6R3hIptjBFQQtO6pmkfLXW/NGQ4hADWSa9AmK2A==",
       "type": "package",
-      "path": "google.protobuf/3.17.0",
+      "path": "google.protobuf/3.19.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.17.0.nupkg.sha512",
+        "google.protobuf.3.19.1.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -169,17 +169,17 @@
         "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
-    "Google.Protobuf.Tools/3.17.0": {
-      "sha512": "lfFz8w6e4dSozVifAVXM9Tkt/qipHDIZBklvI275O6mcdYaq2AGl4OIgQ4uWTea0zs2i94hBujrcnzfXE7HG+g==",
+    "Google.Protobuf.Tools/3.19.1": {
+      "sha512": "n8Zu+f2lDjc1ULPIXzTuseO9BigYKUq3MDNjtzEfNbPPPdqwgSMqet9/jQergttabdk9PIIi1wI8gptrDPW2XA==",
       "type": "package",
-      "path": "google.protobuf.tools/3.17.0",
+      "path": "google.protobuf.tools/3.19.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Google.Protobuf.Tools.targets",
         "buildCrossTargeting/Google.Protobuf.Tools.targets",
-        "google.protobuf.tools.3.17.0.nupkg.sha512",
+        "google.protobuf.tools.3.19.1.nupkg.sha512",
         "google.protobuf.tools.nuspec",
         "tools/google/protobuf/any.proto",
         "tools/google/protobuf/api.proto",
@@ -554,8 +554,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Google.Protobuf >= 3.17.0",
-      "Google.Protobuf.Tools >= 3.17.0",
+      "Google.Protobuf >= 3.19.1",
+      "Google.Protobuf.Tools >= 3.19.1",
       "Grpc.Core >= 2.37.1",
       "Grpc.Core.Api >= 2.37.1",
       "Grpc.Tools >= 2.37.1",
@@ -608,11 +608,11 @@
         "dependencies": {
           "Google.Protobuf": {
             "target": "Package",
-            "version": "[3.17.0, )"
+            "version": "[3.19.1, )"
           },
           "Google.Protobuf.Tools": {
             "target": "Package",
-            "version": "[3.17.0, )"
+            "version": "[3.19.1, )"
           },
           "Grpc.Core": {
             "target": "Package",

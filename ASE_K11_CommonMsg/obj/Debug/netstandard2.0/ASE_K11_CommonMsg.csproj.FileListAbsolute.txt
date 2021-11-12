@@ -42,9 +42,9 @@ D:\Workspace\青島\RailChanger\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.deps.json
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.dll
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.pdb
-C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csprojAssemblyReference.cache
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.AssemblyInfoInputs.cache
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.AssemblyInfo.cs
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csproj.CoreCompileInputs.cache
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.dll
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.pdb
+C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csprojAssemblyReference.cache

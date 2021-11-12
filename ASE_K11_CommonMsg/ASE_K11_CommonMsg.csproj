@@ -19,8 +19,8 @@
     <None Remove="Protos\EAP_K11_H2E.proto" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.17.0" />
-    <PackageReference Include="Google.Protobuf.Tools" Version="3.17.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.1" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.19.1" />
     <PackageReference Include="Grpc.Core" Version="2.37.1" />
     <PackageReference Include="Grpc.Core.Api" Version="2.37.1" />
     <PackageReference Include="Grpc.Tools" Version="2.37.1">

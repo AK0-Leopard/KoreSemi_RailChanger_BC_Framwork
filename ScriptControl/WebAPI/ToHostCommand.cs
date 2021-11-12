@@ -4,7 +4,6 @@ using System.Configuration;
 using System.Threading;
 using System.Threading.Tasks;
 using com.mirle.ibg3k0.sc.Data.JSON;
-using com.mirle.ibgAK0.EAP.HostMessage.E2H;
 using Grpc.Core;
 using Newtonsoft.Json;
 using com.mirle.ibg3k0.sc.Common;

@@ -1,169 +1,97 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "com.mirle.ibgAK0.EAP.HostMessage.E2H";
+option csharp_namespace = "RailChangerProtocol";
+
+package greet;
+
 // The greeting service definition.
-service EAP_K11_E2H {
-	//From EQ (EAP send to MCS)
-	rpc SendHost_EP11_Command (SendHost_EP11) returns (Reply_FromHost_HP11) {}
-	rpc SendHost_EW34_Command (SendHost_EW34) returns (Reply_FromHost_HW34) {}
-	rpc SendHost_EW35_Command (SendHost_EW35) returns (Reply_FromHost_HW35) {}
-	rpc SendHost_EW36_Command (SendHost_EW36) returns (Reply_FromHost_HW36) {}
-	rpc SendHost_ES45_Command (SendHost_ES45) returns (Reply_FromHost_HS45) {}
-	rpc SendHost_ES46_Command (SendHost_ES46) returns (Reply_FromHost_HS46) {}
-	rpc SendHost_ES49_Command (SendHost_ES49) returns (Reply_FromHost_HS49) {}
-	rpc SendHost_ES54_Command (SendHost_ES54) returns (Reply_FromHost_HS54) {}
-}
-//From EQ (EAP send to MCS)
-message Reply_FromHost_HP11{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
-}
-message SendHost_EP11{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string BUFFER_ID = 6;
-	string BUNDLE_ID = 7;
-	string STATUS = 8;
-	string TRAY_TYPE = 9;
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc isAlive (isAliveRequest) returns (isAliveReply);
+  rpc alarmRst(alarmRstRequest) returns (alarmRstReply);
+  rpc blockRst(blockRstRequest) returns (blockRstReply);
+  rpc changeDir(changeDirRequest) returns (changeDirReply);
+  rpc getDir(getDirRequest) returns (getDirReply);
+  rpc getStatus(getStatusRequest) returns (getStatusReply);
+  rpc getBlock(getBlockRequest) returns (getBlockReply);
+  rpc getChangerTimer(getChangerTimerRequest) returns (getChangerTimerReply);
+  rpc getErrorReport(getErrorReportRequest) returns (getErrorReportReply);
+  rpc getVersion(getVersionRequest) returns (getVersionReply);
+  rpc changeMode(changeModeRequest) returns (changeModeReply);
+  rpc stopSet(stopSetRequest) returns (stopSetReply);
+  rpc RequestTracksInfo(Empty) returns (ReplyTracksInfo);
 }
 
-message Reply_FromHost_HW34{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
+//Start MapData
+message Empty 
+{
+ string ID = 1;
 }
-message SendHost_EW34{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string BUNDLE_ID = 6;
-	string DELETE_LOCATION = 7;
+//Start Track Info
+enum TrackDir{
+    TrackDir_None = 0;
+    TrackDir_Straight = 1;
+    TrackDir_Curve = 2;
 }
+enum TrackStatus{
+    TrackStatus_NotDefine = 0;
+    TrackStatus_Manaul = 1;
+    TrackStatus_Auto = 2;
+    TrackStatus_Alarm = 3;
+}
+enum TrackBlock
+{
+    TrackBlock_None=0;
+    TrackBlock_Block=1;
+    TrackBlock_NonBlock=2;
+}
+message ReplyTracksInfo { repeated TrackInfo tracks_info = 1; }
+message TrackInfo { string track_id = 1; TrackDir dir = 2; TrackStatus status = 3; int32 alarmCode=4; bool Alive=5; TrackBlock isBlock=6;}
 
-message Reply_FromHost_HW35{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
-}
-message SendHost_EW35{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string TRANSFER_TYPE = 6;
-	string BUNDLE_ID = 7;
-	string LOCATION = 8;
-}
+// The request message containing the user's name.
+message HelloRequest {string name = 1;}
+// The response message containing the greetings.
+message HelloReply {string message = 1;}
 
-message Reply_FromHost_HW36{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
-}
-message SendHost_EW36{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string LOCATION = 6;
-	string BUNDLE_ID = 7;
-	string EVENT_TYPE = 8;
-	string TRAY_TYPE = 9;
-	string CODE = 10;
-}
+//is Alive 
+message isAliveRequest {string railChangerNumber = 1;}
+message isAliveReply {string message = 1;}
 
-message Reply_FromHost_HS45{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-}
-message SendHost_ES45{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-}
+//PLC控制訊號
+//Alarm Reset
+message alarmRstRequest{ string railChangerNumber = 1; }
+message alarmRstReply{ string message = 1;}
+//block Reset
+message blockRstRequest{ string railChangerNumber = 1; }
+message blockRstReply{ string message = 1;}
+//Change dir
+message changeDirRequest{ string railChangerNumber = 1; string dir=2;}
+message changeDirReply{ string message = 1;}
 
-message Reply_FromHost_HS46{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-}
-message SendHost_ES46{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string EQUIPMENT_STATUS = 6;
-	string CIM_MODE = 7;
-	string RUN_MODE = 8;
-	string OPERATION_MODE = 9;
-	string ALARMWARNINGHAPPEN = 10;
+message getDirRequest{ string railChangerNumber = 1; }
+message getDirReply{ string message = 1;}
 
-}
+message getStatusRequest{string railChangerNumber = 1;}
+message getStatusReply { string message = 1;}
 
-message Reply_FromHost_HS49{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
-}
-message SendHost_ES49{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string ALARM_STATUS = 6;
-	string ALARM_LEVEL = 7;
-	string ALARM_CODE = 8;
-}
+message getBlockRequest {string railChangerNumber = 1;}
+message getBlockReply { string message=1; }
 
-message Reply_FromHost_HS54{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string CODE = 6;
-}
-message SendHost_ES54{
-	string FUNCTIONID = 1;
-	string FUNCTIONSEQUENCENO = 2;
-	string FUNCTIONNAME = 3;
-	string EQID = 4;
-	string REPORT_TIME = 5;
-	string BCR_Bundle_ID = 6;
-	string Virtual_Bundle_ID = 7;
-	string MATERIAL_PRESENT = 8;
-	string EXECUTION_CMD_SEQUENCE_NO = 9;
-}
 
+
+
+message getChangerTimerRequest {string railChangerNumber=1;}
+message getChangerTimerReply {string message=1;}
+
+message getErrorReportRequest {string railChangerNumber=1;}
+message getErrorReportReply {string message=1;}
+
+message getVersionRequest {string railChangerNumber=1;}
+message getVersionReply {string message=1;}
+
+message changeModeRequest{ string railChangerNumber = 1; string mode=2;}
+message changeModeReply{ string message = 1;}
+
+message stopSetRequest {string railChangerNumber=1;}
+message stopSetReply {string message=1;}

@@ -21,6 +21,6 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\lashellow\.nuget\packages\grpc.tools\2.37.1</PkgGrpc_Tools>
-    <PkgGoogle_Protobuf_Tools Condition=" '$(PkgGoogle_Protobuf_Tools)' == '' ">C:\Users\lashellow\.nuget\packages\google.protobuf.tools\3.17.0</PkgGoogle_Protobuf_Tools>
+    <PkgGoogle_Protobuf_Tools Condition=" '$(PkgGoogle_Protobuf_Tools)' == '' ">C:\Users\lashellow\.nuget\packages\google.protobuf.tools\3.19.1</PkgGoogle_Protobuf_Tools>
   </PropertyGroup>
 </Project>

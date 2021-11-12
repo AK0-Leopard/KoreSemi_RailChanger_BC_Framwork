@@ -184,3 +184,4 @@ C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\RailChanger
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\RailChanger_Viewer\obj\Debug\RailChanger_Viewer.csproj.CopyComplete
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\RailChanger_Viewer\obj\Debug\RailChanger_Viewer.exe
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\RailChanger_Viewer\obj\Debug\RailChanger_Viewer.pdb
+C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\RailChanger_Viewer\obj\Debug\RailChanger_Viewer_Content.g.cs

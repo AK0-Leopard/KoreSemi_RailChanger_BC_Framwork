@@ -7,13 +7,13 @@
 
 using grpc = global::Grpc.Core;
 
-namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
+namespace RailChangerProtocol {
   /// <summary>
   /// The greeting service definition.
   /// </summary>
-  public static partial class EAP_K11_E2H
+  public static partial class Greeter
   {
-    static readonly string __ServiceName = "EAP_K11_E2H";
+    static readonly string __ServiceName = "greet.Greeter";
 
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
@@ -45,352 +45,544 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11> __Marshaller_SendHost_EP11 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11> __Marshaller_Reply_FromHost_HP11 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34> __Marshaller_SendHost_EW34 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34> __Marshaller_Reply_FromHost_HW34 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35> __Marshaller_SendHost_EW35 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35> __Marshaller_Reply_FromHost_HW35 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36> __Marshaller_SendHost_EW36 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36> __Marshaller_Reply_FromHost_HW36 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45> __Marshaller_SendHost_ES45 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45> __Marshaller_Reply_FromHost_HS45 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46> __Marshaller_SendHost_ES46 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46> __Marshaller_Reply_FromHost_HS46 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49> __Marshaller_SendHost_ES49 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49> __Marshaller_Reply_FromHost_HS49 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54> __Marshaller_SendHost_ES54 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54.Parser));
-    static readonly grpc::Marshaller<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54> __Marshaller_Reply_FromHost_HS54 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.HelloRequest> __Marshaller_greet_HelloRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.HelloRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.HelloReply> __Marshaller_greet_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.HelloReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.isAliveRequest> __Marshaller_greet_isAliveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.isAliveRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.isAliveReply> __Marshaller_greet_isAliveReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.isAliveReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.alarmRstRequest> __Marshaller_greet_alarmRstRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.alarmRstRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.alarmRstReply> __Marshaller_greet_alarmRstReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.alarmRstReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.blockRstRequest> __Marshaller_greet_blockRstRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.blockRstRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.blockRstReply> __Marshaller_greet_blockRstReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.blockRstReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.changeDirRequest> __Marshaller_greet_changeDirRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.changeDirRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.changeDirReply> __Marshaller_greet_changeDirReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.changeDirReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getDirRequest> __Marshaller_greet_getDirRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getDirRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getDirReply> __Marshaller_greet_getDirReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getDirReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getStatusRequest> __Marshaller_greet_getStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getStatusRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getStatusReply> __Marshaller_greet_getStatusReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getStatusReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getBlockRequest> __Marshaller_greet_getBlockRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getBlockRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getBlockReply> __Marshaller_greet_getBlockReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getBlockReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getChangerTimerRequest> __Marshaller_greet_getChangerTimerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getChangerTimerRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getChangerTimerReply> __Marshaller_greet_getChangerTimerReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getChangerTimerReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getErrorReportRequest> __Marshaller_greet_getErrorReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getErrorReportRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getErrorReportReply> __Marshaller_greet_getErrorReportReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getErrorReportReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getVersionRequest> __Marshaller_greet_getVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getVersionRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.getVersionReply> __Marshaller_greet_getVersionReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.getVersionReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.changeModeRequest> __Marshaller_greet_changeModeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.changeModeRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.changeModeReply> __Marshaller_greet_changeModeReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.changeModeReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.stopSetRequest> __Marshaller_greet_stopSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.stopSetRequest.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.stopSetReply> __Marshaller_greet_stopSetReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.stopSetReply.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.Empty> __Marshaller_greet_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.Empty.Parser));
+    static readonly grpc::Marshaller<global::RailChangerProtocol.ReplyTracksInfo> __Marshaller_greet_ReplyTracksInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::RailChangerProtocol.ReplyTracksInfo.Parser));
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11> __Method_SendHost_EP11_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11>(
+    static readonly grpc::Method<global::RailChangerProtocol.HelloRequest, global::RailChangerProtocol.HelloReply> __Method_SayHello = new grpc::Method<global::RailChangerProtocol.HelloRequest, global::RailChangerProtocol.HelloReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_EP11_Command",
-        __Marshaller_SendHost_EP11,
-        __Marshaller_Reply_FromHost_HP11);
+        "SayHello",
+        __Marshaller_greet_HelloRequest,
+        __Marshaller_greet_HelloReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34> __Method_SendHost_EW34_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34>(
+    static readonly grpc::Method<global::RailChangerProtocol.isAliveRequest, global::RailChangerProtocol.isAliveReply> __Method_isAlive = new grpc::Method<global::RailChangerProtocol.isAliveRequest, global::RailChangerProtocol.isAliveReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_EW34_Command",
-        __Marshaller_SendHost_EW34,
-        __Marshaller_Reply_FromHost_HW34);
+        "isAlive",
+        __Marshaller_greet_isAliveRequest,
+        __Marshaller_greet_isAliveReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35> __Method_SendHost_EW35_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35>(
+    static readonly grpc::Method<global::RailChangerProtocol.alarmRstRequest, global::RailChangerProtocol.alarmRstReply> __Method_alarmRst = new grpc::Method<global::RailChangerProtocol.alarmRstRequest, global::RailChangerProtocol.alarmRstReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_EW35_Command",
-        __Marshaller_SendHost_EW35,
-        __Marshaller_Reply_FromHost_HW35);
+        "alarmRst",
+        __Marshaller_greet_alarmRstRequest,
+        __Marshaller_greet_alarmRstReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36> __Method_SendHost_EW36_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36>(
+    static readonly grpc::Method<global::RailChangerProtocol.blockRstRequest, global::RailChangerProtocol.blockRstReply> __Method_blockRst = new grpc::Method<global::RailChangerProtocol.blockRstRequest, global::RailChangerProtocol.blockRstReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_EW36_Command",
-        __Marshaller_SendHost_EW36,
-        __Marshaller_Reply_FromHost_HW36);
+        "blockRst",
+        __Marshaller_greet_blockRstRequest,
+        __Marshaller_greet_blockRstReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45> __Method_SendHost_ES45_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45>(
+    static readonly grpc::Method<global::RailChangerProtocol.changeDirRequest, global::RailChangerProtocol.changeDirReply> __Method_changeDir = new grpc::Method<global::RailChangerProtocol.changeDirRequest, global::RailChangerProtocol.changeDirReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_ES45_Command",
-        __Marshaller_SendHost_ES45,
-        __Marshaller_Reply_FromHost_HS45);
+        "changeDir",
+        __Marshaller_greet_changeDirRequest,
+        __Marshaller_greet_changeDirReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46> __Method_SendHost_ES46_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46>(
+    static readonly grpc::Method<global::RailChangerProtocol.getDirRequest, global::RailChangerProtocol.getDirReply> __Method_getDir = new grpc::Method<global::RailChangerProtocol.getDirRequest, global::RailChangerProtocol.getDirReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_ES46_Command",
-        __Marshaller_SendHost_ES46,
-        __Marshaller_Reply_FromHost_HS46);
+        "getDir",
+        __Marshaller_greet_getDirRequest,
+        __Marshaller_greet_getDirReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49> __Method_SendHost_ES49_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49>(
+    static readonly grpc::Method<global::RailChangerProtocol.getStatusRequest, global::RailChangerProtocol.getStatusReply> __Method_getStatus = new grpc::Method<global::RailChangerProtocol.getStatusRequest, global::RailChangerProtocol.getStatusReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_ES49_Command",
-        __Marshaller_SendHost_ES49,
-        __Marshaller_Reply_FromHost_HS49);
+        "getStatus",
+        __Marshaller_greet_getStatusRequest,
+        __Marshaller_greet_getStatusReply);
 
-    static readonly grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54> __Method_SendHost_ES54_Command = new grpc::Method<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54>(
+    static readonly grpc::Method<global::RailChangerProtocol.getBlockRequest, global::RailChangerProtocol.getBlockReply> __Method_getBlock = new grpc::Method<global::RailChangerProtocol.getBlockRequest, global::RailChangerProtocol.getBlockReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SendHost_ES54_Command",
-        __Marshaller_SendHost_ES54,
-        __Marshaller_Reply_FromHost_HS54);
+        "getBlock",
+        __Marshaller_greet_getBlockRequest,
+        __Marshaller_greet_getBlockReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.getChangerTimerRequest, global::RailChangerProtocol.getChangerTimerReply> __Method_getChangerTimer = new grpc::Method<global::RailChangerProtocol.getChangerTimerRequest, global::RailChangerProtocol.getChangerTimerReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getChangerTimer",
+        __Marshaller_greet_getChangerTimerRequest,
+        __Marshaller_greet_getChangerTimerReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.getErrorReportRequest, global::RailChangerProtocol.getErrorReportReply> __Method_getErrorReport = new grpc::Method<global::RailChangerProtocol.getErrorReportRequest, global::RailChangerProtocol.getErrorReportReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getErrorReport",
+        __Marshaller_greet_getErrorReportRequest,
+        __Marshaller_greet_getErrorReportReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.getVersionRequest, global::RailChangerProtocol.getVersionReply> __Method_getVersion = new grpc::Method<global::RailChangerProtocol.getVersionRequest, global::RailChangerProtocol.getVersionReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getVersion",
+        __Marshaller_greet_getVersionRequest,
+        __Marshaller_greet_getVersionReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.changeModeRequest, global::RailChangerProtocol.changeModeReply> __Method_changeMode = new grpc::Method<global::RailChangerProtocol.changeModeRequest, global::RailChangerProtocol.changeModeReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "changeMode",
+        __Marshaller_greet_changeModeRequest,
+        __Marshaller_greet_changeModeReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.stopSetRequest, global::RailChangerProtocol.stopSetReply> __Method_stopSet = new grpc::Method<global::RailChangerProtocol.stopSetRequest, global::RailChangerProtocol.stopSetReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "stopSet",
+        __Marshaller_greet_stopSetRequest,
+        __Marshaller_greet_stopSetReply);
+
+    static readonly grpc::Method<global::RailChangerProtocol.Empty, global::RailChangerProtocol.ReplyTracksInfo> __Method_RequestTracksInfo = new grpc::Method<global::RailChangerProtocol.Empty, global::RailChangerProtocol.ReplyTracksInfo>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestTracksInfo",
+        __Marshaller_greet_Empty,
+        __Marshaller_greet_ReplyTracksInfo);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.Services[0]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of EAP_K11_E2H</summary>
-    [grpc::BindServiceMethod(typeof(EAP_K11_E2H), "BindService")]
-    public abstract partial class EAP_K11_E2HBase
+    /// <summary>Base class for server-side implementations of Greeter</summary>
+    [grpc::BindServiceMethod(typeof(Greeter), "BindService")]
+    public abstract partial class GreeterBase
     {
       /// <summary>
-      ///From EQ (EAP send to MCS)
+      /// Sends a greeting
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11> SendHost_EP11_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.HelloReply> SayHello(global::RailChangerProtocol.HelloRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34> SendHost_EW34_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.isAliveReply> isAlive(global::RailChangerProtocol.isAliveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35> SendHost_EW35_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.alarmRstReply> alarmRst(global::RailChangerProtocol.alarmRstRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36> SendHost_EW36_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.blockRstReply> blockRst(global::RailChangerProtocol.blockRstRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45> SendHost_ES45_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.changeDirReply> changeDir(global::RailChangerProtocol.changeDirRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46> SendHost_ES46_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getDirReply> getDir(global::RailChangerProtocol.getDirRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49> SendHost_ES49_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getStatusReply> getStatus(global::RailChangerProtocol.getStatusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54> SendHost_ES54_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getBlockReply> getBlock(global::RailChangerProtocol.getBlockRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getChangerTimerReply> getChangerTimer(global::RailChangerProtocol.getChangerTimerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getErrorReportReply> getErrorReport(global::RailChangerProtocol.getErrorReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.getVersionReply> getVersion(global::RailChangerProtocol.getVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.changeModeReply> changeMode(global::RailChangerProtocol.changeModeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.stopSetReply> stopSet(global::RailChangerProtocol.stopSetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::RailChangerProtocol.ReplyTracksInfo> RequestTracksInfo(global::RailChangerProtocol.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for EAP_K11_E2H</summary>
-    public partial class EAP_K11_E2HClient : grpc::ClientBase<EAP_K11_E2HClient>
+    /// <summary>Client for Greeter</summary>
+    public partial class GreeterClient : grpc::ClientBase<GreeterClient>
     {
-      /// <summary>Creates a new client for EAP_K11_E2H</summary>
+      /// <summary>Creates a new client for Greeter</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public EAP_K11_E2HClient(grpc::ChannelBase channel) : base(channel)
+      public GreeterClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for EAP_K11_E2H that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for Greeter that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public EAP_K11_E2HClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public GreeterClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected EAP_K11_E2HClient() : base()
+      protected GreeterClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected EAP_K11_E2HClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected GreeterClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
       /// <summary>
-      ///From EQ (EAP send to MCS)
+      /// Sends a greeting
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11 SendHost_EP11_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.HelloReply SayHello(global::RailChangerProtocol.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EP11_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SayHello(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///From EQ (EAP send to MCS)
+      /// Sends a greeting
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11 SendHost_EP11_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.HelloReply SayHello(global::RailChangerProtocol.HelloRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_EP11_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_SayHello, null, options, request);
       }
       /// <summary>
-      ///From EQ (EAP send to MCS)
+      /// Sends a greeting
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11> SendHost_EP11_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.HelloReply> SayHelloAsync(global::RailChangerProtocol.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EP11_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SayHelloAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///From EQ (EAP send to MCS)
+      /// Sends a greeting
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11> SendHost_EP11_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.HelloReply> SayHelloAsync(global::RailChangerProtocol.HelloRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_EP11_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34 SendHost_EW34_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.isAliveReply isAlive(global::RailChangerProtocol.isAliveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW34_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return isAlive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34 SendHost_EW34_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.isAliveReply isAlive(global::RailChangerProtocol.isAliveRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_EW34_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_isAlive, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34> SendHost_EW34_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.isAliveReply> isAliveAsync(global::RailChangerProtocol.isAliveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW34_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return isAliveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34> SendHost_EW34_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.isAliveReply> isAliveAsync(global::RailChangerProtocol.isAliveRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_EW34_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_isAlive, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35 SendHost_EW35_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.alarmRstReply alarmRst(global::RailChangerProtocol.alarmRstRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW35_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return alarmRst(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35 SendHost_EW35_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.alarmRstReply alarmRst(global::RailChangerProtocol.alarmRstRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_EW35_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_alarmRst, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35> SendHost_EW35_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.alarmRstReply> alarmRstAsync(global::RailChangerProtocol.alarmRstRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW35_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return alarmRstAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35> SendHost_EW35_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.alarmRstReply> alarmRstAsync(global::RailChangerProtocol.alarmRstRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_EW35_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_alarmRst, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36 SendHost_EW36_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.blockRstReply blockRst(global::RailChangerProtocol.blockRstRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW36_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return blockRst(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36 SendHost_EW36_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.blockRstReply blockRst(global::RailChangerProtocol.blockRstRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_EW36_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_blockRst, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36> SendHost_EW36_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.blockRstReply> blockRstAsync(global::RailChangerProtocol.blockRstRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_EW36_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return blockRstAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36> SendHost_EW36_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.blockRstReply> blockRstAsync(global::RailChangerProtocol.blockRstRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_EW36_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_blockRst, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45 SendHost_ES45_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.changeDirReply changeDir(global::RailChangerProtocol.changeDirRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES45_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return changeDir(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45 SendHost_ES45_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.changeDirReply changeDir(global::RailChangerProtocol.changeDirRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_ES45_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_changeDir, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45> SendHost_ES45_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.changeDirReply> changeDirAsync(global::RailChangerProtocol.changeDirRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES45_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return changeDirAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45> SendHost_ES45_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.changeDirReply> changeDirAsync(global::RailChangerProtocol.changeDirRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_ES45_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_changeDir, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46 SendHost_ES46_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.getDirReply getDir(global::RailChangerProtocol.getDirRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES46_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getDir(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46 SendHost_ES46_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.getDirReply getDir(global::RailChangerProtocol.getDirRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_ES46_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getDir, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46> SendHost_ES46_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getDirReply> getDirAsync(global::RailChangerProtocol.getDirRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES46_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getDirAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46> SendHost_ES46_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getDirReply> getDirAsync(global::RailChangerProtocol.getDirRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_ES46_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getDir, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49 SendHost_ES49_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.getStatusReply getStatus(global::RailChangerProtocol.getStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES49_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49 SendHost_ES49_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.getStatusReply getStatus(global::RailChangerProtocol.getStatusRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_ES49_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getStatus, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49> SendHost_ES49_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getStatusReply> getStatusAsync(global::RailChangerProtocol.getStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES49_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49> SendHost_ES49_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getStatusReply> getStatusAsync(global::RailChangerProtocol.getStatusRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_ES49_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getStatus, null, options, request);
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54 SendHost_ES54_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::RailChangerProtocol.getBlockReply getBlock(global::RailChangerProtocol.getBlockRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES54_Command(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getBlock(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54 SendHost_ES54_Command(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54 request, grpc::CallOptions options)
+      public virtual global::RailChangerProtocol.getBlockReply getBlock(global::RailChangerProtocol.getBlockRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SendHost_ES54_Command, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getBlock, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54> SendHost_ES54_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getBlockReply> getBlockAsync(global::RailChangerProtocol.getBlockRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SendHost_ES54_CommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getBlockAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54> SendHost_ES54_CommandAsync(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getBlockReply> getBlockAsync(global::RailChangerProtocol.getBlockRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SendHost_ES54_Command, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getBlock, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.getChangerTimerReply getChangerTimer(global::RailChangerProtocol.getChangerTimerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getChangerTimer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.getChangerTimerReply getChangerTimer(global::RailChangerProtocol.getChangerTimerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getChangerTimer, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getChangerTimerReply> getChangerTimerAsync(global::RailChangerProtocol.getChangerTimerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getChangerTimerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getChangerTimerReply> getChangerTimerAsync(global::RailChangerProtocol.getChangerTimerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getChangerTimer, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.getErrorReportReply getErrorReport(global::RailChangerProtocol.getErrorReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getErrorReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.getErrorReportReply getErrorReport(global::RailChangerProtocol.getErrorReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getErrorReport, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getErrorReportReply> getErrorReportAsync(global::RailChangerProtocol.getErrorReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getErrorReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getErrorReportReply> getErrorReportAsync(global::RailChangerProtocol.getErrorReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getErrorReport, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.getVersionReply getVersion(global::RailChangerProtocol.getVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.getVersionReply getVersion(global::RailChangerProtocol.getVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getVersion, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getVersionReply> getVersionAsync(global::RailChangerProtocol.getVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.getVersionReply> getVersionAsync(global::RailChangerProtocol.getVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getVersion, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.changeModeReply changeMode(global::RailChangerProtocol.changeModeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return changeMode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.changeModeReply changeMode(global::RailChangerProtocol.changeModeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_changeMode, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.changeModeReply> changeModeAsync(global::RailChangerProtocol.changeModeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return changeModeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.changeModeReply> changeModeAsync(global::RailChangerProtocol.changeModeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_changeMode, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.stopSetReply stopSet(global::RailChangerProtocol.stopSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return stopSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.stopSetReply stopSet(global::RailChangerProtocol.stopSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_stopSet, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.stopSetReply> stopSetAsync(global::RailChangerProtocol.stopSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return stopSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.stopSetReply> stopSetAsync(global::RailChangerProtocol.stopSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_stopSet, null, options, request);
+      }
+      public virtual global::RailChangerProtocol.ReplyTracksInfo RequestTracksInfo(global::RailChangerProtocol.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestTracksInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::RailChangerProtocol.ReplyTracksInfo RequestTracksInfo(global::RailChangerProtocol.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestTracksInfo, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.ReplyTracksInfo> RequestTracksInfoAsync(global::RailChangerProtocol.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestTracksInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::RailChangerProtocol.ReplyTracksInfo> RequestTracksInfoAsync(global::RailChangerProtocol.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestTracksInfo, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override EAP_K11_E2HClient NewInstance(ClientBaseConfiguration configuration)
+      protected override GreeterClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new EAP_K11_E2HClient(configuration);
+        return new GreeterClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(EAP_K11_E2HBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(GreeterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SendHost_EP11_Command, serviceImpl.SendHost_EP11_Command)
-          .AddMethod(__Method_SendHost_EW34_Command, serviceImpl.SendHost_EW34_Command)
-          .AddMethod(__Method_SendHost_EW35_Command, serviceImpl.SendHost_EW35_Command)
-          .AddMethod(__Method_SendHost_EW36_Command, serviceImpl.SendHost_EW36_Command)
-          .AddMethod(__Method_SendHost_ES45_Command, serviceImpl.SendHost_ES45_Command)
-          .AddMethod(__Method_SendHost_ES46_Command, serviceImpl.SendHost_ES46_Command)
-          .AddMethod(__Method_SendHost_ES49_Command, serviceImpl.SendHost_ES49_Command)
-          .AddMethod(__Method_SendHost_ES54_Command, serviceImpl.SendHost_ES54_Command).Build();
+          .AddMethod(__Method_SayHello, serviceImpl.SayHello)
+          .AddMethod(__Method_isAlive, serviceImpl.isAlive)
+          .AddMethod(__Method_alarmRst, serviceImpl.alarmRst)
+          .AddMethod(__Method_blockRst, serviceImpl.blockRst)
+          .AddMethod(__Method_changeDir, serviceImpl.changeDir)
+          .AddMethod(__Method_getDir, serviceImpl.getDir)
+          .AddMethod(__Method_getStatus, serviceImpl.getStatus)
+          .AddMethod(__Method_getBlock, serviceImpl.getBlock)
+          .AddMethod(__Method_getChangerTimer, serviceImpl.getChangerTimer)
+          .AddMethod(__Method_getErrorReport, serviceImpl.getErrorReport)
+          .AddMethod(__Method_getVersion, serviceImpl.getVersion)
+          .AddMethod(__Method_changeMode, serviceImpl.changeMode)
+          .AddMethod(__Method_stopSet, serviceImpl.stopSet)
+          .AddMethod(__Method_RequestTracksInfo, serviceImpl.RequestTracksInfo).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, EAP_K11_E2HBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, GreeterBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_SendHost_EP11_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11>(serviceImpl.SendHost_EP11_Command));
-      serviceBinder.AddMethod(__Method_SendHost_EW34_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34>(serviceImpl.SendHost_EW34_Command));
-      serviceBinder.AddMethod(__Method_SendHost_EW35_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35>(serviceImpl.SendHost_EW35_Command));
-      serviceBinder.AddMethod(__Method_SendHost_EW36_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36>(serviceImpl.SendHost_EW36_Command));
-      serviceBinder.AddMethod(__Method_SendHost_ES45_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45>(serviceImpl.SendHost_ES45_Command));
-      serviceBinder.AddMethod(__Method_SendHost_ES46_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46>(serviceImpl.SendHost_ES46_Command));
-      serviceBinder.AddMethod(__Method_SendHost_ES49_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49>(serviceImpl.SendHost_ES49_Command));
-      serviceBinder.AddMethod(__Method_SendHost_ES54_Command, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54, global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54>(serviceImpl.SendHost_ES54_Command));
+      serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.HelloRequest, global::RailChangerProtocol.HelloReply>(serviceImpl.SayHello));
+      serviceBinder.AddMethod(__Method_isAlive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.isAliveRequest, global::RailChangerProtocol.isAliveReply>(serviceImpl.isAlive));
+      serviceBinder.AddMethod(__Method_alarmRst, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.alarmRstRequest, global::RailChangerProtocol.alarmRstReply>(serviceImpl.alarmRst));
+      serviceBinder.AddMethod(__Method_blockRst, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.blockRstRequest, global::RailChangerProtocol.blockRstReply>(serviceImpl.blockRst));
+      serviceBinder.AddMethod(__Method_changeDir, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.changeDirRequest, global::RailChangerProtocol.changeDirReply>(serviceImpl.changeDir));
+      serviceBinder.AddMethod(__Method_getDir, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getDirRequest, global::RailChangerProtocol.getDirReply>(serviceImpl.getDir));
+      serviceBinder.AddMethod(__Method_getStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getStatusRequest, global::RailChangerProtocol.getStatusReply>(serviceImpl.getStatus));
+      serviceBinder.AddMethod(__Method_getBlock, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getBlockRequest, global::RailChangerProtocol.getBlockReply>(serviceImpl.getBlock));
+      serviceBinder.AddMethod(__Method_getChangerTimer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getChangerTimerRequest, global::RailChangerProtocol.getChangerTimerReply>(serviceImpl.getChangerTimer));
+      serviceBinder.AddMethod(__Method_getErrorReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getErrorReportRequest, global::RailChangerProtocol.getErrorReportReply>(serviceImpl.getErrorReport));
+      serviceBinder.AddMethod(__Method_getVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.getVersionRequest, global::RailChangerProtocol.getVersionReply>(serviceImpl.getVersion));
+      serviceBinder.AddMethod(__Method_changeMode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.changeModeRequest, global::RailChangerProtocol.changeModeReply>(serviceImpl.changeMode));
+      serviceBinder.AddMethod(__Method_stopSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.stopSetRequest, global::RailChangerProtocol.stopSetReply>(serviceImpl.stopSet));
+      serviceBinder.AddMethod(__Method_RequestTracksInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::RailChangerProtocol.Empty, global::RailChangerProtocol.ReplyTracksInfo>(serviceImpl.RequestTracksInfo));
     }
 
   }
