@@ -131,6 +131,28 @@ namespace RailChanger_Viewer
 
             }
         }
+
+        private void Block_AllReset_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (CheckIsInput())
+                {
+                    return;
+                }
+                for (int i = 1; i <= 42; i++) {
+                    String EQ_ID = "RC" + i.ToString().PadLeft(2, '0'); ;
+                    Equipment eqpt = scApp.getEQObjCacheManager().getEquipmentByEQPTID(EQ_ID);
+                    RailChangerDefaultValueDefMapAction MapAction = eqpt.getMapActionByIdentityKey(typeof(RailChangerDefaultValueDefMapAction).Name) as RailChangerDefaultValueDefMapAction;
+                    MapAction.RAIL_RESET_CAREXIST();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         private void SideChange_Left_Click(object sender, RoutedEventArgs e)
         {
             try

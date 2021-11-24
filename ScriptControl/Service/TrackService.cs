@@ -10,6 +10,7 @@ using NLog;
 using com.mirle.ibg3k0.sc.Data.VO;
 using com.mirle.ibg3k0.sc.App;
 using com.mirle.ibg3k0.sc.Common;
+using com.mirle.ibg3k0.sc.Data.ValueDefMapAction;
 
 namespace GrpcService
 {
@@ -62,7 +63,10 @@ namespace GrpcService
         public override Task<blockRstReply> blockRst(blockRstRequest request, ServerCallContext context)
         {
             string result = String.Empty;
-            saveLog("blockRst", request.RailChangerNumber, "null", result);
+            //saveLog("blockRst", request.RailChangerNumber, "null", result);
+            Equipment voEQ = scApp.getEQObjCacheManager().getEquipmentByEQPTRealID(request.RailChangerNumber);
+            RailChangerDefaultValueDefMapAction MapAction = voEQ.getMapActionByIdentityKey(typeof(RailChangerDefaultValueDefMapAction).Name) as RailChangerDefaultValueDefMapAction;
+            result = MapAction.RAIL_RESET_CAREXIST().ToString();
             return Task.FromResult(new blockRstReply
             {
                 Message = result
