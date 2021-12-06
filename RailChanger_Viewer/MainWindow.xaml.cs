@@ -2,6 +2,7 @@
 using com.mirle.ibg3k0.sc.Data.ValueDefMapAction;
 using com.mirle.ibg3k0.sc.Data.VO;
 using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -302,6 +303,21 @@ namespace RailChanger_Viewer
             {
 
             }
+        }
+
+        private void API_Start(object sender, RoutedEventArgs e)
+        {
+            Task.Run(async () => await scApp.gRPC_Server_StartAsync());
+            btn_API_Start.Visibility = Visibility.Hidden;
+            btn_API_Stop.Visibility = Visibility.Visible;
+        }
+
+        private void API_Stop(object sender, RoutedEventArgs e)
+        {
+            Task.Run(async () => await scApp.gRPC_Server_StopAsync());
+            btn_API_Start.Visibility = Visibility.Visible;
+            btn_API_Stop.Visibility = Visibility.Hidden;
+
         }
     }
 }

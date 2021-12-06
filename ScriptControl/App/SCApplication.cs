@@ -244,8 +244,8 @@ namespace com.mirle.ibg3k0.sc.App
 
         //RailChanger Value
         public UInt16 RC_Alive = 0;
-    
 
+        public Server server = null;
         private SCApplication()
         {
             init();
@@ -1194,7 +1194,7 @@ namespace com.mirle.ibg3k0.sc.App
 
                 Channel eapChannel = new Channel(mcs_ip, mcs_port, ChannelCredentials.Insecure);
 
-                Task.Run(async () => await gRPC_Server_StartAsync());
+                //Task.Run(async () => await gRPC_Server_StartAsync());
                 ToHostCommand = new ToHostCommand(this);
 
             }
@@ -1715,16 +1715,34 @@ namespace com.mirle.ibg3k0.sc.App
         public async Task gRPC_Server_StartAsync()
         {
             #region 建立gRPC Server
-            Console.WriteLine("建立gRPC連線服務中");
-            var server = new Server()
+            if (server == null)
             {
-                Services = { Greeter.BindService(new TrackService(this)) },
-                Ports = { new ServerPort(IPAddress.Any.ToString(), 6060, ServerCredentials.Insecure) },
-            };
-            server.Start();
-            Console.WriteLine("建立gRPC連線服務完成");
+                Console.WriteLine("建立gRPC連線服務中");
+                server = new Server()
+                {
+                    Services = { Greeter.BindService(new TrackService(this)) },
+                    Ports = { new ServerPort(IPAddress.Any.ToString(), 6060, ServerCredentials.Insecure) },
+                };
+                server.Start();
+                Console.WriteLine("建立gRPC連線服務完成");
+                #endregion
+            }
+        }
+
+        /// <summary>
+        /// 啟動gRPC Server
+        /// </summary>
+        public async Task gRPC_Server_StopAsync()
+        {
+            #region 建立gRPC Server
+            if (server != null)
+            {
+                Console.WriteLine("關閉gRPC連線服務中");
+                await server.ShutdownAsync();
+                Console.WriteLine("關閉gRPC連線服務完成");
+                server = null;
+            }
             #endregion
-            //await server.ShutdownAsync();
         }
     }
 

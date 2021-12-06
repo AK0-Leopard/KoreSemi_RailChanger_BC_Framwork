@@ -183,7 +183,25 @@
                 <local:EQStatus x:Name="EQ_Status" HorizontalAlignment="Left" VerticalAlignment="Top" Height="228" Width="250" Margin="20,28,0,0"/>
 
             </Grid>
-            <Button Height="30" Content="Block全部重置" Click="Block_AllReset_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="110" Canvas.Left="542" Canvas.Top="345">
+            <Button Height="30" Content="Block全部重置" Click="Block_AllReset_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="103" Canvas.Left="539" Canvas.Top="345">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Name="btn_API_Start" Height="30" Content="API開啟" Click="API_Start" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="60" Canvas.Left="644" Canvas.Top="345">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Name="btn_API_Stop" Visibility="Hidden" Height="30" Content="API關閉" Click="API_Stop" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="60" Canvas.Left="706" Canvas.Top="345">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">

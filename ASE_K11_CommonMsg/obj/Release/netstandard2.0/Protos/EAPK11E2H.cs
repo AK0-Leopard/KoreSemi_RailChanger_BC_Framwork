@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
+namespace RailChangerProtocol {
 
   /// <summary>Holder for reflection information generated from Protos/EAP_K11_E2H.proto</summary>
   public static partial class EAPK11E2HReflection {
@@ -24,120 +24,142 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     static EAPK11E2HReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQcm90b3MvRUFQX0sxMV9FMkgucHJvdG8ijAEKE1JlcGx5X0Zyb21Ib3N0",
-            "X0hQMTESEgoKRlVOQ1RJT05JRBgBIAEoCRIaChJGVU5DVElPTlNFUVVFTkNF",
-            "Tk8YAiABKAkSFAoMRlVOQ1RJT05OQU1FGAMgASgJEgwKBEVRSUQYBCABKAkS",
-            "EwoLUkVQT1JUX1RJTUUYBSABKAkSDAoEQ09ERRgGIAEoCSLBAQoNU2VuZEhv",
-            "c3RfRVAxMRISCgpGVU5DVElPTklEGAEgASgJEhoKEkZVTkNUSU9OU0VRVUVO",
-            "Q0VOTxgCIAEoCRIUCgxGVU5DVElPTk5BTUUYAyABKAkSDAoERVFJRBgEIAEo",
-            "CRITCgtSRVBPUlRfVElNRRgFIAEoCRIRCglCVUZGRVJfSUQYBiABKAkSEQoJ",
-            "QlVORExFX0lEGAcgASgJEg4KBlNUQVRVUxgIIAEoCRIRCglUUkFZX1RZUEUY",
-            "CSABKAkijAEKE1JlcGx5X0Zyb21Ib3N0X0hXMzQSEgoKRlVOQ1RJT05JRBgB",
-            "IAEoCRIaChJGVU5DVElPTlNFUVVFTkNFTk8YAiABKAkSFAoMRlVOQ1RJT05O",
-            "QU1FGAMgASgJEgwKBEVRSUQYBCABKAkSEwoLUkVQT1JUX1RJTUUYBSABKAkS",
-            "DAoEQ09ERRgGIAEoCSKkAQoNU2VuZEhvc3RfRVczNBISCgpGVU5DVElPTklE",
-            "GAEgASgJEhoKEkZVTkNUSU9OU0VRVUVOQ0VOTxgCIAEoCRIUCgxGVU5DVElP",
-            "Tk5BTUUYAyABKAkSDAoERVFJRBgEIAEoCRITCgtSRVBPUlRfVElNRRgFIAEo",
-            "CRIRCglCVU5ETEVfSUQYBiABKAkSFwoPREVMRVRFX0xPQ0FUSU9OGAcgASgJ",
-            "IowBChNSZXBseV9Gcm9tSG9zdF9IVzM1EhIKCkZVTkNUSU9OSUQYASABKAkS",
-            "GgoSRlVOQ1RJT05TRVFVRU5DRU5PGAIgASgJEhQKDEZVTkNUSU9OTkFNRRgD",
-            "IAEoCRIMCgRFUUlEGAQgASgJEhMKC1JFUE9SVF9USU1FGAUgASgJEgwKBENP",
-            "REUYBiABKAkitAEKDVNlbmRIb3N0X0VXMzUSEgoKRlVOQ1RJT05JRBgBIAEo",
-            "CRIaChJGVU5DVElPTlNFUVVFTkNFTk8YAiABKAkSFAoMRlVOQ1RJT05OQU1F",
-            "GAMgASgJEgwKBEVRSUQYBCABKAkSEwoLUkVQT1JUX1RJTUUYBSABKAkSFQoN",
-            "VFJBTlNGRVJfVFlQRRgGIAEoCRIRCglCVU5ETEVfSUQYByABKAkSEAoITE9D",
-            "QVRJT04YCCABKAkijAEKE1JlcGx5X0Zyb21Ib3N0X0hXMzYSEgoKRlVOQ1RJ",
-            "T05JRBgBIAEoCRIaChJGVU5DVElPTlNFUVVFTkNFTk8YAiABKAkSFAoMRlVO",
-            "Q1RJT05OQU1FGAMgASgJEgwKBEVRSUQYBCABKAkSEwoLUkVQT1JUX1RJTUUY",
-            "BSABKAkSDAoEQ09ERRgGIAEoCSLSAQoNU2VuZEhvc3RfRVczNhISCgpGVU5D",
-            "VElPTklEGAEgASgJEhoKEkZVTkNUSU9OU0VRVUVOQ0VOTxgCIAEoCRIUCgxG",
-            "VU5DVElPTk5BTUUYAyABKAkSDAoERVFJRBgEIAEoCRITCgtSRVBPUlRfVElN",
-            "RRgFIAEoCRIQCghMT0NBVElPThgGIAEoCRIRCglCVU5ETEVfSUQYByABKAkS",
-            "EgoKRVZFTlRfVFlQRRgIIAEoCRIRCglUUkFZX1RZUEUYCSABKAkSDAoEQ09E",
-            "RRgKIAEoCSJ+ChNSZXBseV9Gcm9tSG9zdF9IUzQ1EhIKCkZVTkNUSU9OSUQY",
-            "ASABKAkSGgoSRlVOQ1RJT05TRVFVRU5DRU5PGAIgASgJEhQKDEZVTkNUSU9O",
-            "TkFNRRgDIAEoCRIMCgRFUUlEGAQgASgJEhMKC1JFUE9SVF9USU1FGAUgASgJ",
-            "IngKDVNlbmRIb3N0X0VTNDUSEgoKRlVOQ1RJT05JRBgBIAEoCRIaChJGVU5D",
-            "VElPTlNFUVVFTkNFTk8YAiABKAkSFAoMRlVOQ1RJT05OQU1FGAMgASgJEgwK",
-            "BEVRSUQYBCABKAkSEwoLUkVQT1JUX1RJTUUYBSABKAkifgoTUmVwbHlfRnJv",
-            "bUhvc3RfSFM0NhISCgpGVU5DVElPTklEGAEgASgJEhoKEkZVTkNUSU9OU0VR",
-            "VUVOQ0VOTxgCIAEoCRIUCgxGVU5DVElPTk5BTUUYAyABKAkSDAoERVFJRBgE",
-            "IAEoCRITCgtSRVBPUlRfVElNRRgFIAEoCSLqAQoNU2VuZEhvc3RfRVM0NhIS",
-            "CgpGVU5DVElPTklEGAEgASgJEhoKEkZVTkNUSU9OU0VRVUVOQ0VOTxgCIAEo",
-            "CRIUCgxGVU5DVElPTk5BTUUYAyABKAkSDAoERVFJRBgEIAEoCRITCgtSRVBP",
-            "UlRfVElNRRgFIAEoCRIYChBFUVVJUE1FTlRfU1RBVFVTGAYgASgJEhAKCENJ",
-            "TV9NT0RFGAcgASgJEhAKCFJVTl9NT0RFGAggASgJEhYKDk9QRVJBVElPTl9N",
-            "T0RFGAkgASgJEhoKEkFMQVJNV0FSTklOR0hBUFBFThgKIAEoCSKMAQoTUmVw",
-            "bHlfRnJvbUhvc3RfSFM0ORISCgpGVU5DVElPTklEGAEgASgJEhoKEkZVTkNU",
-            "SU9OU0VRVUVOQ0VOTxgCIAEoCRIUCgxGVU5DVElPTk5BTUUYAyABKAkSDAoE",
-            "RVFJRBgEIAEoCRITCgtSRVBPUlRfVElNRRgFIAEoCRIMCgRDT0RFGAYgASgJ",
-            "IrcBCg1TZW5kSG9zdF9FUzQ5EhIKCkZVTkNUSU9OSUQYASABKAkSGgoSRlVO",
-            "Q1RJT05TRVFVRU5DRU5PGAIgASgJEhQKDEZVTkNUSU9OTkFNRRgDIAEoCRIM",
-            "CgRFUUlEGAQgASgJEhMKC1JFUE9SVF9USU1FGAUgASgJEhQKDEFMQVJNX1NU",
-            "QVRVUxgGIAEoCRITCgtBTEFSTV9MRVZFTBgHIAEoCRISCgpBTEFSTV9DT0RF",
-            "GAggASgJIowBChNSZXBseV9Gcm9tSG9zdF9IUzU0EhIKCkZVTkNUSU9OSUQY",
-            "ASABKAkSGgoSRlVOQ1RJT05TRVFVRU5DRU5PGAIgASgJEhQKDEZVTkNUSU9O",
-            "TkFNRRgDIAEoCRIMCgRFUUlEGAQgASgJEhMKC1JFUE9SVF9USU1FGAUgASgJ",
-            "EgwKBENPREUYBiABKAki5wEKDVNlbmRIb3N0X0VTNTQSEgoKRlVOQ1RJT05J",
-            "RBgBIAEoCRIaChJGVU5DVElPTlNFUVVFTkNFTk8YAiABKAkSFAoMRlVOQ1RJ",
-            "T05OQU1FGAMgASgJEgwKBEVRSUQYBCABKAkSEwoLUkVQT1JUX1RJTUUYBSAB",
-            "KAkSFQoNQkNSX0J1bmRsZV9JRBgGIAEoCRIZChFWaXJ0dWFsX0J1bmRsZV9J",
-            "RBgHIAEoCRIYChBNQVRFUklBTF9QUkVTRU5UGAggASgJEiEKGUVYRUNVVElP",
-            "Tl9DTURfU0VRVUVOQ0VfTk8YCSABKAkylQQKC0VBUF9LMTFfRTJIEj8KFVNl",
-            "bmRIb3N0X0VQMTFfQ29tbWFuZBIOLlNlbmRIb3N0X0VQMTEaFC5SZXBseV9G",
-            "cm9tSG9zdF9IUDExIgASPwoVU2VuZEhvc3RfRVczNF9Db21tYW5kEg4uU2Vu",
-            "ZEhvc3RfRVczNBoULlJlcGx5X0Zyb21Ib3N0X0hXMzQiABI/ChVTZW5kSG9z",
-            "dF9FVzM1X0NvbW1hbmQSDi5TZW5kSG9zdF9FVzM1GhQuUmVwbHlfRnJvbUhv",
-            "c3RfSFczNSIAEj8KFVNlbmRIb3N0X0VXMzZfQ29tbWFuZBIOLlNlbmRIb3N0",
-            "X0VXMzYaFC5SZXBseV9Gcm9tSG9zdF9IVzM2IgASPwoVU2VuZEhvc3RfRVM0",
-            "NV9Db21tYW5kEg4uU2VuZEhvc3RfRVM0NRoULlJlcGx5X0Zyb21Ib3N0X0hT",
-            "NDUiABI/ChVTZW5kSG9zdF9FUzQ2X0NvbW1hbmQSDi5TZW5kSG9zdF9FUzQ2",
-            "GhQuUmVwbHlfRnJvbUhvc3RfSFM0NiIAEj8KFVNlbmRIb3N0X0VTNDlfQ29t",
-            "bWFuZBIOLlNlbmRIb3N0X0VTNDkaFC5SZXBseV9Gcm9tSG9zdF9IUzQ5IgAS",
-            "PwoVU2VuZEhvc3RfRVM1NF9Db21tYW5kEg4uU2VuZEhvc3RfRVM1NBoULlJl",
-            "cGx5X0Zyb21Ib3N0X0hTNTQiAEInqgIkY29tLm1pcmxlLmliZ0FLMC5FQVAu",
-            "SG9zdE1lc3NhZ2UuRTJIYgZwcm90bzM="));
+            "ChhQcm90b3MvRUFQX0sxMV9FMkgucHJvdG8SBWdyZWV0IhMKBUVtcHR5EgoK",
+            "AklEGAEgASgJIjgKD1JlcGx5VHJhY2tzSW5mbxIlCgt0cmFja3NfaW5mbxgB",
+            "IAMoCzIQLmdyZWV0LlRyYWNrSW5mbyKlAQoJVHJhY2tJbmZvEhAKCHRyYWNr",
+            "X2lkGAEgASgJEhwKA2RpchgCIAEoDjIPLmdyZWV0LlRyYWNrRGlyEiIKBnN0",
+            "YXR1cxgDIAEoDjISLmdyZWV0LlRyYWNrU3RhdHVzEhEKCWFsYXJtQ29kZRgE",
+            "IAEoBRINCgVBbGl2ZRgFIAEoCBIiCgdpc0Jsb2NrGAYgASgOMhEuZ3JlZXQu",
+            "VHJhY2tCbG9jayIcCgxIZWxsb1JlcXVlc3QSDAoEbmFtZRgBIAEoCSIdCgpI",
+            "ZWxsb1JlcGx5Eg8KB21lc3NhZ2UYASABKAkiKwoOaXNBbGl2ZVJlcXVlc3QS",
+            "GQoRcmFpbENoYW5nZXJOdW1iZXIYASABKAkiHwoMaXNBbGl2ZVJlcGx5Eg8K",
+            "B21lc3NhZ2UYASABKAkiLAoPYWxhcm1Sc3RSZXF1ZXN0EhkKEXJhaWxDaGFu",
+            "Z2VyTnVtYmVyGAEgASgJIiAKDWFsYXJtUnN0UmVwbHkSDwoHbWVzc2FnZRgB",
+            "IAEoCSIsCg9ibG9ja1JzdFJlcXVlc3QSGQoRcmFpbENoYW5nZXJOdW1iZXIY",
+            "ASABKAkiIAoNYmxvY2tSc3RSZXBseRIPCgdtZXNzYWdlGAEgASgJIjoKEGNo",
+            "YW5nZURpclJlcXVlc3QSGQoRcmFpbENoYW5nZXJOdW1iZXIYASABKAkSCwoD",
+            "ZGlyGAIgASgJIiEKDmNoYW5nZURpclJlcGx5Eg8KB21lc3NhZ2UYASABKAki",
+            "KgoNZ2V0RGlyUmVxdWVzdBIZChFyYWlsQ2hhbmdlck51bWJlchgBIAEoCSIe",
+            "CgtnZXREaXJSZXBseRIPCgdtZXNzYWdlGAEgASgJIi0KEGdldFN0YXR1c1Jl",
+            "cXVlc3QSGQoRcmFpbENoYW5nZXJOdW1iZXIYASABKAkiIQoOZ2V0U3RhdHVz",
+            "UmVwbHkSDwoHbWVzc2FnZRgBIAEoCSIsCg9nZXRCbG9ja1JlcXVlc3QSGQoR",
+            "cmFpbENoYW5nZXJOdW1iZXIYASABKAkiIAoNZ2V0QmxvY2tSZXBseRIPCgdt",
+            "ZXNzYWdlGAEgASgJIjMKFmdldENoYW5nZXJUaW1lclJlcXVlc3QSGQoRcmFp",
+            "bENoYW5nZXJOdW1iZXIYASABKAkiJwoUZ2V0Q2hhbmdlclRpbWVyUmVwbHkS",
+            "DwoHbWVzc2FnZRgBIAEoCSIyChVnZXRFcnJvclJlcG9ydFJlcXVlc3QSGQoR",
+            "cmFpbENoYW5nZXJOdW1iZXIYASABKAkiJgoTZ2V0RXJyb3JSZXBvcnRSZXBs",
+            "eRIPCgdtZXNzYWdlGAEgASgJIi4KEWdldFZlcnNpb25SZXF1ZXN0EhkKEXJh",
+            "aWxDaGFuZ2VyTnVtYmVyGAEgASgJIiIKD2dldFZlcnNpb25SZXBseRIPCgdt",
+            "ZXNzYWdlGAEgASgJIjwKEWNoYW5nZU1vZGVSZXF1ZXN0EhkKEXJhaWxDaGFu",
+            "Z2VyTnVtYmVyGAEgASgJEgwKBG1vZGUYAiABKAkiIgoPY2hhbmdlTW9kZVJl",
+            "cGx5Eg8KB21lc3NhZ2UYASABKAkiKwoOc3RvcFNldFJlcXVlc3QSGQoRcmFp",
+            "bENoYW5nZXJOdW1iZXIYASABKAkiHwoMc3RvcFNldFJlcGx5Eg8KB21lc3Nh",
+            "Z2UYASABKAkqSAoIVHJhY2tEaXISEQoNVHJhY2tEaXJfTm9uZRAAEhUKEVRy",
+            "YWNrRGlyX1N0cmFpZ2h0EAESEgoOVHJhY2tEaXJfQ3VydmUQAiptCgtUcmFj",
+            "a1N0YXR1cxIZChVUcmFja1N0YXR1c19Ob3REZWZpbmUQABIWChJUcmFja1N0",
+            "YXR1c19NYW5hdWwQARIUChBUcmFja1N0YXR1c19BdXRvEAISFQoRVHJhY2tT",
+            "dGF0dXNfQWxhcm0QAypQCgpUcmFja0Jsb2NrEhMKD1RyYWNrQmxvY2tfTm9u",
+            "ZRAAEhQKEFRyYWNrQmxvY2tfQmxvY2sQARIXChNUcmFja0Jsb2NrX05vbkJs",
+            "b2NrEAIy3QYKB0dyZWV0ZXISMgoIU2F5SGVsbG8SEy5ncmVldC5IZWxsb1Jl",
+            "cXVlc3QaES5ncmVldC5IZWxsb1JlcGx5EjUKB2lzQWxpdmUSFS5ncmVldC5p",
+            "c0FsaXZlUmVxdWVzdBoTLmdyZWV0LmlzQWxpdmVSZXBseRI4CghhbGFybVJz",
+            "dBIWLmdyZWV0LmFsYXJtUnN0UmVxdWVzdBoULmdyZWV0LmFsYXJtUnN0UmVw",
+            "bHkSOAoIYmxvY2tSc3QSFi5ncmVldC5ibG9ja1JzdFJlcXVlc3QaFC5ncmVl",
+            "dC5ibG9ja1JzdFJlcGx5EjsKCWNoYW5nZURpchIXLmdyZWV0LmNoYW5nZURp",
+            "clJlcXVlc3QaFS5ncmVldC5jaGFuZ2VEaXJSZXBseRIyCgZnZXREaXISFC5n",
+            "cmVldC5nZXREaXJSZXF1ZXN0GhIuZ3JlZXQuZ2V0RGlyUmVwbHkSOwoJZ2V0",
+            "U3RhdHVzEhcuZ3JlZXQuZ2V0U3RhdHVzUmVxdWVzdBoVLmdyZWV0LmdldFN0",
+            "YXR1c1JlcGx5EjgKCGdldEJsb2NrEhYuZ3JlZXQuZ2V0QmxvY2tSZXF1ZXN0",
+            "GhQuZ3JlZXQuZ2V0QmxvY2tSZXBseRJNCg9nZXRDaGFuZ2VyVGltZXISHS5n",
+            "cmVldC5nZXRDaGFuZ2VyVGltZXJSZXF1ZXN0GhsuZ3JlZXQuZ2V0Q2hhbmdl",
+            "clRpbWVyUmVwbHkSSgoOZ2V0RXJyb3JSZXBvcnQSHC5ncmVldC5nZXRFcnJv",
+            "clJlcG9ydFJlcXVlc3QaGi5ncmVldC5nZXRFcnJvclJlcG9ydFJlcGx5Ej4K",
+            "CmdldFZlcnNpb24SGC5ncmVldC5nZXRWZXJzaW9uUmVxdWVzdBoWLmdyZWV0",
+            "LmdldFZlcnNpb25SZXBseRI+CgpjaGFuZ2VNb2RlEhguZ3JlZXQuY2hhbmdl",
+            "TW9kZVJlcXVlc3QaFi5ncmVldC5jaGFuZ2VNb2RlUmVwbHkSNQoHc3RvcFNl",
+            "dBIVLmdyZWV0LnN0b3BTZXRSZXF1ZXN0GhMuZ3JlZXQuc3RvcFNldFJlcGx5",
+            "EjkKEVJlcXVlc3RUcmFja3NJbmZvEgwuZ3JlZXQuRW1wdHkaFi5ncmVldC5S",
+            "ZXBseVRyYWNrc0luZm9CFqoCE1JhaWxDaGFuZ2VyUHJvdG9jb2xiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HP11.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EP11.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "BUFFERID", "BUNDLEID", "STATUS", "TRAYTYPE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW34.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW34.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "BUNDLEID", "DELETELOCATION" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW35.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW35.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "TRANSFERTYPE", "BUNDLEID", "LOCATION" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HW36.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_EW36.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "LOCATION", "BUNDLEID", "EVENTTYPE", "TRAYTYPE", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS45.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES45.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS46.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES46.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "EQUIPMENTSTATUS", "CIMMODE", "RUNMODE", "OPERATIONMODE", "ALARMWARNINGHAPPEN" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS49.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES49.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "ALARMSTATUS", "ALARMLEVEL", "ALARMCODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.Reply_FromHost_HS54.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "CODE" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54), global::com.mirle.ibgAK0.EAP.HostMessage.E2H.SendHost_ES54.Parser, new[]{ "FUNCTIONID", "FUNCTIONSEQUENCENO", "FUNCTIONNAME", "EQID", "REPORTTIME", "BCRBundleID", "VirtualBundleID", "MATERIALPRESENT", "EXECUTIONCMDSEQUENCENO" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::RailChangerProtocol.TrackDir), typeof(global::RailChangerProtocol.TrackStatus), typeof(global::RailChangerProtocol.TrackBlock), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.Empty), global::RailChangerProtocol.Empty.Parser, new[]{ "ID" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.ReplyTracksInfo), global::RailChangerProtocol.ReplyTracksInfo.Parser, new[]{ "TracksInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.TrackInfo), global::RailChangerProtocol.TrackInfo.Parser, new[]{ "TrackId", "Dir", "Status", "AlarmCode", "Alive", "IsBlock" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.HelloRequest), global::RailChangerProtocol.HelloRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.HelloReply), global::RailChangerProtocol.HelloReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.isAliveRequest), global::RailChangerProtocol.isAliveRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.isAliveReply), global::RailChangerProtocol.isAliveReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.alarmRstRequest), global::RailChangerProtocol.alarmRstRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.alarmRstReply), global::RailChangerProtocol.alarmRstReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.blockRstRequest), global::RailChangerProtocol.blockRstRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.blockRstReply), global::RailChangerProtocol.blockRstReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.changeDirRequest), global::RailChangerProtocol.changeDirRequest.Parser, new[]{ "RailChangerNumber", "Dir" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.changeDirReply), global::RailChangerProtocol.changeDirReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getDirRequest), global::RailChangerProtocol.getDirRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getDirReply), global::RailChangerProtocol.getDirReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getStatusRequest), global::RailChangerProtocol.getStatusRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getStatusReply), global::RailChangerProtocol.getStatusReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getBlockRequest), global::RailChangerProtocol.getBlockRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getBlockReply), global::RailChangerProtocol.getBlockReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getChangerTimerRequest), global::RailChangerProtocol.getChangerTimerRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getChangerTimerReply), global::RailChangerProtocol.getChangerTimerReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getErrorReportRequest), global::RailChangerProtocol.getErrorReportRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getErrorReportReply), global::RailChangerProtocol.getErrorReportReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getVersionRequest), global::RailChangerProtocol.getVersionRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.getVersionReply), global::RailChangerProtocol.getVersionReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.changeModeRequest), global::RailChangerProtocol.changeModeRequest.Parser, new[]{ "RailChangerNumber", "Mode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.changeModeReply), global::RailChangerProtocol.changeModeReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.stopSetRequest), global::RailChangerProtocol.stopSetRequest.Parser, new[]{ "RailChangerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::RailChangerProtocol.stopSetReply), global::RailChangerProtocol.stopSetReply.Parser, new[]{ "Message" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  ///Start Track Info
+  /// </summary>
+  public enum TrackDir {
+    [pbr::OriginalName("TrackDir_None")] None = 0,
+    [pbr::OriginalName("TrackDir_Straight")] Straight = 1,
+    [pbr::OriginalName("TrackDir_Curve")] Curve = 2,
+  }
+
+  public enum TrackStatus {
+    [pbr::OriginalName("TrackStatus_NotDefine")] NotDefine = 0,
+    [pbr::OriginalName("TrackStatus_Manaul")] Manaul = 1,
+    [pbr::OriginalName("TrackStatus_Auto")] Auto = 2,
+    [pbr::OriginalName("TrackStatus_Alarm")] Alarm = 3,
+  }
+
+  public enum TrackBlock {
+    [pbr::OriginalName("TrackBlock_None")] None = 0,
+    [pbr::OriginalName("TrackBlock_Block")] Block = 1,
+    [pbr::OriginalName("TrackBlock_NonBlock")] NonBlock = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  ///From EQ (EAP send to MCS)
+  ///Start MapData
   /// </summary>
-  public sealed partial class Reply_FromHost_HP11 : pb::IMessage<Reply_FromHost_HP11>
+  public sealed partial class Empty : pb::IMessage<Empty>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HP11> _parser = new pb::MessageParser<Reply_FromHost_HP11>(() => new Reply_FromHost_HP11());
+    private static readonly pb::MessageParser<Empty> _parser = new pb::MessageParser<Empty>(() => new Empty());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HP11> Parser { get { return _parser; } }
+    public static pb::MessageParser<Empty> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[0]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,125 +168,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HP11() {
+    public Empty() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HP11(Reply_FromHost_HP11 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public Empty(Empty other) : this() {
+      iD_ = other.iD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HP11 Clone() {
-      return new Reply_FromHost_HP11(this);
+    public Empty Clone() {
+      return new Empty(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "ID" field.</summary>
+    public const int IDFieldNumber = 1;
+    private string iD_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string ID {
+      get { return iD_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        iD_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HP11);
+      return Equals(other as Empty);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HP11 other) {
+    public bool Equals(Empty other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (ID != other.ID) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (ID.Length != 0) hash ^= ID.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -281,29 +233,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (ID.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(ID);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -314,29 +246,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (ID.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(ID);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -347,23 +259,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (ID.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ID);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -372,27 +269,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HP11 other) {
+    public void MergeFrom(Empty other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.ID.Length != 0) {
+        ID = other.ID;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -409,27 +291,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            ID = input.ReadString();
             break;
           }
         }
@@ -447,27 +309,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            ID = input.ReadString();
             break;
           }
         }
@@ -477,19 +319,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_EP11 : pb::IMessage<SendHost_EP11>
+  public sealed partial class ReplyTracksInfo : pb::IMessage<ReplyTracksInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_EP11> _parser = new pb::MessageParser<SendHost_EP11>(() => new SendHost_EP11());
+    private static readonly pb::MessageParser<ReplyTracksInfo> _parser = new pb::MessageParser<ReplyTracksInfo>(() => new ReplyTracksInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_EP11> Parser { get { return _parser; } }
+    public static pb::MessageParser<ReplyTracksInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[1]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -498,167 +340,54 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EP11() {
+    public ReplyTracksInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EP11(SendHost_EP11 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      bUFFERID_ = other.bUFFERID_;
-      bUNDLEID_ = other.bUNDLEID_;
-      sTATUS_ = other.sTATUS_;
-      tRAYTYPE_ = other.tRAYTYPE_;
+    public ReplyTracksInfo(ReplyTracksInfo other) : this() {
+      tracksInfo_ = other.tracksInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EP11 Clone() {
-      return new SendHost_EP11(this);
+    public ReplyTracksInfo Clone() {
+      return new ReplyTracksInfo(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "tracks_info" field.</summary>
+    public const int TracksInfoFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::RailChangerProtocol.TrackInfo> _repeated_tracksInfo_codec
+        = pb::FieldCodec.ForMessage(10, global::RailChangerProtocol.TrackInfo.Parser);
+    private readonly pbc::RepeatedField<global::RailChangerProtocol.TrackInfo> tracksInfo_ = new pbc::RepeatedField<global::RailChangerProtocol.TrackInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
-      set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BUFFER_ID" field.</summary>
-    public const int BUFFERIDFieldNumber = 6;
-    private string bUFFERID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BUFFERID {
-      get { return bUFFERID_; }
-      set {
-        bUFFERID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BUNDLE_ID" field.</summary>
-    public const int BUNDLEIDFieldNumber = 7;
-    private string bUNDLEID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BUNDLEID {
-      get { return bUNDLEID_; }
-      set {
-        bUNDLEID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "STATUS" field.</summary>
-    public const int STATUSFieldNumber = 8;
-    private string sTATUS_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string STATUS {
-      get { return sTATUS_; }
-      set {
-        sTATUS_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "TRAY_TYPE" field.</summary>
-    public const int TRAYTYPEFieldNumber = 9;
-    private string tRAYTYPE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TRAYTYPE {
-      get { return tRAYTYPE_; }
-      set {
-        tRAYTYPE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public pbc::RepeatedField<global::RailChangerProtocol.TrackInfo> TracksInfo {
+      get { return tracksInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_EP11);
+      return Equals(other as ReplyTracksInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_EP11 other) {
+    public bool Equals(ReplyTracksInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (BUFFERID != other.BUFFERID) return false;
-      if (BUNDLEID != other.BUNDLEID) return false;
-      if (STATUS != other.STATUS) return false;
-      if (TRAYTYPE != other.TRAYTYPE) return false;
+      if(!tracksInfo_.Equals(other.tracksInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (BUFFERID.Length != 0) hash ^= BUFFERID.GetHashCode();
-      if (BUNDLEID.Length != 0) hash ^= BUNDLEID.GetHashCode();
-      if (STATUS.Length != 0) hash ^= STATUS.GetHashCode();
-      if (TRAYTYPE.Length != 0) hash ^= TRAYTYPE.GetHashCode();
+      hash ^= tracksInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -675,42 +404,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BUFFERID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BUFFERID);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (STATUS.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(STATUS);
-      }
-      if (TRAYTYPE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(TRAYTYPE);
-      }
+      tracksInfo_.WriteTo(output, _repeated_tracksInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -720,42 +414,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BUFFERID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BUFFERID);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (STATUS.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(STATUS);
-      }
-      if (TRAYTYPE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(TRAYTYPE);
-      }
+      tracksInfo_.WriteTo(ref output, _repeated_tracksInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -765,33 +424,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (BUFFERID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BUFFERID);
-      }
-      if (BUNDLEID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BUNDLEID);
-      }
-      if (STATUS.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(STATUS);
-      }
-      if (TRAYTYPE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TRAYTYPE);
-      }
+      size += tracksInfo_.CalculateSize(_repeated_tracksInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -799,37 +432,11 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_EP11 other) {
+    public void MergeFrom(ReplyTracksInfo other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.BUFFERID.Length != 0) {
-        BUFFERID = other.BUFFERID;
-      }
-      if (other.BUNDLEID.Length != 0) {
-        BUNDLEID = other.BUNDLEID;
-      }
-      if (other.STATUS.Length != 0) {
-        STATUS = other.STATUS;
-      }
-      if (other.TRAYTYPE.Length != 0) {
-        TRAYTYPE = other.TRAYTYPE;
-      }
+      tracksInfo_.Add(other.tracksInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -845,39 +452,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            BUFFERID = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            STATUS = input.ReadString();
-            break;
-          }
-          case 74: {
-            TRAYTYPE = input.ReadString();
+            tracksInfo_.AddEntriesFrom(input, _repeated_tracksInfo_codec);
             break;
           }
         }
@@ -895,39 +470,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            BUFFERID = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            STATUS = input.ReadString();
-            break;
-          }
-          case 74: {
-            TRAYTYPE = input.ReadString();
+            tracksInfo_.AddEntriesFrom(ref input, _repeated_tracksInfo_codec);
             break;
           }
         }
@@ -937,19 +480,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HW34 : pb::IMessage<Reply_FromHost_HW34>
+  public sealed partial class TrackInfo : pb::IMessage<TrackInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HW34> _parser = new pb::MessageParser<Reply_FromHost_HW34>(() => new Reply_FromHost_HW34());
+    private static readonly pb::MessageParser<TrackInfo> _parser = new pb::MessageParser<TrackInfo>(() => new TrackInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HW34> Parser { get { return _parser; } }
+    public static pb::MessageParser<TrackInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[2]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -958,125 +501,125 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW34() {
+    public TrackInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW34(Reply_FromHost_HW34 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public TrackInfo(TrackInfo other) : this() {
+      trackId_ = other.trackId_;
+      dir_ = other.dir_;
+      status_ = other.status_;
+      alarmCode_ = other.alarmCode_;
+      alive_ = other.alive_;
+      isBlock_ = other.isBlock_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW34 Clone() {
-      return new Reply_FromHost_HW34(this);
+    public TrackInfo Clone() {
+      return new TrackInfo(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "track_id" field.</summary>
+    public const int TrackIdFieldNumber = 1;
+    private string trackId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string TrackId {
+      get { return trackId_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        trackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
+    /// <summary>Field number for the "dir" field.</summary>
+    public const int DirFieldNumber = 2;
+    private global::RailChangerProtocol.TrackDir dir_ = global::RailChangerProtocol.TrackDir.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
+    public global::RailChangerProtocol.TrackDir Dir {
+      get { return dir_; }
       set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        dir_ = value;
       }
     }
 
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 3;
+    private global::RailChangerProtocol.TrackStatus status_ = global::RailChangerProtocol.TrackStatus.NotDefine;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
+    public global::RailChangerProtocol.TrackStatus Status {
+      get { return status_; }
       set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        status_ = value;
       }
     }
 
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
+    /// <summary>Field number for the "alarmCode" field.</summary>
+    public const int AlarmCodeFieldNumber = 4;
+    private int alarmCode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
+    public int AlarmCode {
+      get { return alarmCode_; }
       set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        alarmCode_ = value;
       }
     }
 
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
+    /// <summary>Field number for the "Alive" field.</summary>
+    public const int AliveFieldNumber = 5;
+    private bool alive_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
+    public bool Alive {
+      get { return alive_; }
       set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        alive_ = value;
       }
     }
 
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
+    /// <summary>Field number for the "isBlock" field.</summary>
+    public const int IsBlockFieldNumber = 6;
+    private global::RailChangerProtocol.TrackBlock isBlock_ = global::RailChangerProtocol.TrackBlock.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
+    public global::RailChangerProtocol.TrackBlock IsBlock {
+      get { return isBlock_; }
       set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        isBlock_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HW34);
+      return Equals(other as TrackInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HW34 other) {
+    public bool Equals(TrackInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (TrackId != other.TrackId) return false;
+      if (Dir != other.Dir) return false;
+      if (Status != other.Status) return false;
+      if (AlarmCode != other.AlarmCode) return false;
+      if (Alive != other.Alive) return false;
+      if (IsBlock != other.IsBlock) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (TrackId.Length != 0) hash ^= TrackId.GetHashCode();
+      if (Dir != global::RailChangerProtocol.TrackDir.None) hash ^= Dir.GetHashCode();
+      if (Status != global::RailChangerProtocol.TrackStatus.NotDefine) hash ^= Status.GetHashCode();
+      if (AlarmCode != 0) hash ^= AlarmCode.GetHashCode();
+      if (Alive != false) hash ^= Alive.GetHashCode();
+      if (IsBlock != global::RailChangerProtocol.TrackBlock.None) hash ^= IsBlock.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1093,29 +636,29 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (TrackId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
+        output.WriteString(TrackId);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
+      if (Dir != global::RailChangerProtocol.TrackDir.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Dir);
       }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
+      if (Status != global::RailChangerProtocol.TrackStatus.NotDefine) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
       }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
+      if (AlarmCode != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AlarmCode);
       }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+      if (Alive != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Alive);
       }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+      if (IsBlock != global::RailChangerProtocol.TrackBlock.None) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) IsBlock);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1126,29 +669,29 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (TrackId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
+        output.WriteString(TrackId);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
+      if (Dir != global::RailChangerProtocol.TrackDir.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Dir);
       }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
+      if (Status != global::RailChangerProtocol.TrackStatus.NotDefine) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
       }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
+      if (AlarmCode != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AlarmCode);
       }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+      if (Alive != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Alive);
       }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+      if (IsBlock != global::RailChangerProtocol.TrackBlock.None) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) IsBlock);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1159,23 +702,23 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
+      if (TrackId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackId);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
+      if (Dir != global::RailChangerProtocol.TrackDir.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Dir);
       }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
+      if (Status != global::RailChangerProtocol.TrackStatus.NotDefine) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
+      if (AlarmCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AlarmCode);
       }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
+      if (Alive != false) {
+        size += 1 + 1;
       }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (IsBlock != global::RailChangerProtocol.TrackBlock.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IsBlock);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1184,27 +727,27 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HW34 other) {
+    public void MergeFrom(TrackInfo other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
+      if (other.TrackId.Length != 0) {
+        TrackId = other.TrackId;
       }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
+      if (other.Dir != global::RailChangerProtocol.TrackDir.None) {
+        Dir = other.Dir;
       }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
+      if (other.Status != global::RailChangerProtocol.TrackStatus.NotDefine) {
+        Status = other.Status;
       }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
+      if (other.AlarmCode != 0) {
+        AlarmCode = other.AlarmCode;
       }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
+      if (other.Alive != false) {
+        Alive = other.Alive;
       }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.IsBlock != global::RailChangerProtocol.TrackBlock.None) {
+        IsBlock = other.IsBlock;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1221,27 +764,27 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
+            TrackId = input.ReadString();
             break;
           }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
+          case 16: {
+            Dir = (global::RailChangerProtocol.TrackDir) input.ReadEnum();
             break;
           }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
+          case 24: {
+            Status = (global::RailChangerProtocol.TrackStatus) input.ReadEnum();
             break;
           }
-          case 34: {
-            EQID = input.ReadString();
+          case 32: {
+            AlarmCode = input.ReadInt32();
             break;
           }
-          case 42: {
-            REPORTTIME = input.ReadString();
+          case 40: {
+            Alive = input.ReadBool();
             break;
           }
-          case 50: {
-            CODE = input.ReadString();
+          case 48: {
+            IsBlock = (global::RailChangerProtocol.TrackBlock) input.ReadEnum();
             break;
           }
         }
@@ -1259,27 +802,27 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
+            TrackId = input.ReadString();
             break;
           }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
+          case 16: {
+            Dir = (global::RailChangerProtocol.TrackDir) input.ReadEnum();
             break;
           }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
+          case 24: {
+            Status = (global::RailChangerProtocol.TrackStatus) input.ReadEnum();
             break;
           }
-          case 34: {
-            EQID = input.ReadString();
+          case 32: {
+            AlarmCode = input.ReadInt32();
             break;
           }
-          case 42: {
-            REPORTTIME = input.ReadString();
+          case 40: {
+            Alive = input.ReadBool();
             break;
           }
-          case 50: {
-            CODE = input.ReadString();
+          case 48: {
+            IsBlock = (global::RailChangerProtocol.TrackBlock) input.ReadEnum();
             break;
           }
         }
@@ -1289,19 +832,22 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_EW34 : pb::IMessage<SendHost_EW34>
+  /// <summary>
+  /// The request message containing the user's name.
+  /// </summary>
+  public sealed partial class HelloRequest : pb::IMessage<HelloRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_EW34> _parser = new pb::MessageParser<SendHost_EW34>(() => new SendHost_EW34());
+    private static readonly pb::MessageParser<HelloRequest> _parser = new pb::MessageParser<HelloRequest>(() => new HelloRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_EW34> Parser { get { return _parser; } }
+    public static pb::MessageParser<HelloRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[3]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1310,139 +856,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW34() {
+    public HelloRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW34(SendHost_EW34 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      bUNDLEID_ = other.bUNDLEID_;
-      dELETELOCATION_ = other.dELETELOCATION_;
+    public HelloRequest(HelloRequest other) : this() {
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW34 Clone() {
-      return new SendHost_EW34(this);
+    public HelloRequest Clone() {
+      return new HelloRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Name {
+      get { return name_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BUNDLE_ID" field.</summary>
-    public const int BUNDLEIDFieldNumber = 6;
-    private string bUNDLEID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BUNDLEID {
-      get { return bUNDLEID_; }
-      set {
-        bUNDLEID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "DELETE_LOCATION" field.</summary>
-    public const int DELETELOCATIONFieldNumber = 7;
-    private string dELETELOCATION_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DELETELOCATION {
-      get { return dELETELOCATION_; }
-      set {
-        dELETELOCATION_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_EW34);
+      return Equals(other as HelloRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_EW34 other) {
+    public bool Equals(HelloRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (BUNDLEID != other.BUNDLEID) return false;
-      if (DELETELOCATION != other.DELETELOCATION) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (BUNDLEID.Length != 0) hash ^= BUNDLEID.GetHashCode();
-      if (DELETELOCATION.Length != 0) hash ^= DELETELOCATION.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1459,33 +921,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BUNDLEID);
-      }
-      if (DELETELOCATION.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(DELETELOCATION);
+        output.WriteString(Name);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1496,33 +934,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BUNDLEID);
-      }
-      if (DELETELOCATION.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(DELETELOCATION);
+        output.WriteString(Name);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1533,26 +947,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (BUNDLEID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BUNDLEID);
-      }
-      if (DELETELOCATION.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DELETELOCATION);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1561,30 +957,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_EW34 other) {
+    public void MergeFrom(HelloRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.BUNDLEID.Length != 0) {
-        BUNDLEID = other.BUNDLEID;
-      }
-      if (other.DELETELOCATION.Length != 0) {
-        DELETELOCATION = other.DELETELOCATION;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1601,31 +979,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 58: {
-            DELETELOCATION = input.ReadString();
+            Name = input.ReadString();
             break;
           }
         }
@@ -1643,31 +997,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 58: {
-            DELETELOCATION = input.ReadString();
+            Name = input.ReadString();
             break;
           }
         }
@@ -1677,19 +1007,22 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HW35 : pb::IMessage<Reply_FromHost_HW35>
+  /// <summary>
+  /// The response message containing the greetings.
+  /// </summary>
+  public sealed partial class HelloReply : pb::IMessage<HelloReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HW35> _parser = new pb::MessageParser<Reply_FromHost_HW35>(() => new Reply_FromHost_HW35());
+    private static readonly pb::MessageParser<HelloReply> _parser = new pb::MessageParser<HelloReply>(() => new HelloReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HW35> Parser { get { return _parser; } }
+    public static pb::MessageParser<HelloReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[4]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1698,125 +1031,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW35() {
+    public HelloReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW35(Reply_FromHost_HW35 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public HelloReply(HelloReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW35 Clone() {
-      return new Reply_FromHost_HW35(this);
+    public HelloReply Clone() {
+      return new HelloReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HW35);
+      return Equals(other as HelloReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HW35 other) {
+    public bool Equals(HelloReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1833,29 +1096,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1866,29 +1109,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1899,23 +1122,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1924,27 +1132,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HW35 other) {
+    public void MergeFrom(HelloReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1961,27 +1154,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -1999,27 +1172,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -2029,19 +1182,22 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_EW35 : pb::IMessage<SendHost_EW35>
+  /// <summary>
+  ///is Alive 
+  /// </summary>
+  public sealed partial class isAliveRequest : pb::IMessage<isAliveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_EW35> _parser = new pb::MessageParser<SendHost_EW35>(() => new SendHost_EW35());
+    private static readonly pb::MessageParser<isAliveRequest> _parser = new pb::MessageParser<isAliveRequest>(() => new isAliveRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_EW35> Parser { get { return _parser; } }
+    public static pb::MessageParser<isAliveRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[5]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2050,153 +1206,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW35() {
+    public isAliveRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW35(SendHost_EW35 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      tRANSFERTYPE_ = other.tRANSFERTYPE_;
-      bUNDLEID_ = other.bUNDLEID_;
-      lOCATION_ = other.lOCATION_;
+    public isAliveRequest(isAliveRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW35 Clone() {
-      return new SendHost_EW35(this);
+    public isAliveRequest Clone() {
+      return new isAliveRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "TRANSFER_TYPE" field.</summary>
-    public const int TRANSFERTYPEFieldNumber = 6;
-    private string tRANSFERTYPE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TRANSFERTYPE {
-      get { return tRANSFERTYPE_; }
-      set {
-        tRANSFERTYPE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BUNDLE_ID" field.</summary>
-    public const int BUNDLEIDFieldNumber = 7;
-    private string bUNDLEID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BUNDLEID {
-      get { return bUNDLEID_; }
-      set {
-        bUNDLEID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "LOCATION" field.</summary>
-    public const int LOCATIONFieldNumber = 8;
-    private string lOCATION_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string LOCATION {
-      get { return lOCATION_; }
-      set {
-        lOCATION_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_EW35);
+      return Equals(other as isAliveRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_EW35 other) {
+    public bool Equals(isAliveRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (TRANSFERTYPE != other.TRANSFERTYPE) return false;
-      if (BUNDLEID != other.BUNDLEID) return false;
-      if (LOCATION != other.LOCATION) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (TRANSFERTYPE.Length != 0) hash ^= TRANSFERTYPE.GetHashCode();
-      if (BUNDLEID.Length != 0) hash ^= BUNDLEID.GetHashCode();
-      if (LOCATION.Length != 0) hash ^= LOCATION.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2213,37 +1271,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (TRANSFERTYPE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(TRANSFERTYPE);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (LOCATION.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(LOCATION);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2254,37 +1284,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (TRANSFERTYPE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(TRANSFERTYPE);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (LOCATION.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(LOCATION);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2295,29 +1297,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (TRANSFERTYPE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TRANSFERTYPE);
-      }
-      if (BUNDLEID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BUNDLEID);
-      }
-      if (LOCATION.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LOCATION);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2326,33 +1307,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_EW35 other) {
+    public void MergeFrom(isAliveRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.TRANSFERTYPE.Length != 0) {
-        TRANSFERTYPE = other.TRANSFERTYPE;
-      }
-      if (other.BUNDLEID.Length != 0) {
-        BUNDLEID = other.BUNDLEID;
-      }
-      if (other.LOCATION.Length != 0) {
-        LOCATION = other.LOCATION;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2369,35 +1329,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            TRANSFERTYPE = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            LOCATION = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -2415,35 +1347,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            TRANSFERTYPE = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            LOCATION = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -2453,19 +1357,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HW36 : pb::IMessage<Reply_FromHost_HW36>
+  public sealed partial class isAliveReply : pb::IMessage<isAliveReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HW36> _parser = new pb::MessageParser<Reply_FromHost_HW36>(() => new Reply_FromHost_HW36());
+    private static readonly pb::MessageParser<isAliveReply> _parser = new pb::MessageParser<isAliveReply>(() => new isAliveReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HW36> Parser { get { return _parser; } }
+    public static pb::MessageParser<isAliveReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[6]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2474,125 +1378,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW36() {
+    public isAliveReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW36(Reply_FromHost_HW36 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public isAliveReply(isAliveReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HW36 Clone() {
-      return new Reply_FromHost_HW36(this);
+    public isAliveReply Clone() {
+      return new isAliveReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HW36);
+      return Equals(other as isAliveReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HW36 other) {
+    public bool Equals(isAliveReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2609,29 +1443,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2642,29 +1456,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2675,23 +1469,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2700,27 +1479,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HW36 other) {
+    public void MergeFrom(isAliveReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2737,27 +1501,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -2775,27 +1519,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -2805,19 +1529,23 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_EW36 : pb::IMessage<SendHost_EW36>
+  /// <summary>
+  ///PLC控制訊號
+  ///Alarm Reset
+  /// </summary>
+  public sealed partial class alarmRstRequest : pb::IMessage<alarmRstRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_EW36> _parser = new pb::MessageParser<SendHost_EW36>(() => new SendHost_EW36());
+    private static readonly pb::MessageParser<alarmRstRequest> _parser = new pb::MessageParser<alarmRstRequest>(() => new alarmRstRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_EW36> Parser { get { return _parser; } }
+    public static pb::MessageParser<alarmRstRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[7]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2826,181 +1554,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW36() {
+    public alarmRstRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW36(SendHost_EW36 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      lOCATION_ = other.lOCATION_;
-      bUNDLEID_ = other.bUNDLEID_;
-      eVENTTYPE_ = other.eVENTTYPE_;
-      tRAYTYPE_ = other.tRAYTYPE_;
-      cODE_ = other.cODE_;
+    public alarmRstRequest(alarmRstRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_EW36 Clone() {
-      return new SendHost_EW36(this);
+    public alarmRstRequest Clone() {
+      return new alarmRstRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "LOCATION" field.</summary>
-    public const int LOCATIONFieldNumber = 6;
-    private string lOCATION_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string LOCATION {
-      get { return lOCATION_; }
-      set {
-        lOCATION_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BUNDLE_ID" field.</summary>
-    public const int BUNDLEIDFieldNumber = 7;
-    private string bUNDLEID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BUNDLEID {
-      get { return bUNDLEID_; }
-      set {
-        bUNDLEID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EVENT_TYPE" field.</summary>
-    public const int EVENTTYPEFieldNumber = 8;
-    private string eVENTTYPE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EVENTTYPE {
-      get { return eVENTTYPE_; }
-      set {
-        eVENTTYPE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "TRAY_TYPE" field.</summary>
-    public const int TRAYTYPEFieldNumber = 9;
-    private string tRAYTYPE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TRAYTYPE {
-      get { return tRAYTYPE_; }
-      set {
-        tRAYTYPE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 10;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_EW36);
+      return Equals(other as alarmRstRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_EW36 other) {
+    public bool Equals(alarmRstRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (LOCATION != other.LOCATION) return false;
-      if (BUNDLEID != other.BUNDLEID) return false;
-      if (EVENTTYPE != other.EVENTTYPE) return false;
-      if (TRAYTYPE != other.TRAYTYPE) return false;
-      if (CODE != other.CODE) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (LOCATION.Length != 0) hash ^= LOCATION.GetHashCode();
-      if (BUNDLEID.Length != 0) hash ^= BUNDLEID.GetHashCode();
-      if (EVENTTYPE.Length != 0) hash ^= EVENTTYPE.GetHashCode();
-      if (TRAYTYPE.Length != 0) hash ^= TRAYTYPE.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3017,45 +1619,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (LOCATION.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(LOCATION);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (EVENTTYPE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(EVENTTYPE);
-      }
-      if (TRAYTYPE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(TRAYTYPE);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(CODE);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3066,45 +1632,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (LOCATION.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(LOCATION);
-      }
-      if (BUNDLEID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BUNDLEID);
-      }
-      if (EVENTTYPE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(EVENTTYPE);
-      }
-      if (TRAYTYPE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(TRAYTYPE);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(CODE);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3115,35 +1645,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (LOCATION.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LOCATION);
-      }
-      if (BUNDLEID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BUNDLEID);
-      }
-      if (EVENTTYPE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EVENTTYPE);
-      }
-      if (TRAYTYPE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TRAYTYPE);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3152,39 +1655,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_EW36 other) {
+    public void MergeFrom(alarmRstRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.LOCATION.Length != 0) {
-        LOCATION = other.LOCATION;
-      }
-      if (other.BUNDLEID.Length != 0) {
-        BUNDLEID = other.BUNDLEID;
-      }
-      if (other.EVENTTYPE.Length != 0) {
-        EVENTTYPE = other.EVENTTYPE;
-      }
-      if (other.TRAYTYPE.Length != 0) {
-        TRAYTYPE = other.TRAYTYPE;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3201,43 +1677,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            LOCATION = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            EVENTTYPE = input.ReadString();
-            break;
-          }
-          case 74: {
-            TRAYTYPE = input.ReadString();
-            break;
-          }
-          case 82: {
-            CODE = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -3255,43 +1695,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            LOCATION = input.ReadString();
-            break;
-          }
-          case 58: {
-            BUNDLEID = input.ReadString();
-            break;
-          }
-          case 66: {
-            EVENTTYPE = input.ReadString();
-            break;
-          }
-          case 74: {
-            TRAYTYPE = input.ReadString();
-            break;
-          }
-          case 82: {
-            CODE = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -3301,19 +1705,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HS45 : pb::IMessage<Reply_FromHost_HS45>
+  public sealed partial class alarmRstReply : pb::IMessage<alarmRstReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HS45> _parser = new pb::MessageParser<Reply_FromHost_HS45>(() => new Reply_FromHost_HS45());
+    private static readonly pb::MessageParser<alarmRstReply> _parser = new pb::MessageParser<alarmRstReply>(() => new alarmRstReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HS45> Parser { get { return _parser; } }
+    public static pb::MessageParser<alarmRstReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[8]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3322,111 +1726,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS45() {
+    public alarmRstReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS45(Reply_FromHost_HS45 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
+    public alarmRstReply(alarmRstReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS45 Clone() {
-      return new Reply_FromHost_HS45(this);
+    public alarmRstReply Clone() {
+      return new alarmRstReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HS45);
+      return Equals(other as alarmRstReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HS45 other) {
+    public bool Equals(alarmRstReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3443,25 +1791,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3472,25 +1804,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3501,20 +1817,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3523,24 +1827,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HS45 other) {
+    public void MergeFrom(alarmRstReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3557,23 +1849,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -3591,23 +1867,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -3617,19 +1877,22 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_ES45 : pb::IMessage<SendHost_ES45>
+  /// <summary>
+  ///block Reset
+  /// </summary>
+  public sealed partial class blockRstRequest : pb::IMessage<blockRstRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_ES45> _parser = new pb::MessageParser<SendHost_ES45>(() => new SendHost_ES45());
+    private static readonly pb::MessageParser<blockRstRequest> _parser = new pb::MessageParser<blockRstRequest>(() => new blockRstRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_ES45> Parser { get { return _parser; } }
+    public static pb::MessageParser<blockRstRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[9]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3638,111 +1901,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES45() {
+    public blockRstRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES45(SendHost_ES45 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
+    public blockRstRequest(blockRstRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES45 Clone() {
-      return new SendHost_ES45(this);
+    public blockRstRequest Clone() {
+      return new blockRstRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_ES45);
+      return Equals(other as blockRstRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_ES45 other) {
+    public bool Equals(blockRstRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3759,25 +1966,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3788,25 +1979,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3817,20 +1992,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3839,24 +2002,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_ES45 other) {
+    public void MergeFrom(blockRstRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3873,23 +2024,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -3907,23 +2042,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -3933,19 +2052,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HS46 : pb::IMessage<Reply_FromHost_HS46>
+  public sealed partial class blockRstReply : pb::IMessage<blockRstReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HS46> _parser = new pb::MessageParser<Reply_FromHost_HS46>(() => new Reply_FromHost_HS46());
+    private static readonly pb::MessageParser<blockRstReply> _parser = new pb::MessageParser<blockRstReply>(() => new blockRstReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HS46> Parser { get { return _parser; } }
+    public static pb::MessageParser<blockRstReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[10]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3954,111 +2073,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS46() {
+    public blockRstReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS46(Reply_FromHost_HS46 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
+    public blockRstReply(blockRstReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS46 Clone() {
-      return new Reply_FromHost_HS46(this);
+    public blockRstReply Clone() {
+      return new blockRstReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HS46);
+      return Equals(other as blockRstReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HS46 other) {
+    public bool Equals(blockRstReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4075,25 +2138,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4104,25 +2151,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4133,20 +2164,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4155,24 +2174,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HS46 other) {
+    public void MergeFrom(blockRstReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4189,23 +2196,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -4223,23 +2214,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -4249,19 +2224,22 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_ES46 : pb::IMessage<SendHost_ES46>
+  /// <summary>
+  ///Change dir
+  /// </summary>
+  public sealed partial class changeDirRequest : pb::IMessage<changeDirRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_ES46> _parser = new pb::MessageParser<SendHost_ES46>(() => new SendHost_ES46());
+    private static readonly pb::MessageParser<changeDirRequest> _parser = new pb::MessageParser<changeDirRequest>(() => new changeDirRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_ES46> Parser { get { return _parser; } }
+    public static pb::MessageParser<changeDirRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[11]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4270,181 +2248,69 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES46() {
+    public changeDirRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES46(SendHost_ES46 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      eQUIPMENTSTATUS_ = other.eQUIPMENTSTATUS_;
-      cIMMODE_ = other.cIMMODE_;
-      rUNMODE_ = other.rUNMODE_;
-      oPERATIONMODE_ = other.oPERATIONMODE_;
-      aLARMWARNINGHAPPEN_ = other.aLARMWARNINGHAPPEN_;
+    public changeDirRequest(changeDirRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      dir_ = other.dir_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES46 Clone() {
-      return new SendHost_ES46(this);
+    public changeDirRequest Clone() {
+      return new changeDirRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
+    /// <summary>Field number for the "dir" field.</summary>
+    public const int DirFieldNumber = 2;
+    private string dir_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
+    public string Dir {
+      get { return dir_; }
       set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQUIPMENT_STATUS" field.</summary>
-    public const int EQUIPMENTSTATUSFieldNumber = 6;
-    private string eQUIPMENTSTATUS_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQUIPMENTSTATUS {
-      get { return eQUIPMENTSTATUS_; }
-      set {
-        eQUIPMENTSTATUS_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CIM_MODE" field.</summary>
-    public const int CIMMODEFieldNumber = 7;
-    private string cIMMODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CIMMODE {
-      get { return cIMMODE_; }
-      set {
-        cIMMODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "RUN_MODE" field.</summary>
-    public const int RUNMODEFieldNumber = 8;
-    private string rUNMODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RUNMODE {
-      get { return rUNMODE_; }
-      set {
-        rUNMODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "OPERATION_MODE" field.</summary>
-    public const int OPERATIONMODEFieldNumber = 9;
-    private string oPERATIONMODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string OPERATIONMODE {
-      get { return oPERATIONMODE_; }
-      set {
-        oPERATIONMODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ALARMWARNINGHAPPEN" field.</summary>
-    public const int ALARMWARNINGHAPPENFieldNumber = 10;
-    private string aLARMWARNINGHAPPEN_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ALARMWARNINGHAPPEN {
-      get { return aLARMWARNINGHAPPEN_; }
-      set {
-        aLARMWARNINGHAPPEN_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        dir_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_ES46);
+      return Equals(other as changeDirRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_ES46 other) {
+    public bool Equals(changeDirRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (EQUIPMENTSTATUS != other.EQUIPMENTSTATUS) return false;
-      if (CIMMODE != other.CIMMODE) return false;
-      if (RUNMODE != other.RUNMODE) return false;
-      if (OPERATIONMODE != other.OPERATIONMODE) return false;
-      if (ALARMWARNINGHAPPEN != other.ALARMWARNINGHAPPEN) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      if (Dir != other.Dir) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (EQUIPMENTSTATUS.Length != 0) hash ^= EQUIPMENTSTATUS.GetHashCode();
-      if (CIMMODE.Length != 0) hash ^= CIMMODE.GetHashCode();
-      if (RUNMODE.Length != 0) hash ^= RUNMODE.GetHashCode();
-      if (OPERATIONMODE.Length != 0) hash ^= OPERATIONMODE.GetHashCode();
-      if (ALARMWARNINGHAPPEN.Length != 0) hash ^= ALARMWARNINGHAPPEN.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (Dir.Length != 0) hash ^= Dir.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4461,45 +2327,13 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
+        output.WriteString(RailChangerNumber);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
+      if (Dir.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (EQUIPMENTSTATUS.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(EQUIPMENTSTATUS);
-      }
-      if (CIMMODE.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(CIMMODE);
-      }
-      if (RUNMODE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(RUNMODE);
-      }
-      if (OPERATIONMODE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(OPERATIONMODE);
-      }
-      if (ALARMWARNINGHAPPEN.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(ALARMWARNINGHAPPEN);
+        output.WriteString(Dir);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4510,45 +2344,13 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
+        output.WriteString(RailChangerNumber);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
+      if (Dir.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (EQUIPMENTSTATUS.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(EQUIPMENTSTATUS);
-      }
-      if (CIMMODE.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(CIMMODE);
-      }
-      if (RUNMODE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(RUNMODE);
-      }
-      if (OPERATIONMODE.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(OPERATIONMODE);
-      }
-      if (ALARMWARNINGHAPPEN.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(ALARMWARNINGHAPPEN);
+        output.WriteString(Dir);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4559,35 +2361,11 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (EQUIPMENTSTATUS.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQUIPMENTSTATUS);
-      }
-      if (CIMMODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CIMMODE);
-      }
-      if (RUNMODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RUNMODE);
-      }
-      if (OPERATIONMODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OPERATIONMODE);
-      }
-      if (ALARMWARNINGHAPPEN.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ALARMWARNINGHAPPEN);
+      if (Dir.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dir);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4596,39 +2374,15 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_ES46 other) {
+    public void MergeFrom(changeDirRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.EQUIPMENTSTATUS.Length != 0) {
-        EQUIPMENTSTATUS = other.EQUIPMENTSTATUS;
-      }
-      if (other.CIMMODE.Length != 0) {
-        CIMMODE = other.CIMMODE;
-      }
-      if (other.RUNMODE.Length != 0) {
-        RUNMODE = other.RUNMODE;
-      }
-      if (other.OPERATIONMODE.Length != 0) {
-        OPERATIONMODE = other.OPERATIONMODE;
-      }
-      if (other.ALARMWARNINGHAPPEN.Length != 0) {
-        ALARMWARNINGHAPPEN = other.ALARMWARNINGHAPPEN;
+      if (other.Dir.Length != 0) {
+        Dir = other.Dir;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4645,43 +2399,11 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
           case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            EQUIPMENTSTATUS = input.ReadString();
-            break;
-          }
-          case 58: {
-            CIMMODE = input.ReadString();
-            break;
-          }
-          case 66: {
-            RUNMODE = input.ReadString();
-            break;
-          }
-          case 74: {
-            OPERATIONMODE = input.ReadString();
-            break;
-          }
-          case 82: {
-            ALARMWARNINGHAPPEN = input.ReadString();
+            Dir = input.ReadString();
             break;
           }
         }
@@ -4699,43 +2421,11 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
           case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            EQUIPMENTSTATUS = input.ReadString();
-            break;
-          }
-          case 58: {
-            CIMMODE = input.ReadString();
-            break;
-          }
-          case 66: {
-            RUNMODE = input.ReadString();
-            break;
-          }
-          case 74: {
-            OPERATIONMODE = input.ReadString();
-            break;
-          }
-          case 82: {
-            ALARMWARNINGHAPPEN = input.ReadString();
+            Dir = input.ReadString();
             break;
           }
         }
@@ -4745,19 +2435,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HS49 : pb::IMessage<Reply_FromHost_HS49>
+  public sealed partial class changeDirReply : pb::IMessage<changeDirReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HS49> _parser = new pb::MessageParser<Reply_FromHost_HS49>(() => new Reply_FromHost_HS49());
+    private static readonly pb::MessageParser<changeDirReply> _parser = new pb::MessageParser<changeDirReply>(() => new changeDirReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HS49> Parser { get { return _parser; } }
+    public static pb::MessageParser<changeDirReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[12]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4766,125 +2456,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS49() {
+    public changeDirReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS49(Reply_FromHost_HS49 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public changeDirReply(changeDirReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS49 Clone() {
-      return new Reply_FromHost_HS49(this);
+    public changeDirReply Clone() {
+      return new changeDirReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HS49);
+      return Equals(other as changeDirReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HS49 other) {
+    public bool Equals(changeDirReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4901,29 +2521,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4934,29 +2534,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4967,23 +2547,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4992,27 +2557,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HS49 other) {
+    public void MergeFrom(changeDirReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5029,27 +2579,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -5067,27 +2597,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -5097,19 +2607,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_ES49 : pb::IMessage<SendHost_ES49>
+  public sealed partial class getDirRequest : pb::IMessage<getDirRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_ES49> _parser = new pb::MessageParser<SendHost_ES49>(() => new SendHost_ES49());
+    private static readonly pb::MessageParser<getDirRequest> _parser = new pb::MessageParser<getDirRequest>(() => new getDirRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_ES49> Parser { get { return _parser; } }
+    public static pb::MessageParser<getDirRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[13]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5118,153 +2628,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES49() {
+    public getDirRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES49(SendHost_ES49 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      aLARMSTATUS_ = other.aLARMSTATUS_;
-      aLARMLEVEL_ = other.aLARMLEVEL_;
-      aLARMCODE_ = other.aLARMCODE_;
+    public getDirRequest(getDirRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES49 Clone() {
-      return new SendHost_ES49(this);
+    public getDirRequest Clone() {
+      return new getDirRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ALARM_STATUS" field.</summary>
-    public const int ALARMSTATUSFieldNumber = 6;
-    private string aLARMSTATUS_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ALARMSTATUS {
-      get { return aLARMSTATUS_; }
-      set {
-        aLARMSTATUS_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ALARM_LEVEL" field.</summary>
-    public const int ALARMLEVELFieldNumber = 7;
-    private string aLARMLEVEL_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ALARMLEVEL {
-      get { return aLARMLEVEL_; }
-      set {
-        aLARMLEVEL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ALARM_CODE" field.</summary>
-    public const int ALARMCODEFieldNumber = 8;
-    private string aLARMCODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ALARMCODE {
-      get { return aLARMCODE_; }
-      set {
-        aLARMCODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_ES49);
+      return Equals(other as getDirRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_ES49 other) {
+    public bool Equals(getDirRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (ALARMSTATUS != other.ALARMSTATUS) return false;
-      if (ALARMLEVEL != other.ALARMLEVEL) return false;
-      if (ALARMCODE != other.ALARMCODE) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (ALARMSTATUS.Length != 0) hash ^= ALARMSTATUS.GetHashCode();
-      if (ALARMLEVEL.Length != 0) hash ^= ALARMLEVEL.GetHashCode();
-      if (ALARMCODE.Length != 0) hash ^= ALARMCODE.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5281,37 +2693,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (ALARMSTATUS.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(ALARMSTATUS);
-      }
-      if (ALARMLEVEL.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(ALARMLEVEL);
-      }
-      if (ALARMCODE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ALARMCODE);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5322,37 +2706,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (ALARMSTATUS.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(ALARMSTATUS);
-      }
-      if (ALARMLEVEL.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(ALARMLEVEL);
-      }
-      if (ALARMCODE.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ALARMCODE);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5363,29 +2719,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (ALARMSTATUS.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ALARMSTATUS);
-      }
-      if (ALARMLEVEL.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ALARMLEVEL);
-      }
-      if (ALARMCODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ALARMCODE);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5394,33 +2729,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_ES49 other) {
+    public void MergeFrom(getDirRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.ALARMSTATUS.Length != 0) {
-        ALARMSTATUS = other.ALARMSTATUS;
-      }
-      if (other.ALARMLEVEL.Length != 0) {
-        ALARMLEVEL = other.ALARMLEVEL;
-      }
-      if (other.ALARMCODE.Length != 0) {
-        ALARMCODE = other.ALARMCODE;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5437,35 +2751,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            ALARMSTATUS = input.ReadString();
-            break;
-          }
-          case 58: {
-            ALARMLEVEL = input.ReadString();
-            break;
-          }
-          case 66: {
-            ALARMCODE = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -5483,35 +2769,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            ALARMSTATUS = input.ReadString();
-            break;
-          }
-          case 58: {
-            ALARMLEVEL = input.ReadString();
-            break;
-          }
-          case 66: {
-            ALARMCODE = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -5521,19 +2779,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class Reply_FromHost_HS54 : pb::IMessage<Reply_FromHost_HS54>
+  public sealed partial class getDirReply : pb::IMessage<getDirReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Reply_FromHost_HS54> _parser = new pb::MessageParser<Reply_FromHost_HS54>(() => new Reply_FromHost_HS54());
+    private static readonly pb::MessageParser<getDirReply> _parser = new pb::MessageParser<getDirReply>(() => new getDirReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Reply_FromHost_HS54> Parser { get { return _parser; } }
+    public static pb::MessageParser<getDirReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[14]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5542,125 +2800,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS54() {
+    public getDirReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS54(Reply_FromHost_HS54 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      cODE_ = other.cODE_;
+    public getDirReply(getDirReply other) : this() {
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Reply_FromHost_HS54 Clone() {
-      return new Reply_FromHost_HS54(this);
+    public getDirReply Clone() {
+      return new getDirReply(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string Message {
+      get { return message_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "CODE" field.</summary>
-    public const int CODEFieldNumber = 6;
-    private string cODE_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CODE {
-      get { return cODE_; }
-      set {
-        cODE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Reply_FromHost_HS54);
+      return Equals(other as getDirReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Reply_FromHost_HS54 other) {
+    public bool Equals(getDirReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (CODE != other.CODE) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (CODE.Length != 0) hash ^= CODE.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5677,29 +2865,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5710,29 +2878,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(CODE);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5743,23 +2891,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (CODE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CODE);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5768,27 +2901,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Reply_FromHost_HS54 other) {
+    public void MergeFrom(getDirReply other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.CODE.Length != 0) {
-        CODE = other.CODE;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5805,27 +2923,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -5843,27 +2941,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            CODE = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -5873,19 +2951,19 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
 
   }
 
-  public sealed partial class SendHost_ES54 : pb::IMessage<SendHost_ES54>
+  public sealed partial class getStatusRequest : pb::IMessage<getStatusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SendHost_ES54> _parser = new pb::MessageParser<SendHost_ES54>(() => new SendHost_ES54());
+    private static readonly pb::MessageParser<getStatusRequest> _parser = new pb::MessageParser<getStatusRequest>(() => new getStatusRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SendHost_ES54> Parser { get { return _parser; } }
+    public static pb::MessageParser<getStatusRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::com.mirle.ibgAK0.EAP.HostMessage.E2H.EAPK11E2HReflection.Descriptor.MessageTypes[15]; }
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5894,167 +2972,55 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES54() {
+    public getStatusRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES54(SendHost_ES54 other) : this() {
-      fUNCTIONID_ = other.fUNCTIONID_;
-      fUNCTIONSEQUENCENO_ = other.fUNCTIONSEQUENCENO_;
-      fUNCTIONNAME_ = other.fUNCTIONNAME_;
-      eQID_ = other.eQID_;
-      rEPORTTIME_ = other.rEPORTTIME_;
-      bCRBundleID_ = other.bCRBundleID_;
-      virtualBundleID_ = other.virtualBundleID_;
-      mATERIALPRESENT_ = other.mATERIALPRESENT_;
-      eXECUTIONCMDSEQUENCENO_ = other.eXECUTIONCMDSEQUENCENO_;
+    public getStatusRequest(getStatusRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SendHost_ES54 Clone() {
-      return new SendHost_ES54(this);
+    public getStatusRequest Clone() {
+      return new getStatusRequest(this);
     }
 
-    /// <summary>Field number for the "FUNCTIONID" field.</summary>
-    public const int FUNCTIONIDFieldNumber = 1;
-    private string fUNCTIONID_ = "";
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONID {
-      get { return fUNCTIONID_; }
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
       set {
-        fUNCTIONID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONSEQUENCENO" field.</summary>
-    public const int FUNCTIONSEQUENCENOFieldNumber = 2;
-    private string fUNCTIONSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONSEQUENCENO {
-      get { return fUNCTIONSEQUENCENO_; }
-      set {
-        fUNCTIONSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FUNCTIONNAME" field.</summary>
-    public const int FUNCTIONNAMEFieldNumber = 3;
-    private string fUNCTIONNAME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string FUNCTIONNAME {
-      get { return fUNCTIONNAME_; }
-      set {
-        fUNCTIONNAME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EQID" field.</summary>
-    public const int EQIDFieldNumber = 4;
-    private string eQID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EQID {
-      get { return eQID_; }
-      set {
-        eQID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "REPORT_TIME" field.</summary>
-    public const int REPORTTIMEFieldNumber = 5;
-    private string rEPORTTIME_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string REPORTTIME {
-      get { return rEPORTTIME_; }
-      set {
-        rEPORTTIME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "BCR_Bundle_ID" field.</summary>
-    public const int BCRBundleIDFieldNumber = 6;
-    private string bCRBundleID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BCRBundleID {
-      get { return bCRBundleID_; }
-      set {
-        bCRBundleID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "Virtual_Bundle_ID" field.</summary>
-    public const int VirtualBundleIDFieldNumber = 7;
-    private string virtualBundleID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string VirtualBundleID {
-      get { return virtualBundleID_; }
-      set {
-        virtualBundleID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "MATERIAL_PRESENT" field.</summary>
-    public const int MATERIALPRESENTFieldNumber = 8;
-    private string mATERIALPRESENT_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MATERIALPRESENT {
-      get { return mATERIALPRESENT_; }
-      set {
-        mATERIALPRESENT_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "EXECUTION_CMD_SEQUENCE_NO" field.</summary>
-    public const int EXECUTIONCMDSEQUENCENOFieldNumber = 9;
-    private string eXECUTIONCMDSEQUENCENO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EXECUTIONCMDSEQUENCENO {
-      get { return eXECUTIONCMDSEQUENCENO_; }
-      set {
-        eXECUTIONCMDSEQUENCENO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SendHost_ES54);
+      return Equals(other as getStatusRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SendHost_ES54 other) {
+    public bool Equals(getStatusRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FUNCTIONID != other.FUNCTIONID) return false;
-      if (FUNCTIONSEQUENCENO != other.FUNCTIONSEQUENCENO) return false;
-      if (FUNCTIONNAME != other.FUNCTIONNAME) return false;
-      if (EQID != other.EQID) return false;
-      if (REPORTTIME != other.REPORTTIME) return false;
-      if (BCRBundleID != other.BCRBundleID) return false;
-      if (VirtualBundleID != other.VirtualBundleID) return false;
-      if (MATERIALPRESENT != other.MATERIALPRESENT) return false;
-      if (EXECUTIONCMDSEQUENCENO != other.EXECUTIONCMDSEQUENCENO) return false;
+      if (RailChangerNumber != other.RailChangerNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (FUNCTIONID.Length != 0) hash ^= FUNCTIONID.GetHashCode();
-      if (FUNCTIONSEQUENCENO.Length != 0) hash ^= FUNCTIONSEQUENCENO.GetHashCode();
-      if (FUNCTIONNAME.Length != 0) hash ^= FUNCTIONNAME.GetHashCode();
-      if (EQID.Length != 0) hash ^= EQID.GetHashCode();
-      if (REPORTTIME.Length != 0) hash ^= REPORTTIME.GetHashCode();
-      if (BCRBundleID.Length != 0) hash ^= BCRBundleID.GetHashCode();
-      if (VirtualBundleID.Length != 0) hash ^= VirtualBundleID.GetHashCode();
-      if (MATERIALPRESENT.Length != 0) hash ^= MATERIALPRESENT.GetHashCode();
-      if (EXECUTIONCMDSEQUENCENO.Length != 0) hash ^= EXECUTIONCMDSEQUENCENO.GetHashCode();
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6071,41 +3037,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BCRBundleID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BCRBundleID);
-      }
-      if (VirtualBundleID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(VirtualBundleID);
-      }
-      if (MATERIALPRESENT.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(MATERIALPRESENT);
-      }
-      if (EXECUTIONCMDSEQUENCENO.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(EXECUTIONCMDSEQUENCENO);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -6116,41 +3050,9 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FUNCTIONID.Length != 0) {
+      if (RailChangerNumber.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(REPORTTIME);
-      }
-      if (BCRBundleID.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(BCRBundleID);
-      }
-      if (VirtualBundleID.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(VirtualBundleID);
-      }
-      if (MATERIALPRESENT.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(MATERIALPRESENT);
-      }
-      if (EXECUTIONCMDSEQUENCENO.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(EXECUTIONCMDSEQUENCENO);
+        output.WriteString(RailChangerNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -6161,32 +3063,8 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (FUNCTIONID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONID);
-      }
-      if (FUNCTIONSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONSEQUENCENO);
-      }
-      if (FUNCTIONNAME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FUNCTIONNAME);
-      }
-      if (EQID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EQID);
-      }
-      if (REPORTTIME.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(REPORTTIME);
-      }
-      if (BCRBundleID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BCRBundleID);
-      }
-      if (VirtualBundleID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VirtualBundleID);
-      }
-      if (MATERIALPRESENT.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MATERIALPRESENT);
-      }
-      if (EXECUTIONCMDSEQUENCENO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EXECUTIONCMDSEQUENCENO);
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6195,36 +3073,12 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SendHost_ES54 other) {
+    public void MergeFrom(getStatusRequest other) {
       if (other == null) {
         return;
       }
-      if (other.FUNCTIONID.Length != 0) {
-        FUNCTIONID = other.FUNCTIONID;
-      }
-      if (other.FUNCTIONSEQUENCENO.Length != 0) {
-        FUNCTIONSEQUENCENO = other.FUNCTIONSEQUENCENO;
-      }
-      if (other.FUNCTIONNAME.Length != 0) {
-        FUNCTIONNAME = other.FUNCTIONNAME;
-      }
-      if (other.EQID.Length != 0) {
-        EQID = other.EQID;
-      }
-      if (other.REPORTTIME.Length != 0) {
-        REPORTTIME = other.REPORTTIME;
-      }
-      if (other.BCRBundleID.Length != 0) {
-        BCRBundleID = other.BCRBundleID;
-      }
-      if (other.VirtualBundleID.Length != 0) {
-        VirtualBundleID = other.VirtualBundleID;
-      }
-      if (other.MATERIALPRESENT.Length != 0) {
-        MATERIALPRESENT = other.MATERIALPRESENT;
-      }
-      if (other.EXECUTIONCMDSEQUENCENO.Length != 0) {
-        EXECUTIONCMDSEQUENCENO = other.EXECUTIONCMDSEQUENCENO;
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6241,39 +3095,7 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
-            break;
-          }
-          case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
-            break;
-          }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
-            break;
-          }
-          case 34: {
-            EQID = input.ReadString();
-            break;
-          }
-          case 42: {
-            REPORTTIME = input.ReadString();
-            break;
-          }
-          case 50: {
-            BCRBundleID = input.ReadString();
-            break;
-          }
-          case 58: {
-            VirtualBundleID = input.ReadString();
-            break;
-          }
-          case 66: {
-            MATERIALPRESENT = input.ReadString();
-            break;
-          }
-          case 74: {
-            EXECUTIONCMDSEQUENCENO = input.ReadString();
+            RailChangerNumber = input.ReadString();
             break;
           }
         }
@@ -6291,39 +3113,2279 @@ namespace com.mirle.ibgAK0.EAP.HostMessage.E2H {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FUNCTIONID = input.ReadString();
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getStatusReply : pb::IMessage<getStatusReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getStatusReply> _parser = new pb::MessageParser<getStatusReply>(() => new getStatusReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getStatusReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getStatusReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getStatusReply(getStatusReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getStatusReply Clone() {
+      return new getStatusReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getStatusReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getStatusReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getStatusReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getBlockRequest : pb::IMessage<getBlockRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getBlockRequest> _parser = new pb::MessageParser<getBlockRequest>(() => new getBlockRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getBlockRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockRequest(getBlockRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockRequest Clone() {
+      return new getBlockRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getBlockRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getBlockRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getBlockRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getBlockReply : pb::IMessage<getBlockReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getBlockReply> _parser = new pb::MessageParser<getBlockReply>(() => new getBlockReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getBlockReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockReply(getBlockReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getBlockReply Clone() {
+      return new getBlockReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getBlockReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getBlockReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getBlockReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getChangerTimerRequest : pb::IMessage<getChangerTimerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getChangerTimerRequest> _parser = new pb::MessageParser<getChangerTimerRequest>(() => new getChangerTimerRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getChangerTimerRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerRequest(getChangerTimerRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerRequest Clone() {
+      return new getChangerTimerRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getChangerTimerRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getChangerTimerRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getChangerTimerRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getChangerTimerReply : pb::IMessage<getChangerTimerReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getChangerTimerReply> _parser = new pb::MessageParser<getChangerTimerReply>(() => new getChangerTimerReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getChangerTimerReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerReply(getChangerTimerReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getChangerTimerReply Clone() {
+      return new getChangerTimerReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getChangerTimerReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getChangerTimerReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getChangerTimerReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getErrorReportRequest : pb::IMessage<getErrorReportRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getErrorReportRequest> _parser = new pb::MessageParser<getErrorReportRequest>(() => new getErrorReportRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getErrorReportRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportRequest(getErrorReportRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportRequest Clone() {
+      return new getErrorReportRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getErrorReportRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getErrorReportRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getErrorReportRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getErrorReportReply : pb::IMessage<getErrorReportReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getErrorReportReply> _parser = new pb::MessageParser<getErrorReportReply>(() => new getErrorReportReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getErrorReportReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportReply(getErrorReportReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getErrorReportReply Clone() {
+      return new getErrorReportReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getErrorReportReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getErrorReportReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getErrorReportReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getVersionRequest : pb::IMessage<getVersionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getVersionRequest> _parser = new pb::MessageParser<getVersionRequest>(() => new getVersionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getVersionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionRequest(getVersionRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionRequest Clone() {
+      return new getVersionRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getVersionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getVersionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getVersionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class getVersionReply : pb::IMessage<getVersionReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<getVersionReply> _parser = new pb::MessageParser<getVersionReply>(() => new getVersionReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<getVersionReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionReply(getVersionReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public getVersionReply Clone() {
+      return new getVersionReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as getVersionReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(getVersionReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(getVersionReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class changeModeRequest : pb::IMessage<changeModeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<changeModeRequest> _parser = new pb::MessageParser<changeModeRequest>(() => new changeModeRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<changeModeRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeRequest(changeModeRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      mode_ = other.mode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeRequest Clone() {
+      return new changeModeRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 2;
+    private string mode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Mode {
+      get { return mode_; }
+      set {
+        mode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as changeModeRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(changeModeRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      if (Mode != other.Mode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (Mode.Length != 0) hash ^= Mode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (Mode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (Mode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (Mode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Mode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(changeModeRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      if (other.Mode.Length != 0) {
+        Mode = other.Mode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
             break;
           }
           case 18: {
-            FUNCTIONSEQUENCENO = input.ReadString();
+            Mode = input.ReadString();
             break;
           }
-          case 26: {
-            FUNCTIONNAME = input.ReadString();
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
             break;
           }
-          case 34: {
-            EQID = input.ReadString();
+          case 18: {
+            Mode = input.ReadString();
             break;
           }
-          case 42: {
-            REPORTTIME = input.ReadString();
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class changeModeReply : pb::IMessage<changeModeReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<changeModeReply> _parser = new pb::MessageParser<changeModeReply>(() => new changeModeReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<changeModeReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeReply(changeModeReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public changeModeReply Clone() {
+      return new changeModeReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as changeModeReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(changeModeReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(changeModeReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
             break;
           }
-          case 50: {
-            BCRBundleID = input.ReadString();
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
             break;
           }
-          case 58: {
-            VirtualBundleID = input.ReadString();
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class stopSetRequest : pb::IMessage<stopSetRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<stopSetRequest> _parser = new pb::MessageParser<stopSetRequest>(() => new stopSetRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<stopSetRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetRequest(stopSetRequest other) : this() {
+      railChangerNumber_ = other.railChangerNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetRequest Clone() {
+      return new stopSetRequest(this);
+    }
+
+    /// <summary>Field number for the "railChangerNumber" field.</summary>
+    public const int RailChangerNumberFieldNumber = 1;
+    private string railChangerNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RailChangerNumber {
+      get { return railChangerNumber_; }
+      set {
+        railChangerNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as stopSetRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(stopSetRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RailChangerNumber != other.RailChangerNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RailChangerNumber.Length != 0) hash ^= RailChangerNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RailChangerNumber.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RailChangerNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RailChangerNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(stopSetRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RailChangerNumber.Length != 0) {
+        RailChangerNumber = other.RailChangerNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
             break;
           }
-          case 66: {
-            MATERIALPRESENT = input.ReadString();
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RailChangerNumber = input.ReadString();
             break;
           }
-          case 74: {
-            EXECUTIONCMDSEQUENCENO = input.ReadString();
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class stopSetReply : pb::IMessage<stopSetReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<stopSetReply> _parser = new pb::MessageParser<stopSetReply>(() => new stopSetReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<stopSetReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::RailChangerProtocol.EAPK11E2HReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetReply(stopSetReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public stopSetReply Clone() {
+      return new stopSetReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as stopSetReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(stopSetReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(stopSetReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
             break;
           }
         }
