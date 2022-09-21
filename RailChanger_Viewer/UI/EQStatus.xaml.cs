@@ -202,6 +202,10 @@ namespace RailChanger_Viewer.UI
                         RailStatusValue.Text = "ERROR";
                         RailStatusValue.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
                         break;
+                    case 4:
+                        RailStatusValue.Text = "切換中";
+                        RailStatusValue.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                        break;
                 }
             }
             catch (Exception ex)
@@ -219,6 +223,10 @@ namespace RailChanger_Viewer.UI
             {
                 switch (mode)
                 {
+                    case 0:
+                        RailSideValue.Text = "未到位";
+                        RailSideValue.Foreground = new SolidColorBrush(Color.FromRgb(7, 0, 34));
+                        break;
                     case 1:
                         RailSideValue.Text = "直軌";
                         RailSideValue.Foreground = new SolidColorBrush(Color.FromRgb(7, 0, 34));

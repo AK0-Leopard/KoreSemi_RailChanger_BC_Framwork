@@ -290,3 +290,4 @@ C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ScriptContr
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ScriptControl\obj\Debug\ScriptControl.csproj.CopyComplete
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ScriptControl\obj\Debug\ScriptControl.dll
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ScriptControl\obj\Debug\ScriptControl.pdb
+C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ScriptControl\bin\Debug\MPLCConnectionControl.pdb

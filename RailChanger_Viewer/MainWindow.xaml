@@ -164,7 +164,7 @@
                                             </ControlTemplate>
                                         </Button.Template>
                                     </Button>
-                                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Padding="0,6,0,0" FontSize="16" Style="{DynamicResource TitleContentText}" Margin="10,0,0,0" Width="134"><Run Text="延遲時間"/><Run Text="(秒):"/></TextBlock>
+                                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Padding="0,6,0,0" FontSize="16" Style="{DynamicResource TitleContentText}" Margin="10,0,0,0" Width="134"><Run Text="延遲時間"/><Run Text="(100ms):"/></TextBlock>
                                     <Button x:Name="btn_read_Copy5" Height="30" Margin="4,92,4.6,-2" Content="停用自動切換" Click="AutoChange_Stop_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3">
                                         <Button.Template>
                                             <ControlTemplate TargetType="{x:Type Button}">
@@ -174,7 +174,7 @@
                                             </ControlTemplate>
                                         </Button.Template>
                                     </Button>
-                                    <TextBox x:Name="tbx_delay_time" Margin="116,3,9.667,92.333" TextWrapping="Wrap" Text="1" Foreground="Black" Background="White" FontSize="18" MaxLength="10" HorizontalContentAlignment="Center" Style="{DynamicResource MirleGoTextBox1}" Width="95"/>
+                                    <TextBox x:Name="tbx_delay_time" Margin="144,3,9.667,92.333" Text="10" Foreground="Black" Background="White" FontSize="18" MaxLength="100" HorizontalContentAlignment="Center" Style="{DynamicResource MirleGoTextBox1}" Width="67"/>
                                 </Grid>
                             </GroupBox>
                         </Grid>

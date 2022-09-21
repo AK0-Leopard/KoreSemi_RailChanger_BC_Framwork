@@ -5,6 +5,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms.Integration;
 
 namespace RailChanger_Viewer
 {
@@ -20,8 +21,8 @@ namespace RailChanger_Viewer
         {
             InitializeComponent();
             scApp = SCApplication.getInstance();
-
             cbx_RC_Number.SelectionChanged += cbx_RC_Number_SelectedIndexChanged;
+            ElementHost.EnableModelessKeyboardInterop(this);
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)

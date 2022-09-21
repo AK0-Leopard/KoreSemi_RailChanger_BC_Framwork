@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms.Integration;
 
 namespace RailChanger_Viewer
 {
@@ -19,8 +20,6 @@ namespace RailChanger_Viewer
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            new MainWindow();
         }
     }
 }

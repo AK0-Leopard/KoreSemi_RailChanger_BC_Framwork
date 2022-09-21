@@ -574,7 +574,7 @@ namespace com.mirle.ibg3k0.sc.Data.ValueDefMapAction
             {
                 RPVW_OnOff.setWriteValue(OnOff.ToString());
                 RPVW_Side.setWriteValue(Side.ToString());
-                RPVW_DelayTime.setWriteValue((DelayTime*1000).ToString());
+                RPVW_DelayTime.setWriteValue((DelayTime*100).ToString());
                 if (PLCIsConnect)
                 {
                     smControl = scApp.getBCFApplication().getMPLCSMControl(RPVW_Trigger.MPLCName) as MPLCSMControl;

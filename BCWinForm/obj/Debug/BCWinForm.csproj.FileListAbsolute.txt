@@ -458,3 +458,4 @@ C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\BCWinForm\o
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\BCWinForm\obj\Debug\BCWinForm.csproj.CopyComplete
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\BCWinForm\obj\Debug\KoreSemi_RailChanger.exe
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\BCWinForm\obj\Debug\KoreSemi_RailChanger.pdb
+C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\BCWinForm\bin\Debug\MPLCConnectionControl.pdb
