@@ -74,7 +74,6 @@ namespace RailChanger_Viewer {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-
             RailChanger_Viewer.App app = new RailChanger_Viewer.App();
             app.InitializeComponent();
             app.Run();

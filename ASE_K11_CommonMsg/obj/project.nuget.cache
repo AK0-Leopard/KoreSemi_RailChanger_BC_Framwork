@@ -1,20 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "AeV0GG3q87VmGP5iw1kiGq55BcEBQI+EuAn3YotFx8wZTlKQQ34EAyZVSlZCkVP+iN6JvU5zHU6Fu60A6/x5qg==",
+  "dgSpecHash": "daNIE9gYdwdVSrAP73Rifg8bpxp7F8/u0anLT3ulUNc3l5Hmg8LCgfp/4yIAEtV2gbO+aEEFl2esALzKJ8lHOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lashellow\\Documents\\GitHub\\KoreSemi_RailChanger_BC_Framwork\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
+  "projectFilePath": "D:\\Visual Studio 2012\\Projects\\KoreSemi_RailChanger_BC_Framwork\\ASE_K11_CommonMsg\\ASE_K11_CommonMsg.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lashellow\\.nuget\\packages\\google.protobuf\\3.19.1\\google.protobuf.3.19.1.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\google.protobuf.tools\\3.19.1\\google.protobuf.tools.3.19.1.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.core\\2.37.1\\grpc.core.2.37.1.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.core.api\\2.37.1\\grpc.core.api.2.37.1.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\grpc.tools\\2.37.1\\grpc.tools.2.37.1.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Users\\lashellow\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    "C:\\Users\\stevenhong\\.nuget\\packages\\google.protobuf\\3.19.1\\google.protobuf.3.19.1.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\google.protobuf.tools\\3.19.1\\google.protobuf.tools.3.19.1.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\grpc.core\\2.37.1\\grpc.core.2.37.1.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\grpc.core.api\\2.37.1\\grpc.core.api.2.37.1.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\grpc.tools\\2.37.1\\grpc.tools.2.37.1.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\stevenhong\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "您正在使用 'HTTP' 來源 'http://gitlab.mirle.com.tw/api/v4/projects/650/packages/nuget/index.json' 執行 'restore' 作業。未來的版本將移除非 HTTPS 存取。請考慮移轉至 'HTTPS' 來源。"
+    }
+  ]
 }

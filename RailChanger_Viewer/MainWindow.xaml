@@ -135,7 +135,7 @@
 
                                 </Grid>
                             </GroupBox>
-                            <GroupBox x:Name="groupBox_Copy3" FontSize="14" Header="自動切換軌道設定" HorizontalAlignment="Left" Height="173" Margin="187,34,0,0" VerticalAlignment="Top" Width="239" Grid.ColumnSpan="2" Grid.Column="1" >
+                            <GroupBox x:Name="groupBox_Copy3" FontSize="14" Header="自動切換軌道設定" HorizontalAlignment="Left" Height="173" Margin="187,34,0,0" VerticalAlignment="Top" Width="239" Grid.ColumnSpan="2" Grid.Column="1" Visibility="Hidden">
                                 <Grid>
                                     <Button x:Name="btn_read_Copy2" Height="30" Margin="5,52,116.6,38" Content="自動(直軌)" Click="AutoChange_Right_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="100">
                                         <Button.Template>
@@ -147,15 +147,6 @@
                                         </Button.Template>
                                     </Button>
                                     <Button x:Name="btn_read_Copy3" Height="30" Margin="116,52,5.6,38" Content="自動(彎軌)" Click="AutoChange_Left_Click" Background="#FF2196F3" Foreground="White" BorderBrush="#FF2196F3" Width="100">
-                                        <Button.Template>
-                                            <ControlTemplate TargetType="{x:Type Button}">
-                                                <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
-                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Button.Template>
-                                    </Button>
-                                    <Button x:Name="btn_read_Copy4" Height="30" Margin="1,147,7.6,-57" Content="強制停止" Click="FoceStop_Click" Background="#FFF32121" Foreground="White" BorderBrush="#FF2196F3">
                                         <Button.Template>
                                             <ControlTemplate TargetType="{x:Type Button}">
                                                 <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
@@ -177,6 +168,17 @@
                                     <TextBox x:Name="tbx_delay_time" Margin="144,3,9.667,92.333" Text="10" Foreground="Black" Background="White" FontSize="18" MaxLength="100" HorizontalContentAlignment="Center" Style="{DynamicResource MirleGoTextBox1}" Width="67"/>
                                 </Grid>
                             </GroupBox>
+
+                            <Button x:Name="btn_read_Copy4" Height="30" Margin="200,226,0,0" Width="212" Content="強制停止" Click="FoceStop_Click" Background="#FFF32121" Foreground="White" BorderBrush="#FF2196F3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="1" CornerRadius="5" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
                         </Grid>
                     </GroupBox>
                 </Grid>

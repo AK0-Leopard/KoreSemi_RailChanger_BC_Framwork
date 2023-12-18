@@ -47,3 +47,13 @@ C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_Com
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csproj.CoreCompileInputs.cache
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.dll
 C:\Users\lashellow\Documents\GitHub\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.pdb
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.deps.json
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.dll
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\bin\Debug\netstandard2.0\ASE_K11_CommonMsg.pdb
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csproj.AssemblyReference.cache
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.AssemblyInfoInputs.cache
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.AssemblyInfo.cs
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.dll
+D:\Visual Studio 2012\Projects\KoreSemi_RailChanger_BC_Framwork\ASE_K11_CommonMsg\obj\Debug\netstandard2.0\ASE_K11_CommonMsg.pdb
